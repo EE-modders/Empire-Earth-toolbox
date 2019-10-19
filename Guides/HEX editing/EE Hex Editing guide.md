@@ -79,7 +79,7 @@ This is a very diffcult task: the procedure depends on what are you planning to 
 - **Object ID** is empty
 - There's no upgraded object
 - **Type of tech** is ***0***
-- The effects are diferent (obviously!)
+- The effects are different (obviously!)
 
 #### "Object" technology (example: the technology associated to the object Marine, which define its cost, build tme, epoch, etc. …):
 ##### Requirements:
