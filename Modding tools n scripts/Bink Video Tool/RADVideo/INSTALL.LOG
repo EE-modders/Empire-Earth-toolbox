@@ -1,0 +1,55 @@
+***  Installation Started 01/03/19 12:54  ***
+Title: Bink and Smacker Installation
+Source: E:\Bink Tool\Bink Tool.exe
+Made Dir: C:\Program Files (x86)\RADVideo
+File Copy: C:\Program Files (x86)\RADVideo\UNWISE.EXE
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Bink and Smacker
+RegDB Val: Bink and Smacker
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Bink and Smacker
+RegDB Val: C:\PROGRA~2\RADVideo\UNWISE.EXE C:\PROGRA~2\RADVideo\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+File Copy: C:\Program Files (x86)\RADVideo\bink.exe
+File Copy: C:\Program Files (x86)\RADVideo\binkconv.exe
+File Copy: C:\Program Files (x86)\RADVideo\binkmake.dll
+File Copy: C:\Program Files (x86)\RADVideo\binkmix.exe
+File Copy: C:\Program Files (x86)\RADVideo\binkpl64.exe
+File Copy: C:\Program Files (x86)\RADVideo\binkplay.exe
+File Copy: C:\Program Files (x86)\RADVideo\changes.html
+File Copy: C:\Program Files (x86)\RADVideo\rad2exe.exe
+File Copy: C:\Program Files (x86)\RADVideo\radana.exe
+File Copy: C:\Program Files (x86)\RADVideo\radbatch.exe
+File Copy: C:\Program Files (x86)\RADVideo\radinfo.exe
+File Copy: C:\Program Files (x86)\RADVideo\radsiw.exe
+File Copy: C:\Program Files (x86)\RADVideo\radutil.dll
+File Copy: C:\Program Files (x86)\RADVideo\radvideo.exe
+File Copy: C:\Program Files (x86)\RADVideo\reference.css
+File Copy: C:\Program Files (x86)\RADVideo\smack.exe
+File Copy: C:\Program Files (x86)\RADVideo\smackmix.exe
+File Copy: C:\Program Files (x86)\RADVideo\smackplw.exe
+File Copy: C:\Program Files (x86)\RADVideo\smackply.exe
+File Copy: C:\Program Files (x86)\RADVideo\smackpw6.exe
+Made Dir: C:\Users\VM\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bink and Smacker
+Shell Link: C:\Users\VM\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bink and Smacker\RAD Video Tools.lnk
+Shell Link: C:\Users\VM\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bink and Smacker\Uninstall the RAD Video Tools.lnk
+RegDB Key: .bik
+RegDB Val: Bink.Document
+RegDB Key: Bink.Document
+RegDB Val: Bink Video
+RegDB Key: Bink.Document\shell\open\command
+RegDB Val: C:\PROGRA~2\RADVideo\binkpl64.exe /! "%1"
+RegDB Key: .rlst
+RegDB Val: RADBatch.Document
+RegDB Key: RADBatch.Document
+RegDB Val: RAD Batch List
+RegDB Key: RADBatch.Document\shell\open\command
+RegDB Val: C:\PROGRA~2\RADVideo\radbatch.exe "%1"
+RegDB Key: .smk
+RegDB Val: Smacker.Document
+RegDB Key: Smacker.Document
+RegDB Val: Smacker Video
+RegDB Key: Smacker.Document\shell\open\command
+RegDB Val: C:\PROGRA~2\RADVideo\smackplw.exe /! "%1"
+User Rights: Admin

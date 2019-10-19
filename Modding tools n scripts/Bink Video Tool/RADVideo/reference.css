@@ -1,0 +1,181 @@
+body
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+    padding: 10px 0px 0px 10px;
+}
+
+img
+{
+    border: none;
+}
+
+table
+{
+    font-size: 10pt;
+}
+
+a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+a.blue
+{
+    color: #0000FF;
+}
+
+a.blue:visited
+{
+    color: #0000FF;
+}
+
+a.paragraph:link
+{
+    color: #336699;
+}
+
+a.paragraph:visited
+{
+    color: #336699;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a.nohover:hover
+{
+    text-decoration: none;
+}
+
+table.bar
+{
+    background-color: #B3B9AF;
+    margin: 2px 0px 0px 0px;
+    width: 100%;
+}
+
+table.bar td
+{
+    padding: 8px 8px 8px 8px;
+}
+
+td.title
+{
+    font-size: 140%;
+}
+
+td.biline
+{
+    font-style: italic;
+    margin: 5px 0px 0px 0px;
+}
+
+div.menu
+{
+    position:absolute;
+    visibility:hidden;
+}
+
+div.rightmenuouter
+{
+    position:relative;
+    width:100%;
+}
+
+div.rightmenu
+{
+    position:absolute;
+    width:100%;
+    visibility:hidden;
+}
+
+table.spacer td
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+table.dropmenu
+{
+    border:2px solid #444444;
+    background-color: #B3B9AF;
+    padding: 2px 2px 2px 2px;
+    float: right;
+    width: 350px;
+}
+
+table.dropmenu td
+{
+    padding: 0px;
+}
+
+pre
+{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.prototype
+{
+    background-color: #DDDDDD;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+    font-family: monospace;
+}
+
+.prototype span.header
+{
+    color:#007700;
+    margin: 0px 0px 10px 0px;
+}
+
+.prototype span.left
+{
+    float:left;
+    height: 100%;
+}
+
+.prototype span.type
+{
+    color:#0000FF;
+}
+
+div.discussion_heading
+{
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+}
+
+td.paramname
+{
+    padding: 4px 4px 4px 4px;
+    text-align: right;
+    font-style: italic;
+}
+
+td.paramdesc
+{
+    padding: 4px 4px 4px 4px;
+}
+
+table.notes
+{
+    background-color: #DDDDDD;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+img.TOCGroup
+{
+    cursor: hand;
+    list-style-image: url(white_pixel.jpg);
+}
+ul.TOCItem
+{
+    list-style-image: url(white_pixel.jpg);
+}

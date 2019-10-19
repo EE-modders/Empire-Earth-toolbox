@@ -1,0 +1,1053 @@
+<!-- This page was created with CRAPI. -->
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<title>Changelog</title>
+<meta http-equiv='content-type' content='text/html; charset=iso8859-1'>
+<meta name='ms.locale' content='en-us'>
+<meta name='description' content=''>
+<meta name='ms-hkwd' content='Changelog'>
+<link rel='stylesheet' title='default' href='reference.css' type='text/css'>
+</head>
+<body onClick='HandleClick(event, null); return true'>
+<table class=bar>
+  <tr>
+    <td rowspan=2><img src='smallproduct.png'></td>
+    <td width=100% class=title>Changelog</td>
+  </tr>
+  <tr><td width=100% class=biline></td></tr>
+</table>
+
+<table class=bar>
+  <tr>
+<div class="discussion_heading"><a name='changelog_main' class='nohover'><b>The Bink Changelog</b></a></div>
+<p>
+This documentation is for Bink 1 <b>and</b> Bink 2 (which are licensed separately).
+<p>The minor versions are released in sync, so, for example, 2.1a (Bink 2) and 1.990a (Bink 1) are released at the same time.
+</p>
+<p>
+This documentation was generated for Bink versions "2.7J/1.300J".
+</p>
+<p>
+<img src = "arrowright.png"> <script language='JavaScript1.2'> 
+  var LatestVersionString; var ThisVersion = "2.7J/1.300J"; var ProductEmail = "sales3@radgametools.com"; var ProductPhone = "425-893-4300";
+</script>
+<script src='http://www.radgametools.com/bink/serverversion.js' language='JavaScript1.2'></script>
+<script src='localversion.js' language='JavaScript1.2'></script>
+</p>
+<div class="discussion_heading"><a name='Changes from 2.7i/1.300i to 2.7J/1.300J (10-17-2018)' class='nohover'><b>Changes from 2.7i/1.300i to 2.7J/1.300J (10-17-2018)</b></a></div>
+<ul><li><p>
+Added BinkPluginOpenW function for wide characters on Microsoft platforms.</li><li>Fixed a problem with the end of playback trigger on UE4.</li><li>Fixed a few bugs and made the CPU-GPU overlap a lot better on the PS4 GPU assisted path.</li><li>Worked around some issues with the NX sound system shutdown.</li><li>Made the sound sync after a BinkGoto much tighter and cleaner.</li><li>Fixed a bug when mixing audio into a Bink HDR movie.</li><li>Added a function to open XAudio on a specific audio device (useful for Rift audio).</li></ul><div class="discussion_heading"><a name='Changes from 2.7h/1.300h to 2.7i/1.300i (06-26-2018)' class='nohover'><b>Changes from 2.7h/1.300h to 2.7i/1.300i (06-26-2018)</b></a></div>
+<ul><li><p>
+Replaced the old data rate analyzer tool with a fancy Telemetry-style one.  Can analyze multiple files at once as well.</li><li>All new Bink Player for Mac - 64-bit, OpenGL or Metal support, Cocoa-only, etc.</li><li>Added new BinkTextures API function to allow arbitrary rotation of the video playback.</li><li>Made a BinkTextures C interface to the Apple Metal support, so you can easily switch from GL to Metal.</li><li>Updated all of the BinkTexture implementations to support HDR video (with tonemapping).</li><li>Updated the PS4 and XboxOne sample code to use best HDR practices.</li><li>Added new HDR pixel shader option to directly render ST2084 PQ.</li><li>Fixed a sound problem on NX in the Unity and UE4 shim.</li><li>Fixed a memory freeing issue in the UE4 shim on PS4.</li><li>Added a new secret NDA-ed platform.</li><li>Switched to Sony PS4 SDK 5.5</li></ul><div class="discussion_heading"><a name='Changes from 2.7g/1.300g to 2.7h/1.300h (02-26-2018)' class='nohover'><b>Changes from 2.7g/1.300g to 2.7h/1.300h (02-26-2018)</b></a></div>
+<ul><li><p>
+Added support for UE4 4.19 and soothed the build warnings on 4.17 and 4.18.</li><li>Updated the WinRT example to compile on Windows Universal 10 (instead of Windows 8.1).</li><li>Fixed a warning on the D3D11 code when running on the debug layer.</li><li>Fixed a bug on iOS and Android OpenGL where odd sized videos could have their chroma planes slightly misaligned.</li><li>Triple buffered the GPU command buffers on PS4 for compatibility with Unity.</li><li>Added Bink 2.0 support (really old Bink2) to the WinRT DLLs.</li><li>Switched to PS4 SDK 5.0 (this version will be available for 4.5 as well, but all future versions are 5.0 only).</li></ul><div class="discussion_heading"><a name='Changes from 2.7f/1.300f to 2.7g/1.300g (02-12-2018)' class='nohover'><b>Changes from 2.7f/1.300f to 2.7g/1.300g (02-12-2018)</b></a></div>
+<ul><li><p>
+Fixed a bug in the Unity and UE4 plugins when seeking using GPU-assist.</li><li>Fixes for the Unity plugin on Switch - requires the latest Unity 2017.3 build.</li><li>Fixed the Universal 10 Bink build to export helper functions that the plugin shim uses.</li><li>Fixed a very rare crash in BinkClose on slower platforms (usually Switch or Android).</li><li>Fixed several issues when compressing videos with frames with little to no change after a series of high-delta frames.</li><li>Fixed a sound crash on Android when opening multiple videos simultaneously.</li></ul><div class="discussion_heading"><a name='Changes from 2.7e/1.300e to 2.7f/1.300f (12-16-2017)' class='nohover'><b>Changes from 2.7e/1.300e to 2.7f/1.300f (12-16-2017)</b></a></div>
+<ul><li><p>
+Fixed weird build regression where the Bink 1 compressor would stack crash.</li></ul><div class="discussion_heading"><a name='Changes from 2.7d/1.300d to 2.7e/1.300e (12-07-2017)' class='nohover'><b>Changes from 2.7d/1.300d to 2.7e/1.300e (12-07-2017)</b></a></div>
+<ul><li><p>
+Added GPU-assisted decoding for Nintendo Switch (about 2x faster than CPU only).</li><li>Added UE4.18 support.</li><li>Added UE4 Nintendo Switch support.</li><li>Added partial Unity Nintendo Switch support (render to texture only).</li></ul><div class="discussion_heading"><a name='Changes from 2.7c/1.300c to 2.7d/1.300d (10-23-2017)' class='nohover'><b>Changes from 2.7c/1.300c to 2.7d/1.300d (10-23-2017)</b></a></div>
+<ul><li><p>
+Switched to Nintendo Switch SDK 3.4.</li><li>Fixed a rare bug in the Bink plugin for Unity and UE4 where Bink handles could be leaked if there 
+was a frame currently being decompressed in the background.</li><li>Fixed a problem on UWP when using D3D12 (apparently they don't think developers should loadlib system DLLs anymore, sigh).</li><li>Added some UE4 texture clears in the Bink plugin code if you try to draw before the first video frame is decoded.</li><li>Added support for UE4 4.17.</li><li>Fixed D3D9 support for triple buffering.</li><li>Fixed a few memory leaks on the GPU-assisted path, if there was a graphics API error during setup.</li><li>Worked around nonsense in the Switch audio APIs - mostly affects when the video frame rate drops very low.</li></ul><div class="discussion_heading"><a name='Changes from 2.7b/1.300b to 2.7c/1.300c (8-2-2017)' class='nohover'><b>Changes from 2.7b/1.300b to 2.7c/1.300c (8-2-2017)</b></a></div>
+<ul><li><p>
+Fixed to Unity and UE4 plugin code for D3D 12 on Windows and Xbox One.</li><li>Added new full Switch example with precompiled shaders and BinkTexture API support.</li><li>Fixed several memory allocation problems on UE4 for PS4.</li><li>Fixed a problem on Android when playing out of a APK.</li><li>Fixed a problem in the Adobe Premiere exporter where an audio track was always added.</li></ul><div class="discussion_heading"><a name='Changes from 2.7a/1.300a to 2.7b/1.300b (6-26-2017)' class='nohover'><b>Changes from 2.7a/1.300a to 2.7b/1.300b (6-26-2017)</b></a></div>
+<ul><li><p>
+Added PNG and TGA alpha plane exporting to the RAD Video Tools.</li><li>Added OpenEXR exporting to the RAD Video Tools.</li><li>Desktop Bink player now sets new HDR output flags for the swap chain (gives desktop HDR on Windows 10 Creator's Update).</li><li>Added HDR pixel shaders to OpenGL and Metal platforms.</li><li>Worked around some problems with the Bink Unity player on XboxOne.</li><li>Switched to Nintendo Switch SDK 3.1 because they keep changing the audio function signatures, sigh.</li><li>Fixed a bug with seeking on the Switch.</li><li>Moved to XboxOne March 2017 XDK.</li><li>Moved to PS4 4.5 SDK.</li><li>Fixed a problem freeing texture memory when using GPU-assisted decoding on PS4.</li><li>Updates to the Bink plugin for Unity to workaround and fix problems on PS4 and D3D12.</li><li>Added a way to set the load path in the Bink plugin (mostly for UE4).</li><li>Merged Windows and WinRT SDKs - now there is just one Windows SDK that has everything.</li><li>Build Linux using Clang on Windows - same minimum libc requirements (should be invisible).</li></ul><div class="discussion_heading"><a name='Changes from 2.6h/1.200h to 2.7a/1.300a (5-17-2017)' class='nohover'><b>Changes from 2.6h/1.200h to 2.7a/1.300a (5-17-2017)</b></a></div>
+<ul><li><p>
+Bink 2 now has complete HDR support!  Compress and playback high color-depth videos
+directly in your HDR game!</li><li>Bink 2 how has an Adobe Premiere and Media Encoder plugin for direct Bink 2 and Bink 2 HDR
+exporting!</li><li>The Bink desktop video player now uses Direct3D 11 as the default output option on Windows 7+.  Can still
+optionally DIB mode, but D3D11 gives smooth page flipping and faster performance (but hopefully won't drive me
+crazy with driver support issues).</li><li>Updated the Bink plugin to UE4 4.16.</li><li>Added full video alpha override to the Bink plugins.</li><li>Updated the UE4 Bink plugin to allow rendering to any render target.</li><li>Updated to Nintendo Switch SDK 3.0, added mutex protection around audio calls.</li></ul><div class="discussion_heading"><a name='Changes from 2.6g/1.200g to 2.6h/1.200h (4-5-2017)' class='nohover'><b>Changes from 2.6g/1.200g to 2.6h/1.200h (4-5-2017)</b></a></div>
+<ul><li><p>
+Fixed a couple rare deadlock problems with the Unity PS4 plugin.</li><li>Updated the UE4 plugin for compatibility with UE4 4.15.</li><li>Added compatibility with March 2017 XboxOne XDK.</li></ul><div class="discussion_heading"><a name='Changes from 2.6f/1.200f to 2.6g/1.200g (3-8-2017)' class='nohover'><b>Changes from 2.6f/1.200f to 2.6g/1.200g (3-8-2017)</b></a></div>
+<ul><li><p>
+Updated the async routines so that you can queue up as much work as you want on any
+one async thread (will just block after 64 frame-decodes get queued).  
+Also, you can start up to 64 async threads on Windows, Linux and Mac now.</li><li>In the Unity and UE4 plugins, fixed a problem where we were unloading XAudio, even if
+it failed to load.  This is normally harmless, but on some Windows installs when running with
+no sound card, you could get a shutdown crash.</li><li>Fixed a path problem loading video files in the UE4 plugin on Android.</li></ul><div class="discussion_heading"><a name='Changes from 2.6e/1.200e to 2.6f/1.200f (2-6-2017)' class='nohover'><b>Changes from 2.6e/1.200e to 2.6f/1.200f (2-6-2017)</b></a></div>
+<ul><li><p>
+On PS4, Bink now sets the async thread affinities to share across the cores that you specify,
+(so that even if one core is overloaded on some other game code, Bink can continue decoding on
+the other async cores). In practice, this is makes a big difference in playback speed, when you
+are doing work in the background.  This was already how Bink worked on other platforms (which
+all have soft thread affinities).</li><li>Fixed a linker problem in the iOS plugin for Unity and UE4.</li><li>Fixed a problem where render targets on the UE4 for PS4 wouldn't have SRGB turned on.</li><li>In the Unity and UE4 plugins, we don't clear the rendertarget first, if there is only
+one movie drawing to the RT - this makes a big speed differences on PS4 and mobile.</li><li>The binaries for the UE4 Bink plugin should now be placed in the /Bink directory
+(vs the Movies directory).</li></ul><div class="discussion_heading"><a name='Changes from 2.6d/1.200d to 2.6e/1.200e (1-19-2017)' class='nohover'><b>Changes from 2.6d/1.200d to 2.6e/1.200e (1-19-2017)</b></a></div>
+<ul><li><p>
+Added new function to the Unity and UE4 plugins, so you can limit the number
+of output speakers - this lets you play 5.1 audio on stereo speakers.  Stereo output
+is now the default, you need to call BinkPluginLimitSpeakers to bump up the limit for
+5.1 or 7.1 output.</li><li>Fixed a compressor problem where if the entire alpha plane was zero, we would
+ignore the disable alpha-weighting option.</li></ul><div class="discussion_heading"><a name='Changes from 2.6c/1.200c to 2.6d/1.200d (1-9-2017)' class='nohover'><b>Changes from 2.6c/1.200c to 2.6d/1.200d (1-9-2017)</b></a></div>
+<ul><li><p>
+Switched the BinkTextureGL support to use slightly oversized textures
+when s_HasUnpackRowLength is not available. This is a big speed up on OpenGL ES
+platforms.</li><li>Reorganized the UE4 plugin source - delete the Bink directory under Plugins
+before you install this new version.</li><li>Fixed a few multithreaded PS4 UE4 problems.</li><li>Changed the IO and sound threads to not be locked to any single core. You
+can stick lock these threads to a particular core with BinkGetPlatformInfo manually. 
+This is more compatible in the general case when we don't know how your threads are
+laid out - neither thread does any heavy work, so it should be unnoticeable anyway.</li><li>Added UI option to show just the color plane of alpha movies (handy when 
+alpha plane stores non-alpha data).</li><li>Versioned some atomic internal functions on static library platforms to handle
+linking with multiple RAD products using different versions of the atomics (fixes a 
+PS4 Bink and older Telemetry issue).</li></ul><div class="discussion_heading"><a name='Changes from 2.6b/1.200b to 2.6c/1.200c (11-22-2016)' class='nohover'><b>Changes from 2.6b/1.200b to 2.6c/1.200c (11-22-2016)</b></a></div>
+<ul><li><p>
+Changes to support UE 4.14.</li><li>Fixed a bug in BinkWaitStopAsyncThread on the new platform.</li></ul><div class="discussion_heading"><a name='Changes from 2.6a/1.200a to 2.6b/1.200b (11-14-2016)' class='nohover'><b>Changes from 2.6a/1.200a to 2.6b/1.200b (11-14-2016)</b></a></div>
+<ul><li><p>
+Fixed a problem with sound on Linux on UE4 and Unity.</li><li>Switched to new locking primatives on a number of platforms - should be faster and work around nonsense like Linux clock changes (do not get me started on absolute lock timeouts).</li><li>Added support for a new secret platform.</li><li>Fixed crashes in BinkGoto when using GPU decoding and cleaned up seeking in general.</li><li>Added Windows Universal support for both UE4 and Unity.</li><li>Worked around some Unity issues when switching between fullscreen and windowed modes on Windows and Mac.</li><li>Made BinkOpenXAudio2 a little less error prone when you update. Just pass in 2 zeros, if you want us to init everything for you.</li><li>Fixed a bug in the rescaler that with certain rescaling factors would put a black bar along the right side of the video.</li><li>Fixed a bug in the Mac player, where it showed an Error opening buffer message.</li></ul><div class="discussion_heading"><a name='Changes from 2.5u/1.100u to 2.6a/1.200a (10-3-2016)' class='nohover'><b>Changes from 2.5u/1.100u to 2.6a/1.200a (10-3-2016)</b></a></div>
+<ul><li><p>
+Both Bink 1 and Bink 2 upgraded to play 64-bit video files (larger than 4 GB Bink files). 
+Compressor, mixer, player, runtime all updated.  Bink files less than 4GB are still compatible with old
+versions. These updates pushed some changes out to the memory and file IO callbacks, so very minor code 
+changes may be necessary.</li><li>Added UE4 support for Xbox One. We now support all native UE4 platforms.</li><li>Support cook-on-the-fly mode for UE4 on PS4.</li><li>Added Unity support for Xbox One. We now support all native Unity platforms.</li></ul><div class="discussion_heading"><a name='Changes from 2.5t/1.100t to 2.5u/1.100u (9-21-2016)' class='nohover'><b>Changes from 2.5t/1.100t to 2.5u/1.100u (9-21-2016)</b></a></div>
+<ul><li><p>
+Added Unity plugin for iOS.</li><li>Added Unity plugin for Android.</li><li>Added Unity plugin for Sony PS4.</li><li>Added UE4 plugin for iOS.</li><li>Added UE4 plugin for Android.</li><li>Link dynamically to GL on Android.</li><li>Fixed some path issues with UE4 plugin for Sony PS4.</li><li>Updated the D3D12 support for the UE4 plugins.</li></ul><div class="discussion_heading"><a name='Changes from 2.5s/1.100s to 2.5t/1.100t (9-6-2016)' class='nohover'><b>Changes from 2.5s/1.100s to 2.5t/1.100t (9-6-2016)</b></a></div>
+<ul><li><p>
+Fixed a crash bug in the Win32 Unity plugin when starting up.</li><li>Fixed a bug in the Mac Unity plugin where GL errors were being dumped to the log.</li><li>Fixed a bug where the Unity plugin failed to draw with D3D9.</li><li>Fixed a crash in the Mac and Linux Unity plugins when running under the editor.</li><li>Fixed a crash bug on shutdown in the Win32 and Win64 Unity plugins if you were using Xaudio 2.7 on Windows 7.</li><li>Fixed a bug in the Unreal plugin on PS4 where no sound would play.</li><li>Fixed some bugs in the Unreal plugin build scripts so that the Bink plugin would be included in Win64 packages properly (especially with Unreal 4.13).</li></ul><div class="discussion_heading"><a name='Changes from 2.5r/1.100r to 2.5s/1.100s (8-20-2016)' class='nohover'><b>Changes from 2.5r/1.100r to 2.5s/1.100s (8-20-2016)</b></a></div>
+<ul><li><p>
+Added Bink UE4 plugin support for PS4!</li><li>Added support for UE4 4.13.</li><li>Added Metal support to the Bink Mac SDK (and the UE4 plugin).</li><li>Added Bink Unity plugin support for Windows universal builds.</li><li>Fixed a crash bug in the Unity plugin on MacOS and Linux.</li><li>Added built-in support for lightweight graphics contexts on PS4.</li><li>Moved to PS4 SDK 3.5 (shaders compiled for both GPU modes).</li><li>Bink plugin source now ships with UE4 plugins.</li></ul><div class="discussion_heading"><a name='Changes from 2.5q/1.100q to 2.5r/1.100r (5-31-2016)' class='nohover'><b>Changes from 2.5q/1.100q to 2.5r/1.100r (5-31-2016)</b></a></div>
+<ul><li><p>
+Worked around yet another autovec codegen bug in GCC for Linux 64 - kids, just say no to vectorization.</li><li>The BinkSoundUseXAudio2 changed to take a BINK_XAUDIO2_INFO structure pointer (contains
+pointers to the XAudio device and the mastering voice).  Works the same when you pass zero.</li><li>Fixed some seeking and scrubbing issues in the Unity and UE4 plugins.</li><li>Fixed some frame rate and duration issues in the UE4 plugin.</li><li>Added a compiler define to redirect plugin dynamic loading directory for the UE4 plugin.</li><li>Dropped the LTCG libs on Xbox 360 and Xbox One (not worth the compiler versioning pain).</li><li>Colorspace matrices now drop a 1 into the alpha plane on non-alpha videos when using the 
+Binktexture pixel shaders (convenient for render-to-texture).</li><li>Added PRX versions of the Bink for Sony PS4.</li><li>Allocate the Bink texture memory in the BinkTexture API on PS4 in one big allocation (rather
+than 6 to 8 smaller ones).</li><li>Added shared library versions of Bink for Android.</li><li>Added some sound interruption code to the example for iOS 9+.</li></ul><div class="discussion_heading"><a name='Changes from 2.5p/1.100p to 2.5q/1.100q (5-11-2016)' class='nohover'><b>Changes from 2.5p/1.100p to 2.5q/1.100q (5-11-2016)</b></a></div>
+<ul><li><p>
+Fixed a hang that could occur during video playback if you suspended Bink IO, and then ran the buffer all the way down to empty without
+resuming IO.</li><li>Updated the Bink for UE4 installation docs.</li></ul><div class="discussion_heading"><a name='Changes from 2.5n/1.100n to 2.5p/1.100p (4-18-2016)' class='nohover'><b>Changes from 2.5n/1.100n to 2.5p/1.100p (4-18-2016)</b></a></div>
+<ul><li><p>
+Updated the Bink Unity plugin to support Unity 5.2+ (the binary interface changed).</li><li>Added new Bink Unreal Engine 4 integration! Just drops in (no source changes normally needed). Built-in GPU decoding, async seeking and more. Supports
+UE 4.3 and up. Platforms: Win, Mac, Linux. GL, D3D11, and D3D12 support.</li><li>Updated the Bink Japanese and Korean documentation.</li><li>Added ARM 64 Android target.</li><li>Fixed bug where the Bink player wasn't using keyframes during seeking.</li></ul><div class="discussion_heading"><a name='Changes from 2.5m/1.100m to 2.5n/1.100n (1-5-2016)' class='nohover'><b>Changes from 2.5m/1.100m to 2.5n/1.100n (1-5-2016)</b></a></div>
+<ul><li><p>
+Fixed a few bugs with ancient Bink 1 old audio format files.</li><li>Added new updated Japanese docs.</li><li>Mac builds now use SSE 3 as their minimum architecture.</li><li>The RAD tools no longer pre-read all of the images in a still-image sequence.  We now assume all of the images are the same size as the first.  This
+starts the compression much more quickly.</li><li>Reorganized the order that input files are read - if there is a weird file that used to load and now doesn't, drop me a line.</li><li>Change the minimum frame size calculations for Bink 2 - gives smaller output with videos that have little to no movement.</li></ul><div class="discussion_heading"><a name='Changes from 2.5k/1.100k to 2.5m/1.100m (12-15-2015)' class='nohover'><b>Changes from 2.5k/1.100k to 2.5m/1.100m (12-15-2015)</b></a></div>
+<ul><li><p>
+Fixed a bug in the Binkplayer where it wouldn't use key frames after the current play cursor.</li><li>Fixed a bug in the Analyze window for videos with more than 64K frames.</li><li>The RAD Video Tools now run in high DPI mode (on high DPI monitors of course).</li><li>Added support for importing 24-bit wave files.</li><li>Fixed the iOS distribution to contain up-to-date Metal support.</li><li>Made the Xbox build not set the BLD_INFO to avoid compiler warnings.</li><li>Updated the PS4 sample for SDK 2.5 and 3.0.</li><li>Froze the WinRT 8.0 and 8.1 builds at current version (new versions will be Win10 only).</li><li>Add Miles output support to the Android builds.</li><li>Switched the Windows 10 universal builds back to standard Win32 threads.</li><li>Worked around occasional deadlock in BinkStartAsyncThread on PS4 2.5 or 3.0 SDK.</li><li>Set affinity on Xbox One to the first 6 cores (running on the 7th core, even occasionally, can stall decompression).</li><li>Now build the iOS build with embedded bitcode which is now the Apple recommended sweet action (also updated to Xcode 7.2).</li></ul><div class="discussion_heading"><a name='Changes from 2.5j/1.995j to 2.5k/1.100k (11-12-2015)' class='nohover'><b>Changes from 2.5j/1.995j to 2.5k/1.100k (11-12-2015)</b></a></div>
+<ul><li><p>
+Simpler version scheme for Bink 1.</li><li>Bink 1 file-format update: use full colorspace by default.</li><li>Bink 1 file-format update: constant frame alpha is stored better smaller.</li><li>Bink 1 file-format update: optional string data now supported.</li><li>Bink 1 and 2 can now specify a custom colorspace in the file itself - more to come with
+this later.</li><li>Added GPU-assistance for Windows 10 Universal and RT targets.</li><li>All new software blitters - higher quality and available for all platforms. We continue to recommend not using software blitters and to use the GPU for color conversion, though.</li><li>Dropped all the scaling compression options (2x height, 2x height interlaced, etc). No modern app should need these old school modes.</li><li>Dropped the SPU version of the Bink decoder (which cleans up the codebase considerably). You can
+still download the old Bink 1 SPU decoder if necessary.</li><li>Dropped the Nintendo 3DS as a current platform (also cleans up the codebase).  You can still download the old Bink 1 3DS SDK if necessary.</li><li>Removed all the weird buffer formats that no one uses anymore (BINKSURFACE24, BINKSURFACEYUVU, etc).</li><li>Removed all the DirectDraw based options in the Bink player for Windows (just use DIBSections now).</li><li>Added Linux 64-bit Bink Player to distribution.</li><li>Moved to native Linux 32-bit builds (vs hybrid MSVC build).</li><li>Fixed some window sizing and restoring problems for the RAD Video Tools on Windows 10 (update to Windows 10 1511 for sizing fix).</li><li>Updated to Xcode 7.1 for tvOS, MacOS x64, and iOS.</li></ul><div class="discussion_heading"><a name='Changes from 2.5i/1.995i to 2.5j/1.995j (10-07-2015)' class='nohover'><b>Changes from 2.5i/1.995i to 2.5j/1.995j (10-07-2015)</b></a></div>
+<ul><li><p>
+Fixed a bug when streaming Bink files smaller than 128KB.</li><li>Fixed a bug on 64-bit MacOS when using memory allocation callbacks.</li></ul><div class="discussion_heading"><a name='Changes from 2.5h/1.995h to 2.5i/1.995i (09-16-2015)' class='nohover'><b>Changes from 2.5h/1.995h to 2.5i/1.995i (09-16-2015)</b></a></div>
+<ul><li><p>
+Fixed a bug where files of a certain size would deadlock witth BINKPRELOADALL.</li><li>Small changes to the Apple Metal integration to allow Metal 
+GPU compute shaders to be used once the hardware gets fast enough (which is not now).</li><li>Added an Apple tvOS platform.</li></ul><div class="discussion_heading"><a name='Changes from 2.5g/1.995g to 2.5h/1.995h (08-26-2015)' class='nohover'><b>Changes from 2.5g/1.995g to 2.5h/1.995h (08-26-2015)</b></a></div>
+<ul><li><p>
+Fixed a bug where the IO buffer size was set to zero if the IO thread hadn't run in a while.</li><li>Switched to the upcoming Telemetry 3 lib.</li></ul><div class="discussion_heading"><a name='Changes from 2.5f/1.995f to 2.5g/1.995g (08-12-2015)' class='nohover'><b>Changes from 2.5f/1.995f to 2.5g/1.995g (08-12-2015)</b></a></div>
+<ul><li><p>
+Added Bink for Unity now supports Mac and GNU/Linux (in addition to Windows).</li><li>Various small Unity fixes.</li><li>Windows 10 Universal libraries now link with mincore.lib (instead of kernel32.lib) -
+should run on more Windows Universal platforms.</li><li>Added Bink shared library target for GNU/Linux.</li><li>Added Bink FAT shared library target for Mac.</li><li>Worked around the powf_finite symbol on newer Linux GCC versions, should
+link with older glibc versions now.</li><li>Worked around some multiple symbol definition warnings for older Linux GCC
+versions.</li><li>Worked around ancient GCC linkers failing on long C++ symbols.</li></ul><div class="discussion_heading"><a name='Changes from 2.5e/1.995e to 2.5f/1.995f (07-15-2015)' class='nohover'><b>Changes from 2.5e/1.995e to 2.5f/1.995f (07-15-2015)</b></a></div>
+<ul><li><p>
+Unity update: Unity 5.x compatibility, 64-bit Unity, Bink 1 compatibility, errors to Debug.Log.</li><li>On Linux, we now use clock_gettime with CLOCK_MONOTONIC to avoid problems with timing
+if the system time is changed during video playback.</li></ul><div class="discussion_heading"><a name='Changes from 2.5d/1.995d to 2.5e/1.995e (07-13-2015)' class='nohover'><b>Changes from 2.5d/1.995d to 2.5e/1.995e (07-13-2015)</b></a></div>
+<ul><li><p>
+Added all new Unity integration for Windows! Supports GL, D3D9, D3D11, GPU-assist, rendertargets,
+multichannel audio, and is fully multithreaded (up to 4 core decoding).  Supports Bink 1 or Bink 2.</li><li>With BinkGPU on GL, we now use persistent buffers if available - this gives a large 
+reduction in CPU driver time on some GPUs.</li><li>Added D3D 12 BinkGPU implementation on Windows.</li><li>Added D3D 12 Binktextures and BinkGPU implementation on Xbox One.</li><li>Added feature to stream Bink into memory and then play out of the memory once fully loaded.  Use a size larger than the Bink file size to BinkSetIOSize to trigger this mode.</li><li>Made the BinkGPU GL implementation use a dummy alpha texture instead of relying on driver
+consistency when sampling from unbound textures.</li></ul><div class="discussion_heading"><a name='Changes from 2.5c/1.995c to 2.5d/1.995d (06-17-2015)' class='nohover'><b>Changes from 2.5c/1.995c to 2.5d/1.995d (06-17-2015)</b></a></div>
+<ul><li><p>
+Added new Windows Universal target (WinRT and WinPhone). WinRT and WinPhone targets
+merged.</li><li>Added D3D 12 Binktextures API implementation.  See BinkTexturesD3D12.cpp for details,
+D3D12 isn't as hands off as the other Binktexture platforms.</li><li>Added support for Xaudio 2.8 (in addition to the old Xaudio 2.7 version).</li><li>Added a user pointer parameter to Create_Bink_textures functions (which is passed
+back to you from any internal allocators).</li><li>Made the GL Binktextures implementation use a dummy alpha texture instead of relying on driver
+consistency when sampling from unbound textures.</li><li>Fixed a bug in the D3D9 Binktextures implementation when using triple buffering.</li><li>New C# plugin library.</li></ul><div class="discussion_heading"><a name='Changes from 2.5b/1.995b to 2.5c/1.995c (05-19-2015)' class='nohover'><b>Changes from 2.5b/1.995b to 2.5c/1.995c (05-19-2015)</b></a></div>
+<ul><li><p>
+Merge BinkTextures API with the GPU assisted API - now, if you use BinkTextures,
+you can switch to GPU assisted decoding just by linking with a different source file!</li><li>BinkTexture API streamlined and simplified - switching is easy, should take less than 15 minutes. The Bink docs have a checklist on updating to the 
+new API.</li><li>BinkTextures now allows you to have multiple providers linked in and use them dynamically (like GL and D3D11 in the same EXE, or, more commonly, D3D11 and D3D11-GPU-assisted).</li><li>Added new Apple Metal support for iOS - MUCH faster video than OpenGL, easily play 4K video on new iPads!</li><li>Examples all streamlined and simplified - especially Linux and MacOS.</li><li>BinkTextures source files renamed to be consistent across platforms.</li><li>You can tell Bink to use triple buffering in the framebuffers, so you get
+automatic triple buffering just by changing a constant in BinkOpen. Nice on all zero-copy
+texture platforms (consoles, Metal).</li><li>Fixed a bug where you couldn't control the volume on OpenAL.</li><li>Removed the ancient BinkBuffers 2D API - just easier to use SetDIBits directly
+now-a-days.</li><li>Fixed a tricky bug in the FFT code on Linux and Mac where the CPU detection code
+caused an internal overwrite.</li></ul><div class="discussion_heading"><a name='Changes from 2.5a/1.995a to 2.5b/1.995b (02-27-2015)' class='nohover'><b>Changes from 2.5a/1.995a to 2.5b/1.995b (02-27-2015)</b></a></div>
+<ul><li><p>
+Fixed crash when flooding filling non-divisible by 16 alpha plane sizes.</li><li>Fixed crash when flooding filling a completely empty alpha plane.</li><li>Fixed a problem where the Bink player wasn't showing the scroll bar.</li><li>Fixed a problem when Bink would incorrectly warn about movie-wide constant alpha.</li><li>Fixed a problem where a constant alpha plane could be cleared incorrectly.</li><li>Fixed a problem where decompression of a constant alpha plane with a height divisible by 16 (not 32) could crash.</li></ul><div class="discussion_heading"><a name='Changes from 2.4m/1.994m to 2.5a/1.995a (02-25-2015)' class='nohover'><b>Changes from 2.4m/1.994m to 2.5a/1.995a (02-25-2015)</b></a></div>
+<ul><li><p>
+Big new version! Lots of compression improvements, mostly for alpha and near-lossless videos. This version
+includes a format change, so you need to update the tools and your SDK at the same time.</li><li>We now recommend you use normal alpha video (non-premultiplied) when compressing with Bink, since this gives us the smoothest
+signal for compressing.  Normal alpha is the default output format for video packages, so this should be easy.  You
+usually want to use the 'filter-as-premultiplied-and-convert-back-to-non-premultiplied' option when compressing -
+this gives the best compression quality.</li><li>When using the 'filter-as-premultiplied-and-convert-back-to-non-premultiplied' option, Bink now back fills the 
+zero alpha areas with smooth, easy-to-compress color blocks.</li><li>The Bink player now displays the alpha plane with a checker-board background so you can see it post-alpha (it assumes
+non-premultiplied). Press 'b' to change the brightness of the alpha plane.</li><li>Areas of the video that have areas of all alpha zero values are weighted to zero in the compressor - this gives huge improvements to
+almost all alpha videos.  You can turn off this weighting if you are storing non-alpha data in the alpha plane.</li><li>Frames with constant alpha are stored in a much more efficient form. Effectively, there is no cost for frames that have 
+all constant alpha values (good for videos that fade in the alpha to a max of 255, for example).</li><li>Bink audio decompression is now about 3 times faster (huge SIMD optimizations in our iDCT code).  Bink audio was already
+fast and now it's crazy fast (not that much slower than crappy ADPCM).</li><li>Deblocking is applied slightly differently - gives better quality with fewer artifacts and is faster.</li><li>Videos with lots of flat color (cartoons and sprites for example) can be compressed much smaller.</li><li>Various improvements to the general Bink compressor.</li><li>Old versions of Bink would use bandwidth attempting to microscopically improve near-lossless blocks. Now, Bink is better about using bandwidth for more important improvements.</li></ul><div class="discussion_heading"><a name='Changes from 2.4i/1.994k to 2.4m/1.994m (01-06-2015)' class='nohover'><b>Changes from 2.4i/1.994k to 2.4m/1.994m (01-06-2015)</b></a></div>
+<ul><li><p>
+Fixed a bug in the GL and DX11 examples where they weren't calling BinkRegisterFrameBuffers
+ (which has the odd effect of drawing every other frame).</li><li>Fixed a bug where the DX11 code tried to update the alpha texture, even if it was not initialized.</li></ul><div class="discussion_heading"><a name='Changes from 2.4i/1.994i to 2.4k/1.994k (11-28-2014)' class='nohover'><b>Changes from 2.4i/1.994i to 2.4k/1.994k (11-28-2014)</b></a></div>
+<ul><li><p>
+Added an iOS ARM 64-bit target and 64-bit simulator target.</li><li>Updated the BinkTextures.h API - it is now completely cross platform compatible and 
+much, much simpler (almost no platform ifdefs).  Updating should be easy - it's usually a matter of removing parameters that were previously unused.</li><li>You can now use multiple BinkTexture platforms in one application (like D3D9 and GL, for example).</li><li>Made a few alignment changes in Bink.h - you must make sure your Bink.h matches
+your library version.</li><li>Fixed an export problem with the BinkSetOSFileCallbacks function.</li><li>On PS4, made the background threads use round robin scheduling.</li></ul><div class="discussion_heading"><a name='Changes from 2.4h/1.994h to 2.4i/1.994i (10-23-2014)' class='nohover'><b>Changes from 2.4h/1.994h to 2.4i/1.994i (10-23-2014)</b></a></div>
+<ul><li><p>
+Added a new simplified way to redirect Bink's IO functions without having
+to completely replace the IO system. See the new BinkSetOSFileCallbacks API.</li><li>Made gamma setting during compression not cost any extra CPU.</li><li>Fixed the Linux 32-bit function export settings (bug from 2.4h).</li><li>Fixed an iOS link error (bug from 2.4h).</li><li>Fixed an Android link error (bug from 2.4h).</li><li>Fixed a file open crash on Android (bug from 2.4h).</li><li>When running on Xaudio2 on Windows, we close and reopen the Xaudio device if you
+call BinkSoundUseXAudio2 with a zero multiple times. This way you can have Bink reopen the audio
+device after a headphone is removed (but only if all the Binks are closed first).</li></ul><div class="discussion_heading"><a name='Changes from 2.4g/1.994g to 2.4h/1.994h (09-16-2014)' class='nohover'><b>Changes from 2.4g/1.994g to 2.4h/1.994h (09-16-2014)</b></a></div>
+<ul><li><p>
+Fixed a rare crash bug on PS4 in the atomics library.</li><li>Switched to the new simplified radtypes.h library (from rrcore.h).</li><li>Android now attempts to open the file first with fopen and then the asset manager, so you
+can leave videos unpackaged.</li><li>You can now turn on and off RAD Video Tools version checks with the versioncheck.exe tool.</li></ul><div class="discussion_heading"><a name='Changes from 2.4f/1.994f to 2.4g/1.994g (07-08-2014)' class='nohover'><b>Changes from 2.4f/1.994f to 2.4g/1.994g (07-08-2014)</b></a></div>
+<ul><li><p>
+Fixed a bug in the Bink 2 YUV converter, where there would be a discoloration on the top lines of the chroma planes if the video height wasn't a multiple of 8.</li><li>Fixed a bug on non-x86 platforms where when decompressing alpha we would prefetch beyond the edge of the alpha plane by 16 scanlines.</li><li>On Windows, when using DirectSound, if no application window is found, use the desktop hwnd.</li></ul><div class="discussion_heading"><a name='Changes from 2.4e/1.994e to 2.4f/1.994f (06-20-2014)' class='nohover'><b>Changes from 2.4e/1.994e to 2.4f/1.994f (06-20-2014)</b></a></div>
+<ul><li><p>
+Fixed a bug in the YUV converter, where the bottom line of the video would be overwritten by second to bottom line if 
+the video height wasn't a multiple of 8.</li><li>New BinkTextures implementations - more consistent and better cross platform compatibility.</li><li>New BinkTextures update functions. You now call Start_Bink_texture_update 
+when you are about to start decompressing (before BinkDoFrame or BinkDoFrameAsync).  And once decompression is done (either 
+after BinkDoFrame or BinkDoFrameAsyncWait returns), you call Finish_Bink_texture_update.  Start replaces Wait_for_Bink_textures and Lock_Bink_textures, and Finish replaces Unlock.</li><li>New BinkTextures draw function - you now just specify two device coordinates (0 to 1 based), so the size is consistent
+across different screens, and you no longer use a weird zoom parameter. Much simpler.</li><li>Switched to pre-compiled shaders on most platforms. Our shader source is listed in the comments, so you can always 
+continue to compile them at run-time if you prefer.</li><li>Dropped DX10 support.</li></ul><div class="discussion_heading"><a name='Changes from 2.4d/1.994d to 2.4e/1.994e (05-14-2014)' class='nohover'><b>Changes from 2.4d/1.994d to 2.4e/1.994e (05-14-2014)</b></a></div>
+<ul><li><p>
+Fixed a sporadic compressor crash/hang that could happen within preview frames of the end of the file.</li><li>Made a Windows OpenGL pixel shader example (use gltextures.cpp on Windows).</li><li>Don't query the sound system on a resume, if the video is already resumed.</li></ul><div class="discussion_heading"><a name='Changes from 2.4c/1.994c to 2.4d/1.994d (04-03-2014)' class='nohover'><b>Changes from 2.4c/1.994c to 2.4d/1.994d (04-03-2014)</b></a></div>
+<ul><li><p>
+On Xbox 360, PS3 and Wii, fixed cache-clearing an extra 8 scanlines of texture data on videos that had a divisible by
+16 or less height (height%32 == 1 to 16).  This could crash on a dcbst instruction depending on how your texture memory was mapped.</li><li>Added Telemetry support to Bink Orbis.</li><li>Added hack workaround for Bink 2 GPU on AMD 5800 cards for DX11.</li><li>Fixed a crash when BinkGetPlatformInfo-ing the sound submission thread on PS4 when no Binks had an open sound track.</li><li>Fixed a bug when playing a Bink 2 movie on the GPU that has alpha, but you chose not
+to decompress the alpha.</li><li>On the iOS simulator, fixed a link error with Bink 2.</li><li>Made Bink 1 always blit the entire frame with DIBSections (prevents worse than 
+usual tearing issues on slow scrolling videos in Aero mode on Windows).</li><li>Multithreaded the resizing of videos during compression - compression can be 
+many times faster if you are resizing.</li><li>On Android x86, used a dummy silence sound buffer to prevent clicks and to avoid
+terrible performance if the sound started skipping.</li></ul><div class="discussion_heading"><a name='Changes from 2.4b/1.994b to 2.4c/1.994c (03-13-2014)' class='nohover'><b>Changes from 2.4b/1.994b to 2.4c/1.994c (03-13-2014)</b></a></div>
+<ul><li><p>
+Warn if any of the files in a list file or series of images have missing alpha and you tried to compress with an alpha plane.</li><li>On Xbox One, build with March XDK.</li></ul><div class="discussion_heading"><a name='Changes from 2.4a/1.994a to 2.4b/1.994b (03-06-2014)' class='nohover'><b>Changes from 2.4a/1.994a to 2.4b/1.994b (03-06-2014)</b></a></div>
+<ul><li><p>
+Fixed bug when compressing movies smaller than 128 pixels high (compressor and decompressor fix).</li><li>Made loading series of still PNGs, JPGs, and TIFs much faster (especially over a network).</li><li>Fixed a bug where 64-bit Windows was sometimes showing as 32-bit in the System Info window.</li><li>Added a WinRT 8.1 target (no, you can't just use the 8.0 DLLs, sigh).</li><li>When using OpenAL on Linux, use the per-thread set current context functions (should integrate
+with game OpenAL use now).</li><li>Fixed some symbols names on the Bink 2 Linux 32-bit library that was preventing it from linking into static libs.</li></ul><div class="discussion_heading"><a name='Changes from 2.3e/1.993e to 2.4a/1.994a (02-05-2014)' class='nohover'><b>Changes from 2.3e/1.993e to 2.4a/1.994a (02-05-2014)</b></a></div>
+<ul><li><p>
+Bink 2 now has GPU video decoding!  This is generally two to three times faster than CPU-only decoding alone! BinkGPU
+uses the CPU to decode the bitstream, and compute shaders on the GPU for everything else!  Available for
+Windows DirectX 11, Linux GL 4.3, Sony PS4 and Microsoft Xbox One.  Bink 2 is now even faster!</li></ul><div class="discussion_heading"><a name='Changes from 2.3d/1.993d to 2.3e/1.993e (01-31-2014)' class='nohover'><b>Changes from 2.3d/1.993d to 2.3e/1.993e (01-31-2014)</b></a></div>
+<ul><li><p>
+Switched to PS4 SDK 1.5.</li><li>Switched to GCC 4.8 on Linux 64.</li><li>Fixed a bug where SSSE3 instructions were being generated on Linux (in places they shouldn't have been).</li><li>On PS4, moved the default for the sound and IO threads to core 4 and bumped the sound thread priority (should help with UE3).</li><li>Added a way to query the sound submission thread pointer on PS4 using
+BinkGetPlatformInfo and the BINKPLATFORMSUBMITTHREADS enum.</li><li>Moved to the QFE 11 XDK on Xbox One.</li></ul><div class="discussion_heading"><a name='Changes from 2.3c/1.993d to 2.3d/1.993d (12-11-2013)' class='nohover'><b>Changes from 2.3c/1.993d to 2.3d/1.993d (12-11-2013)</b></a></div>
+<ul><li><p>
+New video format - we've had a lot of fixes in the last month and we
+wanted to round them all up into a new format, so you know you are using the
+best stuff.  We expect this version to be around a while - everyone should 
+recompress.</li><li>Bink now stores the version of the compressor that compressed the video
+in the video itself (can view it in RAD Info).</li><li>Using the command line, you can now store a string in the Bink header
+(for copyrights or other metadata).</li><li>Improved motion compensation near the edges of the video.</li><li>Fixed a bug with videos that very specific widths (736, for example).</li><li>Fixed a bug when decompressing a slices video with one core.</li></ul><div class="discussion_heading"><a name='Changes from 2.3b/1.993b to 2.3c/1.993c (11-26-2013)' class='nohover'><b>Changes from 2.3b/1.993b to 2.3c/1.993c (11-26-2013)</b></a></div>
+<ul><li><p>
+Fixed deblocking artifact if you decompressed a video with fewer cores than slices that you compressed with.  So, for example, if you compress with 2 slices and use 1 core to decode, then you should update (and re-encode).</li><li>Removed the software blitters for Bink 2 Android.</li><li>Lowered the default variance adaptive quantization (VAQ) level (this will
+slightly improve most videos).</li><li>Added an option to control the VAQ level in the Bink 2 compressor (including turning it off completely).</li><li>Allow use of '+' on numeric command line switches for easier setting
+of option flags (you can now use '/v512+8192' instead of '/v8704').</li></ul><div class="discussion_heading"><a name='Changes from 2.3a/1.993a to 2.3b/1.993b (11-24-2013)' class='nohover'><b>Changes from 2.3a/1.993a to 2.3b/1.993b (11-24-2013)</b></a></div>
+<ul><li><p>
+Fixed a nasty overwrite bug in 2.3a, everyone should update and recompress! Valgrind-64 rules, btw!</li><li>Removed the software blitters for Bink 2 iOS.</li><li>Fixed a link error with Bink Android x86.</li></ul><div class="discussion_heading"><a name='Changes from 2.2e/1.992e to 2.3a/1.993a (11-15-2013)' class='nohover'><b>Changes from 2.2e/1.992e to 2.3a/1.993a (11-15-2013)</b></a></div>
+<ul><li><p>
+Big new version: new file format, new features, new platforms!</li><li>Bink now allows you to use 3-way, 4-way and 8-way multicore slicing at compression time.
+This means you can create videos that scale across more cores. So now, with 8-way slicing, you
+can get 4K video decompression down to 4ms on a PC! Also, with 3-way slicing, Xbox 360 and Wii-U
+get much faster too.</li><li>Note that the Bink 2.3 compressor can still create Bink 2.2 compatible files - just set the slice
+count to '2 (Bink 2.2 format)'.</li><li>Added new edge detection on the deblocker - videos with edges that align right onto
+8x8 blocks will look much better.</li><li>New Bink decompression API to use many cores for decompression.</li><li>On Xbox One, added support for Direct3D monolithic mode.</li><li>On Xbox One, fixed a bug in the Xaudio initialization.</li><li>On PS4, fix a bug where the IO and sound thread priorities were too low.</li><li>On PS4, fixed a synch issue if you paused and resumed over and over.</li><li>Updated to most recent Xbox One and PS4 SDKs.</li><li>Updated the GL texture code for faster texture uploading (especially on Android).</li><li>Updated the Windows threaded example code to use many cores (instead of just two).</li><li>Fixed a crash on Android when a file doesn't exist in the asset manager.</li><li>Fixed a rare crash (divide by zero) from the IO thread if you were near the end
+of the video.</li><li>Added iOS support for Bink 2 - requires a Neon device (iPhone 4+ or iPad).</li><li>Added Windows 8 phone support.</li><li>Added 64-bit Mac OS libraries for both Bink 1 and Bink 2.</li><li>Fixed a sound synch bug on PSP2.</li><li>Rewrote the RAD System Info display in the RAD Video Tools (64-bit compatible now).</li></ul><div class="discussion_heading"><a name='Changes from 2.2d/1.992d to 2.2e/1.992e (09-09-2013)' class='nohover'><b>Changes from 2.2d/1.992d to 2.2e/1.992e (09-09-2013)</b></a></div>
+<ul><li><p>
+Added Wii-U support for Bink 2 - play 30 Hz 1080p or 60 Hz 720p video! We didn't
+think this would be possible - the little non-SIMD CPU that could!</li><li>Added PSP2 (Playstation VITA) support for Bink 2 - play 60 Hz videos at native 960x544 resolution!</li><li>Added Wii support for Bink 2 - play 30 Hz 640x480 video. Another Broadway platform we didn't initally think could handle Bink 2 - great CPU core!</li><li>Added Bink 2 support for Android! Requires Neon - play beautiful 720p video at low, low data rates!</li><li>Added x86 Android library support - man, the x86 Android phones are crazy fast.  Supports both Bink 1 and Bink 2.</li><li>Fixed the frame flipping logic in the PSP 2 example code - can flip faster now, shouldn't affect your games.</li><li>Fixed a linking problem on Wii-U and Durango for Bink 1.</li><li>Fixed a header file problem on Android.</li></ul><div class="discussion_heading"><a name='Changes from 2.2c/1.992c to 2.2d/1.992d (08-22-2013)' class='nohover'><b>Changes from 2.2c/1.992c to 2.2d/1.992d (08-22-2013)</b></a></div>
+<ul><li><p>
+Added Windows RT (Windows Store Apps) support for Bink 2 and Bink 1. Includes x86,
+x64, and ARM DLLs. x86 and x64 are as lighting fast as regular Windows, and ARM can play 720p 30 Hz video comfortably.</li><li>Allow you to set the engine and mix objects for OpenSL on Android (for
+Android platforms that let you only open one SL context).</li><li>Fixed a crash bug on the Bink 2 alpha software blitters.</li><li>On Xbox One, create the Xaudio object with XAUDIO2_DO_NOT_USE_SHAPE (takes less hardware resources).</li><li>On Xbox One, set 8 channel output so that multichannel mixing works properly.</li><li>On PS4, made the audio when pausing and resuming less latent.</li><li>Use new threading primitives on Windows, Xenon, Xbox One and Windows RT.</li><li>Slightly better motion-comp on the edges of movies that are non-divisible by 32 in the width or height.</li></ul><div class="discussion_heading"><a name='Changes from 2.2b/1.992b to 2.2c/1.992c (07-29-2013)' class='nohover'><b>Changes from 2.2b/1.992b to 2.2c/1.992c (07-29-2013)</b></a></div>
+<ul><li><p>
+Fixed a crash on some divisible by 16 (rather than 32) videos.</li><li>Made the PS3 textures always use a multiple of 128 for the pitch.</li><li>Updated to SDK TWL5.5 on the Nintendo DSi.</li><li>Fixed a non-determinism bug in the encoder.</li></ul><div class="discussion_heading"><a name='Changes from 2.2a/1.992a to 2.2b/1.992b (07-19-2013)' class='nohover'><b>Changes from 2.2a/1.992a to 2.2b/1.992b (07-19-2013)</b></a></div>
+<ul><li><p>
+Added an 'Auto' mode for the datarate in the compressors - this will choose a reasonable
+data rate for your input video's resolution and frame rate.</li><li>Added a position scroll bar to the Bink Player.</li><li>Fixed a bug in the software blitters that would crash if your Bink 2 file was 16 to 23 pixels off of divisible by 32 in the width.</li><li>Made the File Info button properly recognize Bink 2.2 files.</li><li>Several improvements in the Bink 2 encoder - improved compression speed by about 10%.</li><li>New mo-vec samplers that don't overread when filtering.</li></ul><div class="discussion_heading"><a name='Changes from 2.1c/1.990c to 2.2a/1.992a (07-13-2013)' class='nohover'><b>Changes from 2.1c/1.990c to 2.2a/1.992a (07-13-2013)</b></a></div>
+<ul><li><p>
+Huge new 2.2 version - we probably should have called it 3.0. All Bink 2 users should upgrade and recompress.</li><li>All new codec (new file format) - massive quality and speed improvements.</li><li>Use *half* the data rate as Bink 2.1!  720p at 600K, 1080p at 1200K! Experiment with low-rates - we are 
+commonly surprised at how low we can take some videos now.  Smaller is also faster to decode!</li><li>Encoder is twice as fast as 2.1. It is now almost 3 times faster than Bink 1, and will encode 720p at 60 fps with 16 cores.</li><li>New perceptual based variable quantizer - quality is vastly improved at all data rates,
+but especially low rates.</li><li>Uses any dimension of video (padding done internally) - 3D support code all updated to support
+padded widths and heights.</li><li>Improvements to colorspace converters (where some videos would be a little blue).  Make sure you update
+your shader constants too.</li><li>Huge decoder speedups! 1.5x to 2x faster playing the same 2.1 videos.  Faster still if you compress
+the videos at a lower rate with 2.2 (which will look the same).  720p videos are under 1 millisecond per frame
+now on x86.</li><li>SSE3 and SSSE3 optimizations.</li><li>PS3 version is much, much faster and smaller (GCC inliner kept under control).</li><li>Deblocking is much faster, and you can turn it off completely for even more speed.</li><li>Updated to latest Xenon, PS3, Wii-U, PS4 and Xbox One SDKs.</li><li>Support for Telemetry 2.</li><li>Linux 64-bit build now includes software blitters for the Bink 2 colorspace.</li><li>Added PS4 and Xbox One docs.</li><li>Turned off UPX EXE compression, since drunk interns seem to write McAffee's virus detector (pro-tip: decompress 
+before detection... ahh, nevermind, look just take the banana out of your nose).</li></ul><div class="discussion_heading"><a name='Changes from 2.1b/1.990b to 2.1c/1.990c (04-04-2013)' class='nohover'><b>Changes from 2.1b/1.990b to 2.1c/1.990c (04-04-2013)</b></a></div>
+<ul><li><p>
+Massive Bink 2 compressor speed improvement - 20x faster, now usually faster than Bink 1.</li><li>Big improvements in compression quality - up to 20% in some cases.</li><li>Full dual core decoding implemented - twice as fast as previous Bink.</li><li>Fixed problem in new colorspace software blitters (reddish tint).</li><li>Fixed a crash with 32x32 videos.</li><li>Added new colorspace support for GL platforms.</li><li>Print colorspace info in File info window.</li><li>Changed the BinkTextures.h API on DX10, DX11, and OpenGL to better match what the graphics
+APIs are actually doing. To change, remove BINKNOFRAMEBUFFERS from BinkOpen, pass in the width and
+height of the movie to Create_Bink_textures, remove the call to Lock_Bink_textures, rename the call
+to Unlock_Bink_textures to Update_Bink_textures, and remove the call to BinkRegisterFrameBuffers.</li><li>Added video width and height parameters on Create_Bink_textures in the BinkTexture.h API,
+so that we can handle non-divisible by 16 videos on the graphics APIS that allow it.</li><li>Updated the DX9 Exam3DpsThr.cpp example to show how to handle a device reset (and added two
+function to the BinkTextures.h API for DX9.</li></ul><div class="discussion_heading"><a name='Changes from 2.1a/1.990a to 2.1b/1.990b (02-28-2013)' class='nohover'><b>Changes from 2.1a/1.990a to 2.1b/1.990b (02-28-2013)</b></a></div>
+<ul><li><p>
+Fixed crash in Bink 2 when compressing alpha videos.</li><li>Bink 2 now uses full Y colorspace (0-255) - gradients look a *lot* better. You
+must recompress to get the new colorspace.  All of the Bink texture code has changed
+to support two colorspaces.</li><li>Added SSE2 software blitters for the full Y colorspace.</li><li>Added support for handling iOS Siri audio interruption.</li><li>Updated to new beta system SDK for secret platform 2 - lots of GPU optimization.</li><li>Fixed a memory overwrite bug in the DX10 and DX11 BinkTexture cpp files.</li><li>Fixed a problem where an SSE 3 instruction was accidentally used (Bink 2 requires SSE2 only).</li><li>Fix where batching a bunch of files into Bink 2 used the old Bink 1 extension.</li></ul><div class="discussion_heading"><a name='Changes from 1.99w to 2.1a/1.990a (12-10-2012)' class='nohover'><b>Changes from 1.99w to 2.1a/1.990a (12-10-2012)</b></a></div>
+<ul><li><p>
+Public release of Bink 2! Six times quality, 2x to 3x faster!</li><li>Note, Bink 2 compressor only supplied with Bink 2 SDK for now.</li><li>Bink 1 still available for non-SIMD platforms (Wii, 3DS, etc).</li><li>Added another secret platform.</li></ul><div class="discussion_heading"><a name='Changes from 1.99v to 1.99w (11-26-2012)' class='nohover'><b>Changes from 1.99v to 1.99w (11-26-2012)</b></a></div>
+<ul><li><p>
+On Linux, switch to OpenAL for sound output.</li><li>Made the DX10 texturing support code more driver-optimizable - roughly twice as fast on most GPUs.</li><li>Added DX11 texturing support.</li><li>Made the OpenGL texturing support code run on Android.</li><li>Updated to later system SDK on a secret platform.</li><li>Fixed a bug in the example old fixed function Windows GL source, where the second frame was skipped.</li><li>Made the Bink IO system use Telemetry timespans instead of time sections.</li><li>Fixed a bug where the alpha plane could get corrupted on extremely small frames.</li></ul><div class="discussion_heading"><a name='Changes from 1.99u to 1.99v (10-27-2012)' class='nohover'><b>Changes from 1.99u to 1.99v (10-27-2012)</b></a></div>
+<ul><li><p>
+Fixed a nasty rare deadlock on BinkClose on non-priority-inheriting platforms (notably PS3, Xbox, Wii and Wii-U).</li><li>Fixed a regression problem with Wii-U audio not playing.</li><li>Added an ARMv7s library to the fat iOS Bink library.</li><li>Added the async functions to Android.</li></ul><div class="discussion_heading"><a name='Changes from 1.99t to 1.99u (10-24-2012)' class='nohover'><b>Changes from 1.99t to 1.99u (10-24-2012)</b></a></div>
+<ul><li><p>
+Added a new secret platform (contact us for details).</li><li>Added Linux 64-bit as a new platform.</li><li>Added a gltextures.cpp GLSL pixel shader blitter file for Mac, iOS, and Linux.</li><li>On Mac, now handle headphones being removed during playback.</li><li>Updated to latest Telemetry.</li><li>Fixed a bug on PS Vita, where the sound on the first frame could be lost, leading to sync issues.</li><li>Switched distributions to 7zip.</li></ul><div class="discussion_heading"><a name='Changes from 1.99s to 1.99t (9-19-2012)' class='nohover'><b>Changes from 1.99s to 1.99t (9-19-2012)</b></a></div>
+<ul><li><p>
+On Wii-U, switched to Nintendo 2.07.03 patch 3.</li><li>BinkWait keeps waiting if there is still IO to be performed (instead of doing it in BinkDoFrame).</li><li>For Wii-U, added a bunch of I/O guidelines - short version is that BinkOpen, BinkGoto and BinkClose should
+be called on a background thread.</li><li>For Wii-U, create a file command block for each IO, so that you can open multiple Binks at once without complications. This
+means a small source change for the BinkSetWiiUFileClient call.</li><li>For Wii-U, clear out the callback fields in the audio voices to work around a system bug.</li><li>For Wii-U, added a way to poll the BinkControlBackgroundIO call, so that you don't block on the silly IO system.</li><li>For Wii-U, flush the Bink texture buffers during decompression.</li><li>Made most platforms default to not loading up the IO buffer (since most are threaded now anyway).</li><li>Switched to the Android 4.6 toolchain.</li></ul><div class="discussion_heading"><a name='Changes from 1.99r to 1.99s (9-12-2012)' class='nohover'><b>Changes from 1.99r to 1.99s (9-12-2012)</b></a></div>
+<ul><li><p>
+Cleaned up the multiple definitions problem on Linux, and fixed some stuff to allow the static library to be linked into a shared object.</li><li>Fixed a problem where the center channel volume could leak into the DRC output on Wii-U.</li><li>Switched to the 2.07.03 SDK on Wii-U.</li><li>Fixed a bug with certain PNGs that overwrote the JPEG decode tables in the RAD Video Tools.</li><li>Smaller libs on Xenon is due to not including D3D stuff from xtl.h - they will be the same size linked.</li></ul><div class="discussion_heading"><a name='Changes from 1.99q to 1.99r (6-5-2012)' class='nohover'><b>Changes from 1.99q to 1.99r (6-5-2012)</b></a></div>
+<ul><li><p>
+Android is now a supported platform!</li><li>Added a new secret platform (contact us for details).</li><li>On the Wii-U, switched to using the FS API (since FSA has been deprecated).  You'll have to update your code,
+since this call now takes two parameters.</li><li>On Wii and Wii-U, allocate the stack space for the async threads from the BinkSetMemory callback.</li></ul><div class="discussion_heading"><a name='Changes from 1.99p to 1.99q (5-4-2012)' class='nohover'><b>Changes from 1.99p to 1.99q (5-4-2012)</b></a></div>
+<ul><li><p>
+Fixed a subtle bug on iOS where the background threads were sleeping too little - big performance increase on single core Apple devices.</li><li>Switched to Wii-U SDK 2.04.</li><li>Fixed on DRC output on Wii-U.</li></ul><div class="discussion_heading"><a name='Changes from 1.99n to 1.99p (04-04-2012)' class='nohover'><b>Changes from 1.99n to 1.99p (04-04-2012)</b></a></div>
+<ul><li><p>
+Added 5.1 and DRC Wii-U sound support.</li><li>On Wii-U, precompiled shaders are now built for 2.03 and up (and moved to Wii-U 2.03 SDK).</li><li>Added multi-channel out using CoreAudio on MacOS.</li><li>On the 3DS, moved to the 2.4.2 system SDK.</li><li>Added code in the 3DS example to show how to use an Autostack.</li><li>Fixed a bug in the 3DS code where the vertex buffer was being used twice (create a race condition).</li><li>On the 3DS, fixed a rare crash in the sound system when looping a movie.</li><li>On Xenon, synchronize the Xaudio buffer starts to fix cross audio track slipping on resume.</li><li>Improved the colorspace converters used when compressing.</li></ul><div class="discussion_heading"><a name='Changes from 1.99m to 1.99n (12-14-2011)' class='nohover'><b>Changes from 1.99m to 1.99n (12-14-2011)</b></a></div>
+<ul><li><p>
+Added Wii-U support!</li><li>Added some docs about using BINKFROMMEMORY with local memory when using the SPU on PS3
+(there is a speed hit, but only about 30% and you save the system memory).</li><li>Fixed a problem on PS Vita where thread resources hung around.</li></ul><div class="discussion_heading"><a name='Changes from 1.99L to 1.99m (10-10-2011)' class='nohover'><b>Changes from 1.99L to 1.99m (10-10-2011)</b></a></div>
+<ul><li><p>
+Fixed a bug on Windows and Xenon where if you started a Bink async thread and immediately closed it, you could deadlock.</li><li>Added markup to support the upcoming Telemetry version that supports SPU.</li><li>Worked around a bug in Xaudio, where it would crash if there were no audio devices on the system.</li><li>Fixed a threading issue in the yuv converter, where the final 8 lines on an all black frame could turn greenish.</li></ul><div class="discussion_heading"><a name='Changes from 1.99k to 1.99L (09-15-2011)' class='nohover'><b>Changes from 1.99k to 1.99L (09-15-2011)</b></a></div>
+<ul><li><p>
+Fixed a bug where multiple sounds tracks could get out of sync after a BinkGoto.</li><li>On PS Vita, updated to SDK 1.0 (example code tweaks).</li><li>Updated the Wii examples to not use GX_CA_ONE.</li><li>Range check the spu/thread indexes on the async functions.</li><li>Fixed some 3DS sound skipping issues with certain sound playback rates.</li><li>Fixed a bug in the still image library where some PNG files would blow up the JPEG decoder.</li><li>Removed all TLS stuff for PS3 (and just use a hash map) - too many corner cases with the PS3 TLS implementation.</li></ul><div class="discussion_heading"><a name='Changes from 1.99i to 1.99k (08-16-2011)' class='nohover'><b>Changes from 1.99i to 1.99k (08-16-2011)</b></a></div>
+<ul><li><p>
+Fixed a bug on iOS where the background threads weren't sleeping properly - all
+iOS users should update.</li><li>On 3DS, updated to SDK 2.4.</li></ul><div class="discussion_heading"><a name='Changes from 1.99h to 1.99i (08-09-2011)' class='nohover'><b>Changes from 1.99h to 1.99i (08-09-2011)</b></a></div>
+<ul><li><p>
+Fixed a bug where the IO thread inherited the stack size of the calling thread, which
+could lead to rare and hard to reproduce crashes - everyone with 1.99h should update.</li></ul><div class="discussion_heading"><a name='Changes from 1.99g to 1.99h (08-01-2011)' class='nohover'><b>Changes from 1.99g to 1.99h (08-01-2011)</b></a></div>
+<ul><li><p>
+On Wii, fixed a nasty deadlock when ejecting at the end of a file (thanks to two dedicated testers!).</li><li>Added some early outs in the IO system, when an IO error occurs.</li><li>On Xbox, switched to June XDK.</li><li>On PS3, switched to 360 SDK.</li><li>On iOS, fixed blitting pitch issue for odd-width Bink videos.</li></ul><div class="discussion_heading"><a name='Changes from 1.99f to 1.99g (07-07-2011)' class='nohover'><b>Changes from 1.99f to 1.99g (07-07-2011)</b></a></div>
+<ul><li><p>
+Added background decoding on Sony NGP (can use multiple cores).</li><li>On the Wii, updated the example texturing code to more easily integrate with Iggy.</li><li>On PS3, fixed an SPU deadlock if your IO was running way behind.</li><li>Made shutdown slightly faster if an IO was in progress.</li><li>Fixed a bug in BinkGoto when the destination frame was within 750 ms of the previous key frame and the currently displayed frame.</li><li>Fixed a bug on the Wii, if when opening a file on a non-divisible-by-32 file offset.</li></ul><div class="discussion_heading"><a name='Changes from 1.99e to 1.99f (04-27-2011)' class='nohover'><b>Changes from 1.99e to 1.99f (04-27-2011)</b></a></div>
+<ul><li><p>
+Added Sony NGP support!</li><li>Added background thread decompression for Wii (lets you decompress in the retrace wait
+or across multiple frames).</li><li>Fixed background thread decompression on Mac.</li><li>Videos without sound will now only catch up to a maximum of 4 frames (before resyncing).
+This prevents playback from zooming forward if you stop calling Bink for a while. You
+should still call BinkPause if you are doing this intentionally.</li></ul><div class="discussion_heading"><a name='Changes from 1.99d to 1.99e (04-05-2011)' class='nohover'><b>Changes from 1.99d to 1.99e (04-05-2011)</b></a></div>
+<ul><li><p>
+Added iOS as an official platform (had been shipping as beta for a long time).</li><li>The iOS library is now a fat library that contains simulator, ARM 6 and ARM 7 versions.</li><li>Moved our 3DS support out of secret mode.</li><li>Fixed a crash on the 3DS where if another system was pumping the DSP sound chip, 
+you could deadlock.  Now, in BinkSoundUse3DS, you call tell Bink to service the DSP or not.</li><li>Fixed an issue where the 3DS wouldn't play sound depending on your thread priorities.</li><li>Switched to light-weight semaphores on 3DS, since there are only 8 real semaphores system-wide.</li><li>Added the blend op in the DX10 pixel shader code.</li><li>On the PS3, insure that all audio tracks are decoded before starting mixing (fixes a problem
+where occasionally a set of audio track would be started out of phase).</li></ul><div class="discussion_heading"><a name='Changes from 1.99c to 1.99d (03-10-2011)' class='nohover'><b>Changes from 1.99c to 1.99d (03-10-2011)</b></a></div>
+<ul><li><p>
+On the Xbox, switched to the Feb 2011 XDK for an Xaudio flags change.</li><li>Fixed a bug in the compressor when setting a hint value on the very final frame.</li><li>Fixed the MacOS X player so that it can play compiled Bink EXE files again.</li><li>On the 3DS, moved the sound servicing thread back into Bink (from the user-side code).</li></ul><div class="discussion_heading"><a name='Changes from 1.99b to 1.99c (02-24-2011)' class='nohover'><b>Changes from 1.99b to 1.99c (02-24-2011)</b></a></div>
+<ul><li><p>
+Added support for negative frame numbers in the Bink compressor - they are offsets
+from the end of the file.  So, a start frame of -1 means start on the very last frame.</li><li>On the 3DS, remove an unintentional call to NN_LOG (which isn't in the release libs).</li><li>On Windows, increment the maximum number of queued async frame decompressions to 32 (for Intel's 100's of videos demo).</li><li>On the Xbox, when under super-heavy system load, avoid the XDK warning message if you incremented a semaphore past it's max.</li><li>On the 3DS, reset the vertices pointers on every call to draw the textures.</li><li>On the PS3, dynamically allocate TLS variables so that the Bink library can be used in a PRX.</li><li>On the PS3, use a bigger priority delta for the background threads.</li><li>On the Wii, allocate the stack memory for the background threads from the user memory callback.</li><li>On the Xbox, switched to the November XDK.</li><li>On the 3DS, switched to the 1.0 SDK.</li></ul><div class="discussion_heading"><a name='Changes from 1.99a to 1.99b (01-19-2011)' class='nohover'><b>Changes from 1.99a to 1.99b (01-19-2011)</b></a></div>
+<ul><li><p>
+Fixed a bug on Windows machines with more than 32 cores.</li><li>Updated Bink on NDS to use the same IO layer as all the other platforms.</li><li>Fixed a bug on the NDS where the first bit of sound would be muted.</li><li>Fixed a problem in the example program for a secret platform.</li><li>On the PS3, if you don't use threaded IO and you are decoding on the SPU, then we 
+make sure the disc IO is complete before starting the SPU task.</li></ul><div class="discussion_heading"><a name='Changes from 1.9z to 1.99a (01-04-2011)' class='nohover'><b>Changes from 1.9z to 1.99a (01-04-2011)</b></a></div>
+<ul><li><p>
+Fixed a crash when playing a movie directly from memory that had no sound.</li><li>Updated to the latest iOS SDK for the Apple devices.</li><li>Added volume control to Bink for iOS.</li><li>Updated to the least SDK on a secret platform and fixed a sound skipping problem caused by this update.</li><li>Updated to the Xbox November 2010 XDK.</li></ul><div class="discussion_heading"><a name='Changes from 1.9y to 1.9z (12-06-2010)' class='nohover'><b>Changes from 1.9y to 1.9z (12-06-2010)</b></a></div>
+<ul><li><p>
+Added XAudio 2 support on Windows and enabled it in the RAD Video Tools - now there is an easy way
+to test your multichannel Binks on Windows 7.</li><li>Made the Bink player window resizable during playback. Playback also now continues
+during window drags.</li><li>Made the Bink player default to playing when it isn't the focus.</li><li>Fixed a bug where semaphore handles could leak depending on how the Bink IO and sound threads
+shut down.</li><li>On Nintendo 3DS, fixed a thread handle leak.</li><li>Clear the sound buffer when using BinkGoto to jump back to frame 1.</li><li>Fixed a few rare volume issues on Xbox 360.</li><li>Switched to VC2008 and built with stack frame enabled on Windows (for better release-mode debugging).</li></ul><div class="discussion_heading"><a name='Changes from 1.9x to 1.9y (11-10-2010)' class='nohover'><b>Changes from 1.9x to 1.9y (11-10-2010)</b></a></div>
+<ul><li><p>
+Added a new support for Nintendo 3DS.</li><li>On the Wii, added support for the latest IO and sound systems (which are thread based). Threads are
+awkward on the Wii, but now that we have a good wrapper, we can share all of the fancy IO features from other platforms.</li><li>Added code to the Wii examples to show how to handle critical IO errors during Bink playback.</li><li>On the PS3, don't call cellAudioPortStop when audio drops out, since we've had reports of it deadlocking
+when the system is under severe load.</li><li>On the Xbox 360, fixed a problem when you didn't set all of the speaker volumes for a track (that is, if you
+just set the volumes for a subset of speaker outputs).</li><li>Fixed a bug where audio would be delayed, if you used BinkGoto to jump directly to a key frame.</li><li>Fixed a bug on MacOS, where the initial file offset when using BINKFILEOFFSET wasn't queried correctly.</li><li>Moved to the PS3 350 system software.</li><li>Moved to the Xbox September 2010 system software.</li></ul><div class="discussion_heading"><a name='Changes from 1.9w to 1.9x (10-13-2010)' class='nohover'><b>Changes from 1.9w to 1.9x (10-13-2010)</b></a></div>
+<ul><li><p>
+Updated the Mac platform to the latest Bink. Dropped all pre-MacOS X versions of the library.</li><li>Released a new version of the Bink Mac player that supports the latest versions of MacOS.</li><li>Updated the Linux platform to the latest Bink.</li><li>Fixed a rare deadlock in BinkGoto.</li></ul><div class="discussion_heading"><a name='Changes from 1.9v to 1.9w (09-15-2010)' class='nohover'><b>Changes from 1.9v to 1.9w (09-15-2010)</b></a></div>
+<ul><li><p>
+Fixed the new 64-bit file offset stuff for Xbox 360.</li><li>Fixed a rare deadlock in the global libAudio mixer on the PS3.</li><li>When possible, made the BinkGoto IO happen on the background thread.</li><li>Fixed some sound systems not restarting after a BinkSetSoundOnOff.</li><li>Fixed a problem with multiple sounds tracks on the SPUs.</li></ul><div class="discussion_heading"><a name='Changes from 1.9u to 1.9v (08-30-2010)' class='nohover'><b>Changes from 1.9u to 1.9v (08-30-2010)</b></a></div>
+<ul><li><p>
+The Bink encoder has been massively tweaked using Telemetry - up to twice as fast on many core machines (4+ cores).</li><li>Decoder IO system completely rewritten. IO is now done later in pipeline (more opportunity for background IO). And even under 
+starvation conditions, IO happens on the async thread.  Better yet, when playing multiple Binks at a time, all IO is co-operatively scheduled.  Again,
+all these optimizations performed using Telemetry.</li><li>Telemetry integration in the Bink compressor, Bink player, and Bink SDK.  More information soon.</li><li>Multichannel output functions overhauled - the new BinkSetSpeakerVolumes function is cross-platform compatible and
+replaces the old mix bin functions.  Cleaned up Xaudio2, PS3 libAudio, and Miles multichannel output.</li><li>Added built-in support for PNGs files with alpha - you no longer have to install QuickTime still image support.</li><li>Bink now allows developers to control whether the background IO and sound threads are closed in BinkClose automatically or not.
+If you choose not to free them in BinkClose, then free them with BinkFreeGlobals.</li><li>Removed the non-MacOS-X Mac, Xbox 1, and GameCube build targets.</li><li>Added new BinkGetPlatformInfo function to obtain internal Bink information (like thread handles).</li><li>Standard Bink IO source simplified for easier modification (several chunks of functionality moved back into library).</li><li>Ported the async decompression features to more platforms (PSP, Mac, Linux).</li><li>Fixed a problem where the Bink tools would warn to check for updates each time you ran them on 64-bit Windows.</li><li>Added Altivec byteswappers to the PS3 and Xbox360 build (minor speed win).</li><li>Added the new BinkSetFileOffset function to allow you to set the Bink video position within the file to load (also now 64-bit offset compatible).</li><li>Exported the BinkFlipEndian32 function to do fast endian-swapping on big-endian platforms.</li><li>Added a BinkOpenWithOptions function that allows you to specify all of the optional settings at open time (so it is multithread safe).</li></ul><div class="discussion_heading"><a name='Changes from 1.9t to 1.9u (04-25-2010)' class='nohover'><b>Changes from 1.9t to 1.9u (04-25-2010)</b></a></div>
+<ul><li><p>
+Fixed a rare clicking bug with stereo audio tracks.</li><li>Fixed an alignment crash when looping movies with unusual frame rates.</li><li>Fixed a bug when trying to play non-present audio tracks that were specified out of order between two good audio tracks.</li><li>Fixed some header file dependencies for the new generic x86 build.</li><li>On the PS3, added code to detect if --strip-mode-normal was not specified to spu_elf-to-ppu_obj.</li></ul><div class="discussion_heading"><a name='Changes from 1.9s to 1.9t (04-15-2010)' class='nohover'><b>Changes from 1.9s to 1.9t (04-15-2010)</b></a></div>
+<ul><li><p>
+Fixed an obscure crash bug in audio decoder when using a replacement memory allocator.</li><li>Reduced the memory use on each audio track down even further - saves another 8 KB per audio track.</li><li>Optimized the SPU DMA audio table copy by 10 KB per audio track.</li><li>Bink encoder now uses the same table driven FFT routines at the decoder.</li><li>Shrunk the FFT table memory - saved about 8K in library code space.</li><li>When possible, use the output buffer for the FFT workspace buffer - this is better for the CPU cache which speeds
+up audio decompression, especially on slower platforms like NDS and Wii.</li><li>Aggregate-allocate all the audio memory, so instead of two allocations per track, there is a single big allocation
+for all of the tracks.</li><li>On Windows, set the thread affinity on the async threads to reduce playback variability.</li><li>Added a new generic x86 build - it can run on any 32-bit x86 platform (Linux, MacOS, smartphones or whatever).</li></ul><div class="discussion_heading"><a name='Changes from 1.9r to 1.9s (03-29-2010)' class='nohover'><b>Changes from 1.9r to 1.9s (03-29-2010)</b></a></div>
+<ul><li><p>
+Playing multitrack audio now takes about 10 KB less per track.</li><li>On the consoles, made the FFT audio routines use pre-built tables to avoid the calls to the math libraries.</li><li>Updated Bink to link with Miles 8 (the new Miles is awesome, btw).</li><li>Moved the Bink logo into another file, so that GCC would be convinced to dead-strip it (when not used).</li><li>Added a hint in the docs to use --strip-mode=normal on PS3 when embedding your SPU images in a PPU object file.</li><li>On the Xbox, switched to the new February XDK (which comes with a new compiler).</li></ul><div class="discussion_heading"><a name='Changes from 1.9q to 1.9r (01-21-2010)' class='nohover'><b>Changes from 1.9q to 1.9r (01-21-2010)</b></a></div>
+<ul><li><p>
+On PS3, we switched back to use cellSpursEventFlagWait (you should insure that exitIfNoWork is set to
+false in cellSpursAttributeInitialize or cellSpursInitialize).</li><li>On the PS3, upgraded to SDK 310.</li><li>On Windows, fixed a bug when scheduling async decompression of more than 64 background frames.</li><li>On Windows, turn off audio rate adjusting for data rates that are exactly 44100 or 48000 or when
+you are running on a single CPU. This fixes some skipping problems on older machines.</li><li>On Windows, added a timer option that forces use of timeGetTime instead of QueryPerformanceCounter - to enable it,
+set the environment variable RAD_USE_TGT to 1 (can be useful as a workaround on old AMD boxes).</li><li>Fixed a rare divide overflow in BinkGetSummary.</li></ul><div class="discussion_heading"><a name='Changes from 1.9p to 1.9q (11-02-2009)' class='nohover'><b>Changes from 1.9p to 1.9q (11-02-2009)</b></a></div>
+<ul><li><p>
+Fixed a bug in the PS3 GCM texture example - if your mapped memory allocator doesn't align to 128-byte 
+addresses, then you need this apply this change.</li><li>Fixed a regression where small Bink files still streamed (even though they could fit in the IO buffer).</li><li>Made it safe to call Bink from multiple threads using different HBINK handles without using a mutex.</li><li>Made it possible to change sound providers after you have set one (if there are no Bink files open).</li><li>Added a BinkSetWillLoop function that tells Bink that you want to loop the video during playback - this lets Bink
+seek back to the beginning of the file to hide the disc seek hitch when you loop around.</li></ul><div class="discussion_heading"><a name='Changes from 1.9n to 1.9p (09-02-2009)' class='nohover'><b>Changes from 1.9n to 1.9p (09-02-2009)</b></a></div>
+<ul><li><p>
+Added support for the Nintendo DSi.</li><li>Rewrote the IO system on the DS and DSi - it saves up to 25% of the CPU. Everyone should upgrade.</li><li>Sped up the SPU based PS3 decompression for SPURS (uses less SPU and PPU cpu while waiting).</li><li>Changed the DX9 support on Windows to always use system textures with dirty rectangle updating - this gets better render overlap.</li><li>Added Bink texture support code for DX10 on Windows.</li><li>Added Korean documentation.</li><li>Optimized the initial file loading on all platforms - we now do fewer start up IOs.</li><li>Dropped Xaudio 1 support on Xbox 360.</li><li>Added some alignment constraints to speed up file IO on various platforms.</li><li>Fixed a bug where dirty rectangles weren't being returned correctly.</li><li>Fixed a rare deadlock on Vista (when a user unplugged USB speakers or headphones during playback).</li><li>Made the Windows 64-bit player use the 32-bit registry, so that it finds all the 32-bit settings.</li></ul><div class="discussion_heading"><a name='Changes from 1.9m to 1.9n (04-02-2009)' class='nohover'><b>Changes from 1.9m to 1.9n (04-02-2009)</b></a></div>
+<ul><li><p>
+Built with March Xbox XDK - fixes a sound crash when using an older Bink on the March XDK.</li><li>Built with the 250 Sony SDK.</li><li>Built with the Wii SdK 3.2 (patch 3).</li></ul><div class="discussion_heading"><a name='Changes from 1.9L to 1.9m (03-16-2009)' class='nohover'><b>Changes from 1.9L to 1.9m (03-16-2009)</b></a></div>
+<ul><li><p>
+Fixed a rare bug that would cause the background IO thread to use 100% of the CPU when IO was suspended. If
+you are loading data while streaming a video, this will greatly help your performance (especially on PS3 which doesn't
+have a spare core to hide the problem).</li><li>Switch the MacOS X version of the Bink library to use Unix paths (no more FSSpecs).</li><li>Fixed the screen vertices on Windows, Xbox and Xenon, so that videos will play properly with bi-linear turned off.</li><li>Changed the Wii texture code to draw in 32x32 pixel chunks - this almost doubles (!) the texturing speed (better texture cache
+usage), and it fixes the previous problem of artifacts when scaling a texture (which means the Wii texturing precision problem was in triangle setup
+and not the texture iterators as I previously suspected). Note that this fix is in WiiTextures.c, which is sample code that you
+generally integrate into your game, so make sure you merge these changes!</li><li>Cleaned up the 3D window resizing code in the Windows examples.</li><li>Added error reporting to the SPU setup code, so you can call BinkGetError to better see what went wrong.</li><li>Fixed a crash when using BinkMix to remove a track that wasn't present in the input file.</li></ul><div class="discussion_heading"><a name='Changes from 1.9k to 1.9L (01-14-2009)' class='nohover'><b>Changes from 1.9k to 1.9L (01-14-2009)</b></a></div>
+<ul><li><p>
+Worked around yet another code-gen bug on the Xbox 360 (which led to noisy audio).</li></ul><div class="discussion_heading"><a name='Changes from 1.9i to 1.9k (01-01-2009)' class='nohover'><b>Changes from 1.9i to 1.9k (01-01-2009)</b></a></div>
+<ul><li><p>
+Fixed a bug in the new BinkDoFramePlane function.</li><li>Switched to the November Xbox 360 XDK (with hotfix).</li><li>Fixed a bug on Windows where the video could play too fast for the first few seconds after a loop.</li><li>Fixed a linker issue on Win64, where MSS64.DLL wasn't being delay loaded properly.</li><li>Added SIMD optimizations in the Bink audio decoder for PSP.</li><li>Switched the latest GCC and to the GCC linker on PSP.</li><li>Switched to CodeWarrior 1.0 on Wii.</li></ul><div class="discussion_heading"><a name='Changes from 1.9h to 1.9i (10-31-2008)' class='nohover'><b>Changes from 1.9h to 1.9i (10-31-2008)</b></a></div>
+<ul><li><p>
+Added SIMD versions of the Bink audio decoder for MMX, SSE, SSE2, PS3 VMX, Xbox 360 VMX, and Sony PS2. The Bink audio decoder
+is already really fast (usually less than a few percent on most platforms), but it's now faster still.</li><li>Added the new BinkDoFramePlane function which lets you decompress specific planes of a video frame (like just the alpha, or just the Y).</li><li>Added support for Miles 7.2d and up.</li><li>Fixed two bugs in the Nintendo Wii GPU color conversion sample code. The first bug would draw your movies too bright (blacks
+would be slightly gray). The second bug selected three indirect stages instead of two, so game state could be incorrectly inherited.
+These bugs were fixed in <b>wiitextures.c</b> which is supplied in source form, so be sure to update the copy in your game.</li><li>Fixed a bug in the Wii audio code where very long movies (around 8 minutes) would start to fall out of sync.</li><li>Fixed sync problems for all Windows sound providers (DirectSound, waveOut, and Miles) where newer sound chipsets (most
+motherboard sound chips) that have a natural sample rate of 48000, will play non-48K audio (like 44100 Hz) at the incorrect rate
+(like 44130 Hz).  This slight clock difference slowly leads to sync problems in longer movies. We now measure the sound rate
+and slowly compensate the video to match. It's amazing that in 2008 we are still having these problems.</li><li>On the Nintendo DS, added the embedded middleware notices.</li><li>On the PS3, added vectorized sound mixing in the hand-off to libaudio. This is one of the few tasks done on the PPU and it
+only uses about 1%, but, in any case, it is now about 3.5 times faster.</li><li>Switched the PS2 example code to use GPU color conversion. This uses about half the dynamic memory during playback
+and doubles the amount of CPU that Bink can use for decompression.  This means you can now playback <b>much</b> higher quality
+Bink movies on PS2. Since this technique is so much better, we removed the software blitters to save another 32K in code space. You
+can still use the old Bink library, if you don't want to update to the new technique (but there's no reason not to switch).</li><li>Fixed a bug on the Xbox 360 and Win32, where if you were playing two videos simultaneously on one background hardware thread, only 
+one video would be advanced.</li><li>Fixed a bug in the DirectSound code, where long thread delays during playback would play the previous contents of the audio 
+buffer (leading to looping audio), instead of silence.</li><li>Fixed a bug on the Xbox 360 where you could get an XAudio 2 assert if you changed the master volume of a mono track.</li><li>Updated the analysis window with more modern data rate target graphs.</li><li>Added Smacker 4.2d to the RAD Video Tools.</li></ul><div class="discussion_heading"><a name='Changes from 1.9g to 1.9h (05-20-2008)' class='nohover'><b>Changes from 1.9g to 1.9h (05-20-2008)</b></a></div>
+<ul><li><p>
+Made the RAD Video Tools use registry for settings, so that the 64-bit player can see the 32-bit settings.</li><li>On the PS3, fixed a bug in the GCM example code where the SPU decompression would fail on movies that had a non-divisible-by-32 width.</li><li>Shrunk the stack sizes on the PS3.</li><li>Fixed a bug playing ancient Bink files on single CPU machines.</li></ul><div class="discussion_heading"><a name='Changes from 1.9f to 1.9g (04-07-2008)' class='nohover'><b>Changes from 1.9f to 1.9g (04-07-2008)</b></a></div>
+<ul><li><p>
+Added support for XAudio 2 on the Xbox 360.</li></ul><div class="discussion_heading"><a name='Changes from 1.9e to 1.9f (03-07-2008)' class='nohover'><b>Changes from 1.9e to 1.9f (03-07-2008)</b></a></div>
+<ul><li><p>
+On the PS3, set an error when using an aligned structure for BinkRegisterFrameBuffers (instead of just crashing).</li><li>On the Wii and GameCube, fixed a rare problem with IO buffer alignment if you did a BinkGoto exactly while
+the final IO of the file was in still progress (thanks Mattias!)</li></ul><div class="discussion_heading"><a name='Changes from 1.9d to 1.9e (02-12-2008)' class='nohover'><b>Changes from 1.9d to 1.9e (02-12-2008)</b></a></div>
+<ul><li><p>
+Fixed a bug in the Xbox 360 mixbin code, where volume would behave oddly.</li></ul><div class="discussion_heading"><a name='Changes from 1.9c to 1.9d (02-06-2008)' class='nohover'><b>Changes from 1.9c to 1.9d (02-06-2008)</b></a></div>
+<ul><li><p>
+Fixed a bug in the PS3 SPU code when playing multiple audio tracks (5.1 or 7.1 audio).</li><li>Fixed a silly bug in the PS3 example code where the example would crash if it couldn't find the Bink SPU elf.</li><li>Fixed a bug in the Windows Miles integration code where stereo audio tracks might not play in the rear speakers correctly.</li><li>Always allocate two video buffers, even if the file contains all key frames. This allows us to properly use async
+decompression on these file (async requires two buffers).</li><li>Fixed a distribution problem where the latest Win64 Bink player wasn't being included in the RAD Video Tools.</li><li>If you request alpha channel support, and the input movie doesn't have an alpha channel - we just turn off alpha in the
+Bink file (rather than encode an all-zero alpha plane).  Also added an option to override the `no alpha channel present` warning.</li><li>When running on Win64, the RAD Video Tools now calls the 64-bit player automatically.</li></ul><div class="discussion_heading"><a name='Changes from 1.9b to 1.9c (01-15-2008)' class='nohover'><b>Changes from 1.9b to 1.9c (01-15-2008)</b></a></div>
+<ul><li><p>
+On the Nintendo DS, fixed a bug with videos that had very little data changing from frame to frame.</li><li>Updated the documentation of BinkStartAsyncThread for SPURS tasks.</li><li>Built the PS3 version with system software 210.</li></ul><div class="discussion_heading"><a name='Changes from 1.9a to 1.9b (12-12-2007)' class='nohover'><b>Changes from 1.9a to 1.9b (12-12-2007)</b></a></div>
+<ul><li><p>
+Added pre-written SPURS task and RAW support libraries for the PS3 SPU asynchronous decompressor.</li><li>On SPURS, allow the audio codec to be swapped out to make more room when decompressing 1080p movies.</li><li>Wrote SIMD SPU audio decoder routines (which lowered the audio decompression time on the SPU by 25%).</li><li>Preload a little more data on the SPU routines to get better overlap (which allowed me to shrink the
+overall memory footprint a bit).</li><li>Switched a bunch of temporary buffers to the stack with alloca on Windows, Xbox 360, PS3 and SPU. This
+usually lets us load higher resolution movies in tight memory situations.</li><li>Return from BinkNextFrame and BinkGoto if there is an asynchronous decompression already in progress.</li><li>Fixed an IO buffer problem on the Wii, that would cause very small Binks to fail to load.</li><li>In the RAD Video Tools, try using our built-in file readers for TIFF and JPEG before trying QuickTime - this is much faster.</li><li>Improved the Xbox 360 mix bin support code, so that you can modify the speaker mix during playback.</li><li>Switched to the November Xbox 360 SDK.</li><li>Fixed a bug where ancient Bink files (created before January 2000) would play incorrectly on multi-CPU boxes.</li><li>Fixed a filename length overrun when creating Bink files in very deep file paths.</li></ul><div class="discussion_heading"><a name='Changes from 1.8x to 1.9a (11-04-2007)' class='nohover'><b>Changes from 1.8x to 1.9a (11-04-2007)</b></a></div>
+<ul><li><p>
+The big asynchronous decompression release!  Bink now supports built-in background decompression on Windows,
+Xbox 360 and Sony PS3 (using SPUs).  All of this is done super cleanly, it requires very few code changes, and you don't
+have to do any direct multi-threaded coding at all.</li><li>Added SPU decompression support on the PS3 - Bink now takes no PPU time at all! You can play up to ten 1280x720
+on the six SPUs at the same time, or up to 36 640x480 movies simultaneously! The PS3 is really fast when
+you can harness the SPUs.</li><li>Added support for background decompression on Windows.  All games should use threaded decompression now - it
+is faster even on single core CPUs (because the blitting takes place concurrently with decompression). The standalone
+Bink Player has also been threaded.</li><li>Dropped the requirement to do a Sync_Bink_textures on Xbox 360, PS3, and Wii.  We now do the cache flush
+ourselves in the codec (which is faster).</li><li>Added some clean-up code to the Draw_Bink_textures function on Wii, so that the GX API isn't left in such 
+a weird state.</li><li>Added a FrameChangePercent field to the Bink structure, so you don't have to calculate it with the BinkGetRects
+function.</li><li>Added some optimizations on Xbox 360, PS3 and Windows 64. Cartoon style videos are up to 15% faster.</li><li>Added support for background decompression on the Xbox 360.</li><li>Fixed the sound sync on PSP after resuming from a paused state.</li><li>In creating the SPU version, cut the library code/static data size by about 20K on all platforms.</li><li>Put more runtime temporary data on the stack - this saved about 26K of data previously allocated in BinkOpen.</li><li>No longer allocate the delta mask plane unless you call BinkGetRects or BinkCopyToBuffer - otherwise we save
+another 8K or so.</li><li>Added the total video time in the file info window.</li><li>Show the video name in the Bink Player window.</li><li>Added support for Miles 7.1b.</li><li>Switched to the August Xbox 360 SDK.</li></ul><div class="discussion_heading"><a name='Changes from 1.8w to 1.8x (08-11-2007)' class='nohover'><b>Changes from 1.8w to 1.8x (08-11-2007)</b></a></div>
+<ul><li><p>
+Fixed a problem in the Bink file header validation where partially compressed Bink files would be seen as corrupted.  This meant you couldn't
+preview Bink files while they were still compressing in the front-end tool.</li><li>Added more bulletproofing to the audio frame reader to handle additional corrupted input Bink files.</li><li>Switched to the 1.90 PS3 SDK, and built with GCC 4.11.  The new GCC is terrific - it sped up decompression on the PS3 by 10%!</li><li>In the Bink compression tool, added an option to apply the alpha pre-multiplication before compressing.  Pre-multiplied alpha gives better quality, it filters better, 
+and it's faster - everyone should use it.  Also, added an option to use pre-multiplied alpha during filtering (like resizing) and then convert back before compression.</li><li>Updated the examples on all of the platforms to allow you to specify whether you used pre-multiplied alpha.</li><li>Updated the PS3 GCM example to included a simple manager for mapped memory.</li><li>On Xbox 360 and PS3, rewrote the pixel shaders to be more efficient (although the GPUs are so fast on these platforms that it doesn't matter much).</li><li>On Windows, rewrote the 2.0 pixel shaders to be more efficient, and added an optional pixel shader 1.1 path to run on older DX8-class hardware.</li><li>On Wii, changed the example code to take into account as much information about the Wii texture iterators as is public to minimize resampling errors
+when scaling a Bink video texture.  It's always best to try to play the movies at 1 to 1, though, since it seems impossible to remove all possible scaled sampling errors.</li><li>On Wii, fixed the pause feature so that it resumes the audio tracks immediately. Previously, it could take up to 700 ms for the audio to begin when you paused
+and then resumed audio.</li><li>Fixed a problem in the front-end tools, where filenames in a list file had to be less than 128 characters long.</li></ul><div class="discussion_heading"><a name='Changes from 1.8v to 1.8w (07-13-2007)' class='nohover'><b>Changes from 1.8v to 1.8w (07-13-2007)</b></a></div>
+<ul><li><p>
+Wrote new optimizations for Xbox 360 and PS3 that give around a 5% speed improvement.</li><li>Fixed an overflow bug where Bink movies around the 400 MB range might be preloaded rather than streamed.</li><li>Fixed a bug on the PS3 where a small amount of audio could be dropped at the beginning of playback if the system was under load.</li><li>Added more bulletproofing when reading the Bink header.</li><li>Fixed a bug on Wii and GameCube where very small files (and preloaded files) using a file offset wouldn't open.</li><li>Added new documentation describing best practices for handling critical errors on each of our platforms.</li><li>Made 8-bit audio tracks play on Wii, PS2, PS3, and PSP. Note that you should normally use 16-bit audio, since 8-bit
+input is simply scaled up to 16-bit anyway.</li><li>Compiled the Nintendo DS SDK to allow it to be called from 32-bit or 16-bit code.</li><li>Fixed a bug where the Windows Bink player wouldn't clear the bottom of the playback window, if the window was scaled.</li><li>Made the File Info button show up to 256 tracks in a Bink file (it previously only showed 8).</li></ul><div class="discussion_heading"><a name='Changes from 1.8u to 1.8v (05-22-2007)' class='nohover'><b>Changes from 1.8u to 1.8v (05-22-2007)</b></a></div>
+<ul><li><p>
+Fixed a bug on Windows that caused a crash on machines that have SSE, but not SSE2 (older Athlons mostly).</li><li>Added a delay in the PSP audio shutdown to make sure the sound buffer has spun down.</li></ul><div class="discussion_heading"><a name='Changes from 1.8t to 1.8u (05-22-2007)' class='nohover'><b>Changes from 1.8t to 1.8u (05-22-2007)</b></a></div>
+<ul><li><p>
+Bulletproofed the video and audio decoders against bad input file data - Bink can play right through any data corruptions now.</li><li>Changed the frame skipping logic to handle playback at incorrect fixed frame rates more smoothly.  Playing an NTSC movie
+on PAL device will be much nicer now, for example.</li><li>Worked around three, count 'em, three code generation bugs with VC 2005 that were causing the RAD Video Tools to exit.</li><li>Increased a few of the internal buffer sizes to handle super long filenames.</li></ul><div class="discussion_heading"><a name='Changes from 1.8s to 1.8t (05-10-2007)' class='nohover'><b>Changes from 1.8s to 1.8t (05-10-2007)</b></a></div>
+<ul><li><p>
+Changed the default video blitter on Windows to DIBSection.  DirectDraw is becoming less reliable and modern machines
+are more than fast enough to use DIBs.</li><li>Fixed a very rare compression issue when compressing with alpha planes (which also improves alpha quality).</li><li>A bunch of changes under the hood of the Bink audio compressor.</li><li>Bink decompression could previously only open 8 tracks per Bink due to a stupid bug - you can now open 32 per movie.</li><li>Added restrict to many of the internal decoder pointers so that RISC compilers can do a bit better optimizing.</li><li>Added an option for pure mono out on the Wii.</li><li>Fixed the Bink version info so that it shows up on Vista correctly.</li><li>Added internal SSE versions of memcpy, memmove and memset on Win32.</li><li>Put a few of the small global allocations into a fixed pool to avoid fragmentation or remnant allocations (especially for PS3).</li><li>Updated to the PS3 1.60 SDK.</li><li>Updated to the Xbox 360 April SDK.</li><li>Updated to the Visual Studio 2005 on Windows.</li><li>Updated to the Wii 2.4 patch 3 SDK.</li><li>Renamed a few of the fft math routines to avoid conflicting with other middleware.</li><li>Fixed a few of the example programs for the PS3 for SDK 1.60.</li><li>Forced the first Bink frame to always be a key frame (avoids surprises if you use the compression hint window incorrectly).</li></ul><div class="discussion_heading"><a name='Changes from 1.8r to 1.8s (01-25-2007)' class='nohover'><b>Changes from 1.8r to 1.8s (01-25-2007)</b></a></div>
+<ul><li><p>
+On the PS3, added GCM library example code - now you can get Bink running with a GCM based game almost immediately.</li><li>Change the PS3 library to free the background threads when you call BinkFreeGlobals instead of when you close
+the last Bink file.  This lets you run Bink on other threads without having to worry so much about thread shutdown deadlocks.</li><li>Made the PS3 examples using cellFs directory functions to avoid a memory leak in the C runtime library directory functions.</li><li>Rebuilt the library for version 2.4 of the Wii system libraries.  If you are using 2.4, then you must upgrade to this version.</li><li>Added some docs about handling the home button on the PSP.</li><li>Fixed the DX9 pixel shader example code for Windows so that it sets the vertex declaration each frame instead of at setup time.</li><li>Made the tools handle the maximum length Windows file names.</li><li>Changed the way Bink handles small delays (60 to 400 ms) during playback - avoids a very rare pathological case where Bink would 
+keep skipping frames, thinking it was lagging behind the audio.</li></ul><div class="discussion_heading"><a name='Changes from 1.8q to 1.8r (10-04-2006)' class='nohover'><b>Changes from 1.8q to 1.8r (10-04-2006)</b></a></div>
+<ul><li><p>
+Fixed a very rare bug in the threaded IO provider that is used on Windows, Xbox 360, and PS3.  If you are
+using one of these platforms, you <b>must</b> update.</li><li>Fixed a problem where a mono sound track couldn't be spacialized to the back right speaker on Xbox 360. Stereo tracks worked fine.</li><li>Fixed a problem in the simple Win32 3D example where the second frame was always skipped.</li><li>Fixed a bug on PS3 and PSP where file IO errors weren't being detected properly, leading to a crash on media eject - updating
+is <b>required</b>.</li><li>Updated the PS3 library and examples to the 096.002 SDK.</li><li>Updated to the Xbox 360 September XDK build.</li></ul><div class="discussion_heading"><a name='Changes from 1.8p to 1.8q (09-13-2006)' class='nohover'><b>Changes from 1.8p to 1.8q (09-13-2006)</b></a></div>
+<ul><li><p>
+Fixed a silly bug where the batch editor window wasn't popping up.</li><li>Fixed a bug in the optional VRAM allocator in the PSP SDK (not sure if anyone actually uses this).</li><li>Fixed a bug in the 360 SDK where pausing and resuming a Bink would put the audio tracks slightly
+out of phase.</li><li>Made file IO a little more efficient on files with a data rate less than 128KBps.</li><li>Fixed an IO problem when reading from the very end of a file that had a data rate of less than 128KBps.</li></ul><div class="discussion_heading"><a name='Changes from 1.8o to 1.8p (09-07-2006)' class='nohover'><b>Changes from 1.8o to 1.8p (09-07-2006)</b></a></div>
+<ul><li><p>
+Added a new video texturing example for the Wii that uses the GPU to do color conversion (for video texturing).</li><li>Updated the GameCube SDK to also use GPU based color conversion and removed the old software blitters (which
+saves a bunch of runtime memory).</li><li>Fixed a problem where the JPEG library would infinite loop if it attempted to 
+open some types of PNG files.</li><li>Fixed a regression bug in the 16-bit blitters on the NDS.</li><li>Removed the CRT library from the Bink tools and DLL on Win32 - saves about 60K in the player and DLL.</li><li>Updated the Japanese Bink SDK manual to the latest version of the docs.</li></ul><div class="discussion_heading"><a name='Changes from 1.8n to 1.8o (08-07-2006)' class='nohover'><b>Changes from 1.8n to 1.8o (08-07-2006)</b></a></div>
+<ul><li><p>
+Added a Nintendo Wii version of Bink!</li><li>Fixed a bug when importing resized TGAs with an alpha channel.</li><li>Changed the Windows, Mac, Xbox, 360, PS3 and PSP IO functions to stay on aligned file offsets when reading.  This
+can make the data reading faster, since the OS doesn't have to break up each IO into multiple chunks (especially
+good for the Xbox and Xbox 360).</li></ul><div class="discussion_heading"><a name='Changes from 1.8m to 1.8n (07-21-2006)' class='nohover'><b>Changes from 1.8m to 1.8n (07-21-2006)</b></a></div>
+<ul><li><p>
+Fixed a crash in the Bink compressor when compressing a file with an alpha channel to very low data rates.</li><li>Fixed a bug where the X and Y offsets were being ignored when importing a file with an alpha channel.</li><li>Fixed a rare, nasty crash in several of the RAD Video Tools when memory returned from the system was oddly aligned.</li><li>Added PSP support for the system simple audio library (and made the example use it).</li><li>Fixed a thread handle leak on PSP.</li><li>Fixed the global audio buffer memory being leaked on PSP.</li></ul><div class="discussion_heading"><a name='Changes from 1.8L to 1.8m (07-17-2006)' class='nohover'><b>Changes from 1.8L to 1.8m (07-17-2006)</b></a></div>
+<ul><li><p>
+Added a Sony PSP version of Bink! The PSP SDK is available immediately.</li><li>Fixed a mutex locking bug on the PS3 that would lock if you played two movies in a row on a background thread.</li></ul><div class="discussion_heading"><a name='Changes from 1.8k to 1.8L (06-22-2006)' class='nohover'><b>Changes from 1.8k to 1.8L (06-22-2006)</b></a></div>
+<ul><li><p>
+Added a Sony Playstation 3 version of Bink! The PS3 SDK is available immediately.</li><li>Changed a D3D setup flag in the Windows 3D examples that was preventing ATI 1900 cards from rendering.</li><li>Updated a few of the Xbox and Xbox 360 examples to play lumpy data rate movies more smoothly.</li><li>Added details in the Bink docs about the Bink cross platform pixel shader blitting API (supplied in BinkTextures.h).  This
+API automates pixel shader blitting on Windows, Sony PS3, Xbox, and Xbox 360.</li></ul><div class="discussion_heading"><a name='Changes from 1.8J to 1.8k (05-07-2006)' class='nohover'><b>Changes from 1.8J to 1.8k (05-07-2006)</b></a></div>
+<ul><li><p>
+Added a Mac Intel version of Bink. The MacIntel SDK is available immediately, and a Bink player for 
+Mac Intel machines can be downloaded from our website.</li></ul><div class="discussion_heading"><a name='Changes from 1.8i to 1.8J (05-02-2006)' class='nohover'><b>Changes from 1.8i to 1.8J (05-02-2006)</b></a></div>
+<ul><li><p>
+Added a Win64 version of the Bink player.  You can even compile to Win64 video EXEs. On Win64, playback
+is about 15% faster than the 32-bit version of Bink.  A beta Win64 SDK is also available. Thanks to AMD for their
+kind support of this porting effort!</li><li>Added new DirectX 9 pixel shader example code for Win32 and Win64.  Pixel shaders are the 
+fastest and highest quality method to display Bink videos.  If you are using Bink
+in a 3D game on Windows, you should definitely update and use the new pixel shader example code.</li><li>Fixed some stuttering when closing and re-opening the cover of a Nintendo DS. You must call
+BinkSetSoundOnOff around the close and re-open.</li><li>Fixed the 5.1 speaker channel settings on Xbox 360 for newer versions of the XDK.</li><li>Sped up the loading of single image series from a network drive 
+(sometimes massively).</li><li>Fixed a crash when using an offset to crop a series of single images that had alpha.</li><li>Cleaned up and simplified the Windows 3D texture examples.</li></ul><div class="discussion_heading"><a name='Changes from 1.8h to 1.8i (02-23-2006)' class='nohover'><b>Changes from 1.8h to 1.8i (02-23-2006)</b></a></div>
+<ul><li><p>
+Fixed a problem in the dirty rectangle calculations when the height wasn't divisible by 16.</li><li>Added the latest version of Smacker Player in the RAD Video Tools.</li></ul><div class="discussion_heading"><a name='Changes from 1.8g to 1.8h (02-14-2006)' class='nohover'><b>Changes from 1.8g to 1.8h (02-14-2006)</b></a></div>
+<ul><li><p>
+Compressor uses a slightly different error metric to help really low data rate Binks (like for NDS).</li><li>Fixed a bug when converting QuickTime files that have internal scale factors (very rare).</li><li>Changed the TGA detection code to avoid matching some QuickTime movie files.</li><li>We now free a global 30K static audio buffer on the NDS when all Bink files are closed (saves 30K when Binks aren't in use).</li><li>Worked around a deadlock problem on some DirectSound drivers when pausing or stopping a DirectSound buffer.</li><li>Set the alpha bit on in the 5551 format on Nintendo (since they do only have alpha blitters).</li><li>Fix a bug on some sound formats where a looping Bink file would play as static every other loop.</li><li>Switched to the new RAD_IOP from Miles (you can now control the hardware audio directly, if you want to replace
+Multistream.</li><li>Fixed a problem where specifying a sound track in a Bink file to convert to an AVI or wave file was converting the wrong track.</li><li>Made the 3D example code on Windows and Xbox use the discard flag if all of the pixels are going to be updated
+(for speeding up full frame copies).  This lets the D3D render a frame ahead on full frame updates.</li></ul><div class="discussion_heading"><a name='Changes from 1.8f to 1.8g (09-28-2005)' class='nohover'><b>Changes from 1.8f to 1.8g (09-28-2005)</b></a></div>
+<ul><li><p>
+Fixed a channel assignment bug with stereo tracks on the Xbox 360.</li><li>Built with latest Xbox 360 system software.</li></ul><div class="discussion_heading"><a name='Changes from 1.8e to 1.8f (09-18-2005)' class='nohover'><b>Changes from 1.8e to 1.8f (09-18-2005)</b></a></div>
+<ul><li><p>
+Worked around a bug in QueryPerformance Counter on the Xbox 360.</li><li>Don't try to check the sound format of still images which cause DirectShow to occasionally crash on importing.</li></ul><div class="discussion_heading"><a name='Changes from 1.8d to 1.8e (09-14-2005)' class='nohover'><b>Changes from 1.8d to 1.8e (09-14-2005)</b></a></div>
+<ul><li><p>
+Built with final version of Xbox 360 system software.</li><li>Added support for Miles 7 on Windows (you can now do 5.1 on Windows)!  The Miles example shows how to do 5.1 with just a few code changes.</li><li>Worked around an Xbox 360 deadlock problem when playing audio with the system audio player while a Bink is playing.</li><li>Fixed the mix bin volume calculation on Xbox and Xbox 360, where the linear to loudness scale was being applied twice.</li><li>Fixed a crash in BinkOpen if you ran out of memory on a little allocation that followed a larger allocation.</li><li>Fixed a crash in the BinkGetRealTime function when run on a 1 fps movie.</li><li>Fixed BinkShouldSkip on Bink files that don't have an audio track.</li><li>Moved the minimum read size on Xbox and Xbox 360 up to 128K since most movies are use HD data rates.</li><li>Fixed importing of QuickTime files that are wider than 4096 pixels.</li><li>Fixed a crash when using a pixel offset on a still image that had an alpha plane.</li><li>Fixed importing of still image files that are wider than 4096 pixels.</li><li>Detect dual-core Athlons.</li><li>Fixed the Smacker player not playing off another drive letter.</li></ul><div class="discussion_heading"><a name='Changes from 1.8c to 1.8d (06-24-2005)' class='nohover'><b>Changes from 1.8c to 1.8d (06-24-2005)</b></a></div>
+<ul><li><p>
+Added support for the beta Xbox 360 hardware (June XDK).</li><li>Fixed 8-bit audio playback on Nintendo DS - we still recommend using 16-bit audio, though.</li></ul><div class="discussion_heading"><a name='Changes from 1.8b to 1.8c (05-22-2005)' class='nohover'><b>Changes from 1.8b to 1.8c (05-22-2005)</b></a></div>
+<ul><li><p>
+Added Nintendo DS support!  Play Bink movies in your NDS games as easily as any other Bink platform.</li><li>Added a new function called BinkControlCPUFeatures to turn on and off various features on different platforms.</li><li>Fixed some pixel center bugs in the DX sample code that bilinear blending usually hid.</li><li>Totally rewrote the entire YcRcB to RGB color conversion system.  All new infrastructure, all new assembly blitters.  This means almost 30% of Bink was replaced in this version.</li><li>All new x86 blitters for MMX and non-MMX: almost twice as fast, less buggy, no more corner cases, 
+and saved almost 200K in the Bink DLL!</li><li>Added dithering to the 16-bit RGB color conversion blitters.  16-bit looks almost as good as 32-bit now.</li><li>Added a new 8-bit palettized output mode.  Also added a BinkGetPalette function to retrieve the global Bink palette.</li><li>Moved a few more source files and data tables into Bink sections, so you save another 64K or so, when you unload the Bink section on Xbox.</li><li>Changed a few of the examples to use BinkShouldSkip, so that they avoid locking a texture completely, if we are just
+going to skip the frame anyway.</li></ul><div class="discussion_heading"><a name='Changes from 1.8b to 1.8c (03-25-2005)' class='nohover'><b>Changes from 1.8b to 1.8c (03-25-2005)</b></a></div>
+<ul><li><p>
+Added all the changes for the new Nintendo DS version.</li><li>In the Bink player, when using the full-screen stretch parameters (/w-1 /h-1), we now maintain the
+aspect ratio, so the video doesn't stretch oddly.</li><li>Fixed a bug where if you paused a Bink movie before the first frame, then Bink would think it was 
+way behind in playback and keep struggling to catch up.</li><li>Bumped to the March XDK for the Xbox 360.</li><li>Fixed a bug in the Redmon next-gen console version where setting the volume could cause an assert in XAudio.</li><li>Updated to CodeWarrior 9.4 on MacOS.</li></ul><div class="discussion_heading"><a name='Changes from 1.8a to 1.8b (03-02-2005)' class='nohover'><b>Changes from 1.8a to 1.8b (03-02-2005)</b></a></div>
+<ul><li><p>
+Added new Bink for Xbox support code that allows the use of hardware pixel shaders for the YcRcB color conversion.  This <b>doubles</b> the playback speed 
+on an Xbox *and* uses 900 KB less memory *and* is much higher quality!  Using this feature, you can now play 1280x720 HDTV movies on the Xbox!!  This is such the `right thing to do` on an Xbox that
+it is now the default playback method - if you have old Bink for Xbox code, you should definitely update it.</li><li>Added new Bink for Xbox examples for both normal video and alpha video pixel shader playback.</li><li>Added a few tweaks to the Xbox 360 support.</li><li>Fixed a silly typo that caused the pause key in the Bink player not to pause the movie.</li><li>Made a tweak to the QuickTime audio importer.  This should fix the -108 error when loading of QT audio tracks (which happens on a lot of camera movies).</li><li>Added a option on the Linux player to not play audio.  This avoids a crash in SDL on some Linux machines.</li><li>For sound input files with a .QT or .MOV file extension, we now always try QuickTime first.  This prevents broken
+DirectShow filters (say for MPEG splitting) from preventing QT files from converting (when they really should 
+be read with QT anyway).  We did this for video files previously, now we do it for sound too.</li></ul><div class="discussion_heading"><a name='Changes from 1.7d to 1.8a (02-18-2005)' class='nohover'><b>Changes from 1.7d to 1.8a (02-18-2005)</b></a></div>
+<ul><li><p>
+Added support for this one unreleased next-gen console from a company over in Redmond (Xbox 360).</li><li>Added BinkGetFrameBuffersInfo and BinkRegisterFrameBuffers functions. These functions allow
+you to allocate the Y, cR, and cB color buffers that Bink uses internally.  This allows you to do a lot of
+cool things, like allocating the frame buffers as 8-bit luminance textures on Xbox, and then using 
+a pixel shader to do the YcRcB to RGB conversion so that there is no blitting overhead at all (example of
+this coming soon)!  This also allows you to share the same frame buffer memory for multiple Bink files
+and save memory (as long as you don't play them all at once).</li><li>Added a BinkControlBackgroundIO function that allows you to suspend and resume the background
+IO that Bink performs.  This makes it really easy to load other game data while 
+a Bink is playing - you just suspend Bink when the Bink buffer is mostly full and resume it when it is mostly empty.
+Great for playing a movie while your game loads level data.</li><li>Added a BinkShouldSkip function that allows you to query whether a frame or blit should be skipped.
+This allows you to avoid calling BinkCopyToBuffer completely to check whether you are falling behind, so
+you don't have to lock a texture or DDraw surface just to find out you should have skipped anyway. It's
+also useful when using the BinkRegisterFrameBuffers function with textures, since you will never call BinkCopyToBuffer.</li><li>Made an adjustment to the audio encoder that makes deep bassy tones compress much better.</li><li>Fixed a goofy bug in the 32-bit still image importer that would cause the right-most pixels to display garbage.</li><li>Fixed a bug in the 16-bit YUV tables that caused unaligned 16-bit blits to be slightly dim.</li><li>For input files with a .QT or .MOV file extension, we now always try QuickTime first.  This prevents broken
+DirectShow filters (say for MJPEG files) from preventing QT files from converting (when they really should 
+be read with QT anyway).</li></ul><div class="discussion_heading"><a name='Changes from 1.7c to 1.7d (01-08-2005)' class='nohover'><b>Changes from 1.7c to 1.7d (01-08-2005)</b></a></div>
+<ul><li><p>
+Fixed a problem where the DirectShow importing code could lock up on the final frame.</li><li>Fixed a problem importing some QuickTime sound files.</li><li>Added a warning for long filenames with QuickTime.</li><li>Fixed a problem with flic output when the final frame palette was different than the first palette.</li></ul><div class="discussion_heading"><a name='Changes from 1.7b to 1.7c (12-10-2004)' class='nohover'><b>Changes from 1.7b to 1.7c (12-10-2004)</b></a></div>
+<ul><li><p>
+Fixed a problem on the PS2 where the system libraries occasionally fail to report a disk error.  We now use an IO timeout, so after 400 ms, we will fail the read.</li><li>Added a warning when QuickTime doesn't have all of the components available to decompress an audio track.</li></ul><div class="discussion_heading"><a name='Changes from 1.7a to 1.7b (11-28-2004)' class='nohover'><b>Changes from 1.7a to 1.7b (11-28-2004)</b></a></div>
+<ul><li><p>
+DirectShow was trying to load JPEG files (presumably with the M-JPEG codec) - changed to use our internal JPEG decoder (which is way faster).</li><li>DirectShow was trying to load GIF files - changed to use our internal GIF decoder (which is way faster) unless it is a multiframe GIF.</li><li>Fixed a lock up with DirectShow files that don't specify an image pitch.</li><li>Fixed a crash with DirectShow files that had a time duration of zero (which makes no sense, but whatever).</li></ul><div class="discussion_heading"><a name='Changes from 1.6g to 1.7a (11-22-2004)' class='nohover'><b>Changes from 1.6g to 1.7a (11-22-2004)</b></a></div>
+<ul><li><p>
+<b>Added a DirectShow video and audio importer</b> - this allows us to import a bunch of new file types! We can now import AVIs larger than 2GB, MPEG 1 videos (including the audio track), MPEG 2 videos (if you have a decoder installed), WMV videos (Windows Media), ASF files, MPEG-4 video files, DV video files, MJPEG videos, and tons of compressed audio formats (MP3 and WMA in particular).  Many file types that were previously decoded with QuickTime (which is really slow) are now handled by DirectShow.</li><li>Added support for LZW-compressed GIF and TIF files (patent expired).</li><li>Added AMD 64, AMD Opteron, SSE3, Hyperthreading, EM64T and Windows 2003 Server detection to the System Info button.</li><li>Switched to building radutil.dll with VS 2003 which has slightly faster code generation.</li><li>Fixed a bug when reading 48-bit TIFF files (which we only compress as 24-bit files).</li><li>Fixed a bug in the File Info button where the fractional part of the frame rate was reported incorrectly.</li><li>Bink now tries to refill the IO buffer when it falls under 75% of the highest one second's worth of data rate of the file. In previous versions, Bink tried to refill the IO buffer when it fell under 75% of the total IO buffer size.  This change allows you to now optionally use large IO buffers without having to worry causing occasional long delays to refill it.</li><li>You can now use the BINKNOFILLIOBUF flag in BinkCopyToBuffer to tell Bink not to refill the IO buffer when it falls under 75% of the data rate.  This is useful if you are holding a system lock and you always need BinkCopyToBuffer to complete as quickly as possible.</li><li>Bumped the Xbox stack size up to 32K.</li></ul><div class="discussion_heading"><a name='Changes from 1.6f to 1.6g (11-03-2004)' class='nohover'><b>Changes from 1.6f to 1.6g (11-03-2004)</b></a></div>
+<ul><li><p>
+Fixed a bug where the the audio track would lose sync with the video if you paused and resumed the audio over and over (problem was most noticeable on Xbox and Windows).</li></ul><div class="discussion_heading"><a name='Changes from 1.6f to 1.6g (9-01-2004)' class='nohover'><b>Changes from 1.6f to 1.6g (9-01-2004)</b></a></div>
+<ul><li><p>
+Fixed a bug on the Mac and GameCube where an uncommon block type was not being byte-swapped as it was loaded.</li><li>Fixed a bug in the YUV lookup tables on the Mac, GameCube and non-MMX PC where the RGB pixels were too dim (which was most noticable when clamped pixels showed up as too bright).</li><li>Fixed a bug in BinkGetRealTime when called on the very first frame.</li><li>Made the input YUV converter more accurate (during compression).</li></ul><div class="discussion_heading"><a name='Changes from 1.6e to 1.6f (8-22-2004)' class='nohover'><b>Changes from 1.6e to 1.6f (8-22-2004)</b></a></div>
+<ul><li><p>
+Fixed a crash in the Bink compressor on XP Service Pack 2 (SP2).</li><li>Added some additional file I/O error checking in BinkOpen.</li><li>Fixed a bug in the Bink for Linux where the background IO thread was taking way too much CPU.</li><li>Fixed a bug on the Nintendo GameCube in the 64-bit divider routine that would cause sound to skip.</li><li>Fixed a bug on the GameCube where async IO were not being cancelled when the cover was opened during BinkOpen.</li><li>Fixed a lock up on Windows when you started playing a movie with a USB headset, but then removed it during playback.</li><li>Moved the Bink decoder DLL base address to avoid conflicts with some XP SP2 DLLs.</li><li>Optimized the 64-bit divider on the MacOS platforms.</li><li>Upgraded to CodeWarrior 9.3 on MacOS.</li><li>Fixed the Japanese documentation to show the Japanese index.</li></ul><div class="discussion_heading"><a name='Changes from 1.6d to 1.6e (7-30-2004)' class='nohover'><b>Changes from 1.6d to 1.6e (7-30-2004)</b></a></div>
+<ul><li><p>
+Added a Japanese version of the Bink SDK documentation.</li><li>Fixed a crash in BinkSoundUseDirectSound that only happened if you called it while a Bink video was still playing.</li></ul><div class="discussion_heading"><a name='Changes from 1.6c to 1.6d (6-25-2004)' class='nohover'><b>Changes from 1.6c to 1.6d (6-25-2004)</b></a></div>
+<ul><li><p>
+Added a new PS2 video texturing example - check out `ExamPtex.c`.</li><li>Fixed the PS2 docs and the examples to use a max volume of 0x7fff for the PCM channel volumes.</li><li>Made the PS2 back buffer example DMA uploading code a little cleaner and more general purpose.</li><li>Made the PS2 RAD_IOPStartup and RAD_IOPShutdown calls do reference counting (so you can call
+        RAD_IOPStartup multiple times).</li></ul><div class="discussion_heading"><a name='Changes from 1.6b to 1.6c (2-28-2004)' class='nohover'><b>Changes from 1.6b to 1.6c (2-28-2004)</b></a></div>
+<ul><li><p>
+Bink for Sony Playstation 2 is now available!  Massively optimized to run on the PS/2, Bink now lets you use the
+same videos and API that you use on your other platforms!  Thanks to Michael Abrash and Mike Sartain for all their hard 
+optimization work.</li><li>Many of the optimizations for the PS2 benefit the other platforms.  Bink for the Xbox is 15% faster, for example.
+Bink for the GameCube is 20% faster.</li><li>Made some build changes to fix problems when running on MacOS 10.3.</li><li>Fixed a bug in the Linux system where playing two Binks at once would reset the system sound format.</li><li>Removed the mono and 2X blitters from the GameCube library to make it smaller (and because you can use the graphics 
+hardware to do these effects faster anyway).</li></ul><div class="discussion_heading"><a name='Changes from 1.6a to 1.6b (12-09-2004)' class='nohover'><b>Changes from 1.6a to 1.6b (12-09-2004)</b></a></div>
+<ul><li><p>
+Added some power management code to the Bink screen saver feature.</li><li>Added support for using Bink screen savers as input (so you can recompress them, convert to AVI or wave format, or whatever).</li><li>Made the screen saver code never change the display resolution when in preview mode (now only changes when the screen saver officially activates).</li></ul><div class="discussion_heading"><a name='Changes from 1.5y to 1.6a (12-06-2003)' class='nohover'><b>Changes from 1.5y to 1.6a (12-06-2003)</b></a></div>
+<ul><li><p>
+Bink Video EXE files can now be used as screen savers!  When you make the EXE, 
+you can choose to create a EXE or a SCR. After creating the SCR file, you simply copy
+it into your main Windows directory and it will be added to the list of available
+screen savers.</li><li>Made the Bink player and examples use high resolution scheduling which makes
+most playback rates much smoother.</li><li>Fixed a crash where turning on playback statistics on very slow movies (one frame
+per second or slower) would crash.</li><li>Updated the list file processor so that it can handle series of filenames 
+that aren't zero left-aligned (now it can handle `file8, file9, file10` and `file08, file09, file10`).
+To use this feature, you must highlight the longest file name (file10 in previous example).</li><li>Fixed the DOS Smacker player so it could be compiled as an EXE.</li></ul><div class="discussion_heading"><a name='Changes from 1.5x to 1.5y (09-23-2003)' class='nohover'><b>Changes from 1.5x to 1.5y (09-23-2003)</b></a></div>
+<ul><li><p>
+Fixed a bug with non-divisible by 8 widths in the 5551 surface blitter.</li><li>Fixed a bug with non-divisible by 16 heights in the delta (non-copy all) blitter.</li><li>Fixed a sporadic bug that could cause DirectSound not to play on NT4.</li></ul><div class="discussion_heading"><a name='Changes from 1.5w to 1.5x (08-27-2003)' class='nohover'><b>Changes from 1.5w to 1.5x (08-27-2003)</b></a></div>
+<ul><li><p>
+Fixed a bug in the RAD Video Tools heap that was cause the RAD Batch window not to pop up.</li></ul><div class="discussion_heading"><a name='Changes from 1.5v to 1.5w (08-19-2003)' class='nohover'><b>Changes from 1.5v to 1.5w (08-19-2003)</b></a></div>
+<ul><li><p>
+Added a Bink for GNU/Linux SDK - should work on most of the modern distributions.</li><li>Added a Bink for GNU/Linux command line video player (uses SDL_mixer for output).</li><li>Added an option in the Windows player to view the alpha plane of a movie.</li><li>Renamed the memory callback function, RADSetMemory to BinkSetMemory (so that
+        you can use Bink and Smacker in the same project.</li><li>Added a BinkDX9SurfaceType function for DX9 games.</li><li>Fixed a problem where a skipped frame would cause BinkGetRects to always return zero rects if you called it before BinkCopyToBufferRect.</li><li>If you pass in inverted numbers for a series of still images for the command line tools, 
+        Bink will process them in reverse order.</li><li>Added a few checks so that we don't detect some weird TGAs as JPEGs.</li></ul><div class="discussion_heading"><a name='Changes from 1.5u to 1.5v (04-12-2003)' class='nohover'><b>Changes from 1.5u to 1.5v (04-12-2003)</b></a></div>
+<ul><li><p>
+Fixed a bug where the Bink player for Mac couldn't highlight pre-compiled EXE video files.</li><li>Fixed a bug on the Mac in the BINKSURFACE32R and BINKSURFACE32RA YUV to RGB pixel converters
+where a non-divisible by 4 right edge would draw with the wrong colors.</li><li>Fixed a bug in the Mac Classic versions of the library and player where RemoveTimeTask couldn't
+be found on pre-9.0 MacOS.</li><li>Added Mach-O format Carbon dynamic libraries for building Project Builder or CodeWarrior Mach-O applications without thunking.</li><li>Brought Bink Mac up to the latest PC source base (now uses Perforce and command line building
+just like the PC, so it will always stay in sync).</li></ul><div class="discussion_heading"><a name='Changes from 1.5t to 1.5u (03-16-2003)' class='nohover'><b>Changes from 1.5t to 1.5u (03-16-2003)</b></a></div>
+<ul><li><p>
+Bink playback is now much smoother on medium to low-end machines running Win 9x, due to working around
+a multi-threaded bug in the system function, timeGetTime, that was eating up to 30% of the CPU!</li><li>Now properly handle the window being minimized when using DirectDraw primary surface blitting in the Bink player.</li><li>Fixed an edge bug when using BinkCopyToBufferRect with a non-divisible-by-4 width or height and a
+non-zero left or top offset.</li></ul><div class="discussion_heading"><a name='Changes from 1.5s to 1.5t (02-06-2003)' class='nohover'><b>Changes from 1.5s to 1.5t (02-06-2003)</b></a></div>
+<ul><li><p>
+Fixed the Smack and SmackMix tools when using old format Bink audio tracks.</li><li>We more support more dialects of TGA import files. This means we resort to QuickTime less 
+often (which is good because QuickTime is slooow).</li><li>Fixed an debug assert in the Xbox SDK when setting very quiet (or silent) mix bin volume levels.</li><li>Fixed a crash when using waveOut audio output and the `play as fast as possible` frame rate option.</li></ul><div class="discussion_heading"><a name='Changes from 1.5r to 1.5s (01-14-2003)' class='nohover'><b>Changes from 1.5r to 1.5s (01-14-2003)</b></a></div>
+<ul><li><p>
+Allowed the Smack and SmackMix tools to create old format Bink audio tracks.</li><li>Increased the Bink I/O block size from 8K to 16K (since Bink videos are slowly
+using higher data rates).</li><li>Fixed a setting in the Bink SDK help where the navigation tab would disappear when
+the focus was lost.  One stupid downside is that WinHelp remembers what the setting used to
+be, so if you have no nagivation tab at all, then choose `Options... Show Tabs` on the menu bar.</li></ul><div class="discussion_heading"><a name='Changes from 1.5q to 1.5r (01-01-2003)' class='nohover'><b>Changes from 1.5q to 1.5r (01-01-2003)</b></a></div>
+<ul><li><p>
+Fixed the accidental exclusion of the RADSetMemory function header file from the Bink SDKs.</li><li>Made the Bink Player only ask to check for updates if it is in the same directory as the RAD Video Tools.
+This means that the free Bink Player can be distributed without popping up update requests.</li><li>We now poll the DirectSound buffer positions much less frequently to handle sound drivers that 
+report these positions slowly.</li><li>We added a non-LTCG version of Bink for Xbox, so that `Edit and Continue` can be used again.</li></ul><div class="discussion_heading"><a name='Changes from 1.5p to 1.5q (11-18-2002)' class='nohover'><b>Changes from 1.5p to 1.5q (11-18-2002)</b></a></div>
+<ul><li><p>
+Fixed a problem where our JPEG reader was detecting motion-JPEG QuickTime movies 
+        as a single frame JPEG.  This had the effect of making motion-JPEG movies only 
+	appear to be one frame, so only the first frame of the movie was ever converted.  
+	We now force the use of QuickTime when the JPEG file is over 1.5 MB in size, or when the 
+	extension is .QT or .MOV.</li><li>Fixed a bug when using the old Bink audio codec where stereo sound files would
+        get converted to mono during compression. Note that there was no problem if you were using the 
+	new Bink audio codec (which you should be anyway).</li><li>Fixed a bug when compiling a Smacker for DOS or Win16 video executable.</li><li>Did the big switch over to Perforce source code control.</li></ul><div class="discussion_heading"><a name='Changes from 1.5m to 1.5p (10-18-2002)' class='nohover'><b>Changes from 1.5m to 1.5p (10-18-2002)</b></a></div>
+<ul><li><p>
+Added MusyX audio output support for the GameCube SDK.  This caused a few API changes on the GameCube (even for non-MusyX games) because we no longer automatically assume you are using AX.  So, you must now call BinkSoundUseAX or BinkSoundUseMusyX before the first call to BinkOpen, or you won't get any sound. Also, RADSetAudioMemory has been removed (because only AX used it) - instead, you now pass in the ARAM callbacks to the BinkSoundUseAX function.</li><li>Updated all of the GameCude examples to let them be built AX or MusyX.</li></ul><div class="discussion_heading"><a name='Changes from 1.5L to 1.5m (10-04-2002)' class='nohover'><b>Changes from 1.5L to 1.5m (10-04-2002)</b></a></div>
+<ul><li><p>
+Made the lower Bink audio compression levels less lossy (the levels less than 4).</li><li>Changed the GameCube I/O code to check the global DVD status (vs. the file status) so that errors are still reported even if other async I/O intervenes.</li><li>Worked around buggy Windows XP sound drivers that report bogus playback positions (which was causing occasional skips).</li><li>Switched to using QuickTime to load PNGs when compressing alpha planes.</li></ul><div class="discussion_heading"><a name='Changes from 1.5k to 1.5L (09-25-2002)' class='nohover'><b>Changes from 1.5k to 1.5L (09-25-2002)</b></a></div>
+<ul><li><p>
+Fixed a problem on the GameCube where stereo audio playback was overly noisy.</li><li>Fixed a few subtle timing issues to allow seamless audio looping.</li></ul><div class="discussion_heading"><a name='Changes from 1.5J to 1.5k (09-09-2002)' class='nohover'><b>Changes from 1.5J to 1.5k (09-09-2002)</b></a></div>
+<ul><li><p>
+Added batch functionality to the RAD Video Tools! Now you can highlight a
+group of input files and process them all one by one.</li><li>The RAD Video Tools now has built-in support for TGA and TIFF alpha
+planes (previously QuickTime was used for alpha input). Our built-in support is almost
+20 times faster than QuickTime, so compressing large numbers of still images
+is now much, much faster!</li><li>Fixed a bug in the DirectSound support where changing the volume could be ignored.</li><li>Bumped up the default compression data rate to 400 kps.</li><li>Added a warning when you ask to compress an alpha plane and the 
+input file has no alpha plane.</li><li>Switched to .NET for building the tools (a little faster
+compiled code, but the debugger is frustrating).</li><li>Changed the sound support so that we only reset the sound system
+every 2 minutes of video (less popping at loop points).  We also do the reset
+on the first frame (previously we did it on the last frame which
+occasionally popped).</li><li>Moved the end of file logic in the Xbox and GameCube example source
+to fix a problem where playback could stop one frame early.</li><li>Show 2 decimal places when displaying frame rates in the RAD
+Video Tools.</li><li>We now free the 2x height doubled YUV scanline buffers in BinkClose
+(vs. shutdown in previous versions). This only saves about 1500 bytes, but 
+it helps with fragmentation.</li><li>Changed the GameCube SDK to account for the slightly faster rate
+that the NGC DSP <i>really</i> runs at.  Fixes sync problems with longer
+movies on the GameCube.</li><li>Changed the Xbox and PC SDK to allocate the sound sample buffer on
+the stack - saves 16K of global memory.</li><li>Now build the Xbox library using VC7's link time code generation. This
+will generate both faster and smaller code. The file size of the library is 
+large because the linker does the compilation - the link size in
+bytes will be 10K to 50K smaller.</li></ul><div class="discussion_heading"><a name='Changes from 1.5i to 1.5J (06-24-2002)' class='nohover'><b>Changes from 1.5i to 1.5J (06-24-2002)</b></a></div>
+<ul><li><p>
+Updated the sound code for the Miles Sound System to work with Miles 6.5.</li><li>Updated the sound code for DirectSound to be loudness based (vs. amplitude based).</li><li>Updated the Nintendo GameCube examples to work with Patch 3.</li></ul><div class="discussion_heading"><a name='Changes from 1.5h to 1.5i (06-15-2002)' class='nohover'><b>Changes from 1.5h to 1.5i (06-15-2002)</b></a></div>
+<ul><li><p>
+Fixed a no-volume problem when using the latest GameCube audio libraries.</li></ul><div class="discussion_heading"><a name='Changes from 1.5g to 1.5h (06-12-2002)' class='nohover'><b>Changes from 1.5g to 1.5h (06-12-2002)</b></a></div>
+<ul><li><p>
+Made BinkOpen use async reads on the GameCube to avoid lock ups when
+opening the door at the wrong time.</li><li>Re-enabled the BinkDX8SurfaceType function on the Xbox.</li></ul><div class="discussion_heading"><a name='Changes from 1.5f to 1.5g (05-15-2002)' class='nohover'><b>Changes from 1.5f to 1.5g (05-15-2002)</b></a></div>
+<ul><li><p>
+Fixed the GameCube not playing some soundtracks.</li><li>Fixed two ugly bugs on the GameCube when closing a Bink file.</li><li>Fixed an periodic clicking on the GameCube with some audio sample rates.</li><li>Fixed the little glitch of audio when playing 8-bit data on the GameCube.</li></ul><div class="discussion_heading"><a name='Changes from 1.5e to 1.5f (05-08-2002)' class='nohover'><b>Changes from 1.5e to 1.5f (05-08-2002)</b></a></div>
+<ul><li><p>
+Fixed a crash when compressing some audio files.</li></ul><div class="discussion_heading"><a name='Changes from 1.5d to 1.5e (04-29-2002)' class='nohover'><b>Changes from 1.5d to 1.5e (04-29-2002)</b></a></div>
+<ul><li><p>
+Fixed a bug when compressing or mixing using the old Bink audio compressor.</li><li>Fixed a debug message that displayed while compressing.</li></ul><div class="discussion_heading"><a name='Changes from 1.5c to 1.5d (04-27-2002)' class='nohover'><b>Changes from 1.5c to 1.5d (04-27-2002)</b></a></div>
+<ul><li><p>
+Fixed a few linker errors on GameCube when using CodeWarrior.</li></ul><div class="discussion_heading"><a name='Changes from 1.5b to 1.5c (04-17-2002)' class='nohover'><b>Changes from 1.5b to 1.5c (04-17-2002)</b></a></div>
+<ul><li><p>
+Worked around a compiler bug that could cause the Bink compressor to
+crash on some input files.</li></ul><div class="discussion_heading"><a name='Changes from 1.5a to 1.5b (04-03-2002)' class='nohover'><b>Changes from 1.5a to 1.5b (04-03-2002)</b></a></div>
+<ul><li><p>
+Added the BinkCopyToBufferRect function to the Bink SDK. This
+function allows you to partially copy a Bink frame to another buffer.  You
+can draw with tiled Direct3D textures much faster with this function.</li><li>Updated the DX8 and DX7 example programs to use the
+BinkCopyToBufferRect function.</li><li>Changed the RAD 3D wrapper API slightly on PC to handle direct
+locking of tiled textures.  You now need to call Lock_RAD_3D_image in a
+loop to obtain each buffer pointer to copy into. See ExamAlph.c for the
+updated example.</li><li>Released a new Carbon version of the Mac player (compatible with 
+MacOS X and 9)!</li><li>Fixed a false positive condition when writing out an AVI that could cause the
+'Windows has crashed' message to appear when everything was fine.</li><li>Updated the Mac version to the latest codebase.</li><li>Fixed an offset bug on the Mac in BinkBufferLock when running on certain
+multi-monitor configurations.</li><li>Switched to an all new internal task sharing model on the Mac -
+replaces all the cooperative thread stuff with timers and critical sections.
+Much better IO and sound performance (fixes the MacOS X multi-CPU sound
+skips).</li><li>On MacOS X, switched to using normal IO on a background thread instead of async IO.</li><li>Fixed a few bugs on the GameCube when playing videos with no sound.</li><li>Fixed the mixer to accept lossy levels greater than 100 (to specify the old Bink encoder
+format).</li><li>Fixed the delay when using BinkGoto on a video without sound.</li></ul><div class="discussion_heading"><a name='Changes from 1.2J to 1.5a (03-15-2002)' class='nohover'><b>Changes from 1.2J to 1.5a (03-15-2002)</b></a></div>
+<ul><li><p>
+Added an all new Bink audio encoder!  Sounds much better and can
+compress up to half the old data rate!</li><li>Added crash protection around all calls to Windows or QuickTime -
+we should now withstand crashes in buggy 3rd party codecs.  The specific
+frame that was being decompressed will be blank, but the rest of the movie
+should survive.</li><li>Added several new Xbox SDK examples showing overlay and
+back buffer support.  Overlays are really cool - they are definitely the
+best way to play most videos on the Xbox.</li><li>Added YUY2 blitting support to the Xbox SDK - this allows the Xbox
+hardware to do the YUV to RGB conversion (which is usually much faster).
+Most of the examples now use YUY2 as the default texture format.</li><li>Added support for 3D Studio Max's RLA file format.  This format
+supports RGB, alpha, Z-depth info, UV-coordinates, and normals - all per
+pixel!  This lets you do some amazing post-process stuff with video that
+you'd swear couldn't be pre-rendered.  We'll put up some demos of this soon!</li><li>Added lots of new configuration detection to the System Info button in
+the RAD Video Tools (Duron, P4, Celeron, Itanium, Me, 2000, XP, video card,
+audio card, memory, and disk space).</li><li>Detect larger than 2 GB AVI files and warn the user that they are
+not supported by the Windows reader.</li></ul><div class="discussion_heading"><a name='Changes from 1.2i to 1.2J (02-18-2002)' class='nohover'><b>Changes from 1.2i to 1.2J (02-18-2002)</b></a></div>
+<ul><li><p>
+Released the all new Nintendo GameCube support!  The platforms keep coming!</li><li>Fixed a stupid memory leak in BinkOpen - everyone using 1.2i should
+upgrade.</li><li>Rewrote BinkGoto completely - you can now jump directly to a frame
+and the sound will begin immediately (vs. the old 750 millisecond silence
+delay).</li><li>Added new Direct3D 8 example texture support code.  Includes
+support for dynamic and non-power of 2 textures (both of which can improve
+playback dramatically).</li></ul><div class="discussion_heading"><a name='Changes from 1.2h to 1.2i (01-18-2002)' class='nohover'><b>Changes from 1.2h to 1.2i (01-18-2002)</b></a></div>
+<ul><li><p>
+Detected when DirectDraw can't lock the primary surface and switch
+to DIBSections. This fixes the problem with blank video windows on XP or when
+NetMeeting was running.</li><li>Fixed a rare deadlock problem when a movie would loop (or when you called BinkSetSoundOnOff).</li><li>Fixed a data overrun that could cause pauses when playing a movie
+that had no sound.</li><li>Made BinkGoto start the audio from the `gone-to` frame instead of
+whatever filled up the sound buffer first.</li><li>Fixed BinkGoto to not unpause the movie if it was previously paused.</li><li>Removed Windows.h from the Bink header file (for faster compilation).</li></ul><div class="discussion_heading"><a name='Changes from 1.2g to 1.2h (11-07-2001)' class='nohover'><b>Changes from 1.2g to 1.2h (11-07-2001)</b></a></div>
+<ul><li><p>
+Made the default mix bins on the Xbox to be all speakers (instead of
+the normal Xbox default of just the front-left and front-right speakers).</li></ul><div class="discussion_heading"><a name='Changes from 1.2f to 1.2g (11-06-2001)' class='nohover'><b>Changes from 1.2f to 1.2g (11-06-2001)</b></a></div>
+<ul><li><p>
+Switched to the November Xbox SDK which required slightly changing
+the BinkSetMixBins and BinkSetMixBinVolumes functions.</li></ul><div class="discussion_heading"><a name='Changes from 1.2e to 1.2f (10-26-2001)' class='nohover'><b>Changes from 1.2e to 1.2f (10-26-2001)</b></a></div>
+<ul><li><p>
+Fixed a silly regression bug where videos without audio would play with the wrong frame rate.</li></ul><div class="discussion_heading"><a name='Changes from 1.2d to 1.2e (10-19-2001)' class='nohover'><b>Changes from 1.2d to 1.2e (10-19-2001)</b></a></div>
+<ul><li><p>
+Bink can now play multiple sound tracks at once.  This means that the BinkSetSoundTrack function now takes an array of track IDs to
+play instead of a single value.  Also, the BINKNOSOUND constant has been removed - to play without any
+sound, pass a zero for the track count in BinkSetSoundTrack.</li><li>Added example code in ExamXbox.cpp that shows how to play 5.1 audio on an Xbox.</li><li>Added the BinkSetMixBinVolumes function to adjust the mix bin
+volumes individually on the Xbox.</li><li>BinkSetVolume, BinkSetPan, BinkSetMixBins functions all now take a
+track ID to control which sound track is changed.</li><li>Worked around a DirectSound bug on the Xbox where the audio tracks
+sometimes wouldn't start.  If we notice the sound positions aren't updating,
+we restart the audio track.</li></ul><div class="discussion_heading"><a name='Changes from 1.2c to 1.2d (10-02-2001)' class='nohover'><b>Changes from 1.2c to 1.2d (10-02-2001)</b></a></div>
+<ul><li><p>
+Fixed a bug in the Miles sound module where sound wouldn't restart after a skip.</li></ul><div class="discussion_heading"><a name='Changes from 1.2b to 1.2c (09-30-2001)' class='nohover'><b>Changes from 1.2b to 1.2c (09-30-2001)</b></a></div>
+<ul><li><p>
+Worked around a nasty bug in the Xbox system software where the
+machine can occasionally get in a state where QueryPerformanceCounter
+actually runs backwards.</li><li>Fixed a bug where Bink wouldn't play the audio track of very short
+videos (the entire video had to be less than 250 milliseconds long).</li></ul><div class="discussion_heading"><a name='Changes from 1.2a to 1.2b (09-24-2001)' class='nohover'><b>Changes from 1.2a to 1.2b (09-24-2001)</b></a></div>
+<ul><li><p>
+Put all of Bink in separate sections, so that it can be loaded and
+unloaded on an Xbox.  Use the new BinkUnload and BinkUnloadConverters to
+manage Bink's sections.</li><li>Set the headroom on the Bink DirectSound buffer to zero (the default
+is too quiet on the Xbox).</li><li>Added a new BinkSetMixBins function to allow the management of Xbox 
+mix bin destination buffers.</li></ul><div class="discussion_heading"><a name='Changes from 1.1d to 1.2a (08-28-2001)' class='nohover'><b>Changes from 1.1d to 1.2a (08-28-2001)</b></a></div>
+<ul><li><p>
+<b>Huge quality improvements</b> on videos with color gradiants, washes,
+or fades as a result of cleaning up noise contamination all the way through the Bink pixel
+pipeline. In some cases, equivalent quality can be obtained at 1/4 the bandwidth!
+If you need highest possible quality, <b>we recommend recompressing</b> all your
+Bink videos.  The only downside is that video compression time is longer when
+using super-high data rates (which you may not need any more).  These
+improvements aren't hype - the quality difference is amazing in most cases!</li><li>Added a new denoising video filter (which is now rarely necessary 
+with the new quality improvements).</li><li>Fixed a front-end problem in the video converter where half-toning 
+was being applied if you selected `half-tone always` in the 256-color 
+section.</li></ul><div class="discussion_heading"><a name='Changes from 1.1c to 1.1d (08-21-2001)' class='nohover'><b>Changes from 1.1c to 1.1d (08-21-2001)</b></a></div>
+<ul><li><p>
+Worked around an Xbox DirectSound bug that caused movies to
+        skip or slip out of synch at the start of a movie.</li><li>Fixed a bug that caused Bink's DirectSound code to take lock the
+DirectSound buffer too frequently.</li><li>Bink for Xbox now allocates it's sound buffer from the RAD memory
+allocation functions.</li><li>Bink's threads now use 12K of stack space instead of the executable
+default.  This can save a fair amount of memory on the Xbox.</li><li>Added a workaround in the Bink timer code for buggy motherboards
+        that advance the QueryPerformanceCounter incorrectly under heavy loads.</li></ul><div class="discussion_heading"><a name='Changes from 1.1b to 1.1c (07-12-2001)' class='nohover'><b>Changes from 1.1b to 1.1c (07-12-2001)</b></a></div>
+<ul><li><p>
+Added new QuickTime importing code to support the video track of
+MPEG and Flash movies.  QuickTime doesn't support audio exporting from
+either of these file types yet, unfortunately.</li><li>Added new QuickTime importing code to support AVIs that Windows
+can't open (like DV formatted AVIs).</li><li>Switched to the July version of the Xbox SDK.</li></ul><div class="discussion_heading"><a name='Changes from 1.1a to 1.1b (06-18-2001)' class='nohover'><b>Changes from 1.1a to 1.1b (06-18-2001)</b></a></div>
+<ul><li><p>
+Fixed bug when opening a Bink file with multi-threaded I/O turned
+off.  This caused several of the tools to lock up when processing Bink
+files as input files.</li></ul><div class="discussion_heading"><a name='Changes from 1.0x to 1.1a (06-14-2001)' class='nohover'><b>Changes from 1.0x to 1.1a (06-14-2001)</b></a></div>
+<ul><li><p>
+Added new audio encoder that provides much higher quality sound on deep tones (may
+still have to use 0 lossy level on some files, though).</li><li>Rewritten DirectSound layer - much more tolerant of CPU starvation.
+Also worked around buggy SBLive drivers that would cause periodic
+skipping under Windows 2000.</li><li>All new threading model - instead of one thread per open Bink, there
+are simply two global threads for all open Bink files.  Also fixed a few very rare thread deadlocks on
+multi-CPU machines (typically exhibited after more than 12 hours of looped playback).</li><li>Built with new beta versions of the Xbox system software - fixes
+crash in BinkOpen on beta 1 and 2 Xbox hardware.</li><li>Fixed compression of unusual AVIs where the video stream format
+doesn't match the file format (usually seen in Debabilizer AVI files).</li><li>Fixed a bug compressing unusual QuickTime movies where the audio
+started at a non-zero offset.</li><li>Improved the Bink I/O system to give better playback when playing
+files that are very close to the data rate limit of the playback device.</li><li>Added a new BinkDX8SurfaceType function that returns the
+type of a DirectX 8 surface.</li></ul><div class="discussion_heading"><a name='Changes from 1.0w to 1.0x (02-15-2001)' class='nohover'><b>Changes from 1.0w to 1.0x (02-15-2001)</b></a></div>
+<ul><li><p>
+First release of the Bink SDK for Xbox! Use Bink files on the
+Xbox!</li><li>Fixed a several precision issues in the front-end tools that caused
+a variety of odd problems when working with very long video files.</li><li>Updated the 3D example files to support scaling the video while
+blitting.</li><li>Fixed a thread deadlock when running under Windows 98 and another
+background application was pounding on the DirectSound device.</li><li>Fixed a bug on the Mac when using the BINKSURFACE32A surface type.</li></ul><div class="discussion_heading"><a name='Changes from 1.0v to 1.0w (11-26-2000)' class='nohover'><b>Changes from 1.0v to 1.0w (11-26-2000)</b></a></div>
+<ul><li><p>
+All Bink example files have been rewritten - much cleaner and easier
+to understand.</li><li>The example programs for performing alpha on OpenGL or Direct3D have
+been merged into one file (ExamAlph.C).  The example now uses a simple
+wrapper API to both OpenGL (GLRAD3D.C) and Direct3D (D3DRAD3D.CPP).</li><li>Added a Carbon version of the Bink library for MacOS X.</li><li>Made the Bink Mac player show double-clicked or dropped files from the Finder.</li><li>Fixed a few bugs in the video resizer - should look better when
+using small resize ratios (like resizing a 320x240 video to 352x256, for
+example).</li><li>Fixed a bug in the video smoother where small artifacts could
+appear.</li><li>Allow more video files to be added to a single compiled executable.</li><li>Fixed a bug where bi-linear filtering was forced on when
+compressing an alpha plane.</li><li>When adding three or more files to a list file, the files are
+sorted as they are placed into the list.</li><li>List files now store complete pathnames internally, so you can copy
+them to other locations and the list file will still work.</li></ul><div class="discussion_heading"><a name='Changes from 1.0u to 1.0v (10-03-2000)' class='nohover'><b>Changes from 1.0u to 1.0v (10-03-2000)</b></a></div>
+<ul><li><p>
+Fixed a silly bug in the still image importer where the frame range
+        was used incorrectly.</li></ul><div class="discussion_heading"><a name='Changes from 1.0t to 1.0u (09-28-2000)' class='nohover'><b>Changes from 1.0t to 1.0u (09-28-2000)</b></a></div>
+<ul><li><p>
+Fixed a bug in Smacker's lossless mode where it wasn't lossless if the
+        input file had a very high data rate.</li><li>Fixed a bug when using a list file containing
+        a series of still images with local start and end frame offsets.</li><li>Fixed a display bug in file information window where large file sizes
+        could be displayed as negative numbers.</li><li>Switched to the new RAD make tool - very cool.</li></ul><div class="discussion_heading"><a name='Changes from 1.0s to 1.0t (09-09-2000)' class='nohover'><b>Changes from 1.0s to 1.0t (09-09-2000)</b></a></div>
+<ul><li><p>
+Added video resizing! You can now shrink or zooming during compression or
+        conversion.  We use bi-cubic interpolation for extremely high quality
+        scaling.</li><li>Added a bunch of digital video filters for use during compression and
+        conversion - contrast, smoothing, brightness, clamp to black, gamma
+        correction, and video de-interlacing are all now available!</li><li>Fixed a subtle bug in the QuickTime importer where the first frame
+        was sometimes duplicated.</li><li>Added new 256-color small and large icons for Bink and Smacker.</li><li>Added a workaround to a SBLive driver bug that was causing waveOut
+        mode not to work under Win98.</li><li>Fixed some thread contention problems that were causing audio
+        decompression to take a bit more CPU than necessary.</li><li>Fixed the non-client area not being redrawn in the players after a 
+        window resize under Win2K.</li><li>Changed a few variable names in RAD.H to avoid conflicts with AMD's
+        3DNow header file.</li><li>Fixed a bug where a list file containing files with different
+        original frame rates would wrap around if an adjusted frame rate was
+        used on the list file.</li></ul><div class="discussion_heading"><a name='Changes from 1.0r to 1.0s (08-08-2000)' class='nohover'><b>Changes from 1.0r to 1.0s (08-08-2000)</b></a></div>
+<ul><li><p>
+Made the player periodically ask to check for updates (since
+        many users just double-click in Explorer and never run the tools).</li><li>Fixed a stupid bug where Bink videos without sound would play as
+        fast possible.</li></ul><div class="discussion_heading"><a name='Changes from 1.0q to 1.0r (08-03-2000)' class='nohover'><b>Changes from 1.0q to 1.0r (08-03-2000)</b></a></div>
+<ul><li><p>
+Sped up the decompressor by 12% on Mac and 5% on PC.</li><li>Fixed a audio problem on the Mac where audio playback was noisy.</li><li>An error is now shown when the audio track of a locked QuickTime file
+        is opened (rather than just converting silence).</li><li>When executing an internal video utility and the control key is held
+        down, we now put the command onto the clipboard (this makes it easy
+        to copy the command line into a batch file).</li><li>An hourglass is displayed when reading long series of image files.</li><li>Fixed a bug where the wrong window style was used in the Bink player.</li><li>Fixed a goofy bug where BinkSetSoundOnOff only allowed zero or one
+        (vs. zero or non-zero).</li></ul><div class="discussion_heading"><a name='Changes from 1.0p to 1.0q (07-10-2000)' class='nohover'><b>Changes from 1.0p to 1.0q (07-10-2000)</b></a></div>
+<ul><li><p>
+Fixed a subtle aliasing error when using the 'adjust to frame rate'
+        option with non-integral multiples.</li><li>Fixed a bug where the alpha plane of an imported Bink file was
+        ignored.</li><li>Fixed a bug where the alpha plane of a TGA file was ignored if you
+        imported the file as one of a series of still images.</li><li>Switched to a new EXE compressor (UPX) under Win32 that gets better
+        compression and that should be more widely compatible.</li></ul><div class="discussion_heading"><a name='Changes from 1.0n to 1.0p (06-26-2000)' class='nohover'><b>Changes from 1.0n to 1.0p (06-26-2000)</b></a></div>
+<ul><li><p>
+Switched to the real FFT instead of the complex FFT which can double
+        audio decompression performance on some CPUs!</li><li>Made the RAD Video Tools must better at detecting series of numbered
+        files.</li></ul><div class="discussion_heading"><a name='Changes from 1.0m to 1.0n (06-12-2000)' class='nohover'><b>Changes from 1.0m to 1.0n (06-12-2000)</b></a></div>
+<ul><li><p>
+Compiled EXE Bink and Smacker files can now be used by most of the
+        tools - you can convert them into AVIs, recompress them, remix audio
+        from them, click on advanced play to change the built-in playback
+        settings, etc.</li><li>You can now use the Bink and Smacker sound mixers to remove an audio
+        track - just use '-' for the sound filename to mix.</li><li>The Mac player can now play PC EXE compiled videos - just highlight
+        EXE file and hit Play!</li><li>Video playback is now centered by default on the Mac.</li><li>The background screen is cleared to black by default on the Mac.</li><li>Added options to not clear the background screen and to hide the mouse
+        during playback on the Mac.</li><li>The Smacker player can now hide the mouse cursor during playback.</li><li>Fixed crash when encountering a file IO error (such as the CD being
+        ejected during playback) on both PC and Mac.</li><li>Fixed an offset bug when using negative X offsets in the RAD graphics
+        file importer when outputting true-color files.</li><li>Added the new RADSetMemory function that allows you to replace Bink's
+        or Smacker's memory allocation and freeing routines on both PC and Mac.</li></ul><div class="discussion_heading"><a name='Changes from 1.0k to 1.0m (06-02-2000)' class='nohover'><b>Changes from 1.0k to 1.0m (06-02-2000)</b></a></div>
+<ul><li><p>
+Switched to a faster FFT routine (speeds up audio decompression).</li><li>Fixed BinkCopyToBuffer to return a 1, if the blit was skipped.</li><li>Exported the BinkSetIO function correctly.</li><li>Fixed a wrap around bug when converting long wave files with the
+        Bink converter.</li></ul><div class="discussion_heading"><a name='Changes from 1.0j to 1.0k (05-22-2000)' class='nohover'><b>Changes from 1.0j to 1.0k (05-22-2000)</b></a></div>
+<ul><li><p>
+Fixed some surface byte ordering issues on MacOS - BINKSURFACE32
+is now the correct format for the MacOS desktop.</li><li>Fixed a millisecond overflow problem on MacOS.</li><li>Buffer more sound data on MacOS - should give smoother playback.</li><li>Use less aggressive frame skipping on both PC and Mac.</li><li>Fixed a bug in the Bink IO speed simulator.</li><li>Fixed a crash when importing a Smacker file with Bink audio.</li><li>Added waveOut support to Bink - it can now run completely without
+        DirectX.</li></ul><div class="discussion_heading"><a name='Changes from 1.0i to 1.0j (04-30-2000)' class='nohover'><b>Changes from 1.0i to 1.0j (04-30-2000)</b></a></div>
+<ul><li><p>
+First version of Bink for Mac! The full Bink SDK and player is now
+available for MacOS!</li><li>Fixed a bug when pausing a video before a single frame had been
+decompressed.</li></ul><div class="discussion_heading"><a name='Changes from 1.0h to 1.0i (04-05-2000)' class='nohover'><b>Changes from 1.0h to 1.0i (04-05-2000)</b></a></div>
+<ul><li><p>
+Added three new display color depth options to the Bink player - `at
+least high-color` (tries 16-bit, then 32-bit, and then 24-bit), `try
+true-color` (tries 32-bit, then 24-bit, and then 16-bit), and `true-color
+only` (tries 32-bit, and then tries 24-bit).</li><li>Checks the actual bit depth set after a call to
+ChangeDisplaySettings to work around a bug in the NVidia drivers.</li><li>Bink player doesn't decompress sound that is going to be skipped
+when playing in `as fast as possible` mode.</li><li>Fixed a bug in the 5551 merged alpha blitters.</li><li>Added two Bink alpha plane playback examples - DXALPHA.CPP for 
+Direct3D and GLALPHA.C for OpenGL.</li><li>First version of Smacker 4.0 for the Mac!  PowerPC and 68K are both
+supported (you should avoid using Bink audio in Smacker files that will be
+played on 68K machines, though).</li><li>Fixed a bug in the Smacker encoder where files compressed with Bink
+audio tracks would be aligned incorrectly.  This led to too slow Smacker
+files on the PC and unplayable files on the Mac.  You have to recompress the
+Smacker file to fix the problem, though.</li><li>Renamed the SmackTimerRead function to RADTimerRead and switched to
+using QueryPerformanceCounter (from timeGetTime) on Win32 - should make
+movies play a little more smoothly on Windows NT and 2000.</li><li>Fixed a bug in the SmackGetRects function where an extra bogus
+rectangle would be returned on a frame where a palette change occurred, but
+no pixels changed.</li><li>In the Smacker player and SDK, broke out the time spent in the audio
+and video decoders into separate values.</li><li>Fixed a bug in the Smacker player that cause an extra millisecond of
+sleep for every frame.</li><li>Fixed a bug where the Bink encoder wouldn't read the alpha channel
+out of an input Bink file.</li><li>Fixed a crash in the Mac SmackBuffer API when a NULL rectangle was
+passing to SmackBufferBlit.</li><li>You can now override settings on the command line with a remove
+switch.  For example, if you run `BinkPlay test /L`, you can tell Bink to
+ignore the loop switch with `BinkPlay test /L /-L`.  The `slash-minus-L`
+tells Bink to skip the earlier L switch.  This is mostly useful for
+overriding the switches that are compiled into a self-playing Bink or
+Smacker file.</li></ul><div class="discussion_heading"><a name='Changes from 1.0g to 1.0h (03-14-2000)' class='nohover'><b>Changes from 1.0g to 1.0h (03-14-2000)</b></a></div>
+<ul><li><p>
+Under NT, sped up mixing time dramatically by flushing the file
+        less often.</li><li>Fixed a problem where a user-specified DirectSound object could
+        cause audio not to play.</li><li>Fixed a bug in the Smacker mixer where forcing a frame rate
+        would cause the audio to be mixed incorrectly.</li></ul><div class="discussion_heading"><a name='Changes from 1.0f to 1.0g (03-08-2000)' class='nohover'><b>Changes from 1.0f to 1.0g (03-08-2000)</b></a></div>
+<ul><li><p>
+Added multi-CPU support to the Bink compressor!  Compression scales
+        close to linearly with multiple CPUs - twice as fast for
+        two CPUs, four times as fast for four CPUs, etc.</li><li>Added reversed order blitters (BINKSURFACE24R and
+BINKSURFACE32R).  These are convenient under OpenGL where the reversed byte
+path is more optimized.</li><li>Added merging alpha blitters (BINKSURFACE32A, BINKSURFACE32RA,
+and BINKSURFACE4444).  These are used with Bink files that are compressed with
+an alpha plane to get the merged formats commonly used by the 3D APIs.</li><li>Added the new online documentation system (with the system that
+        Casey created for Granny).</li><li>Fixed a bug in the BinkBuffer API where the YUV formats were never
+        tried if the DIBSection blitter failed.</li></ul><div class="discussion_heading"><a name='Changes from 1.0e to 1.0f (02-08-2000)' class='nohover'><b>Changes from 1.0e to 1.0f (02-08-2000)</b></a></div>
+<ul><li><p>
+Made the Bink compressor up to 25% faster with better video quality.</li><li>Made the core Bink decompressor about 12% faster on all CPUs.</li><li>Made the decompressor another 5% faster if you recompress your Bink
+files.</li><li>When compressing with alpha, we now use QuickTime to load the files
+first (which lets us read the alpha planes out of most files - including
+TGAs).</li><li>Fixed a few bugs in the alpha plane compressor and decompressor.</li><li>Switched to a new internal frame format as a precursor to multi-CPU
+(SMP) decompression.</li><li>Merged the Bink for PC and Mac into one code base (for the upcoming
+Mac release).</li><li>Fixed a crash in the Bink DLL when shutting down under NT 4.</li><li>Made the Bink and Smacker players for Win32 take longer lists of
+filenames (up to 50 files can now be compiled into an EXE).</li></ul><div class="discussion_heading"><a name='Changes from 1.0d to 1.0e (02-01-2000)' class='nohover'><b>Changes from 1.0d to 1.0e (02-01-2000)</b></a></div>
+<ul><li><p>
+Worked around a Windows buffer limit that was causing
+doubled-clicked files in the RAD Video Tools not to play.</li><li>Fixed a potential crash when decompressing alpha plane data.</li></ul><div class="discussion_heading"><a name='Changes from 1.0c to 1.0d (01-27-2000)' class='nohover'><b>Changes from 1.0c to 1.0d (01-27-2000)</b></a></div>
+<ul><li><p>
+Fixed a bug in the QuickTime sound importer - there should be no
+more glitches with compressed MOV soundtracks, MP3 files or other compressed
+wave files.</li><li>Fixed the Bink converter using the wrong value when displaying
+percent complete during a sound file conversion.</li><li>Fixed some YUV conversion problems when using non-zero offsets to
+the BinkCopyToBuffer function.</li><li>Sped up mono 2x blitting on non-MMX CPUs.</li><li>Fixed a bug where DirectDraw was still required even when using
+DIBSections.</li><li>Fixed a bug in the standalone player where the DirectSound object
+was deadlocking when being released under NT 4 at shutdown time.</li><li>Fixed some bugs in the measuring of total read time (and added
+reporting of idle reading time and background thread reading time in both
+the summary and the real time statistics).</li><li>Fixed a bug when simulating a device speed where the device speed
+was overestimated.</li><li>Made the list file button handle lists as large as Windows itself
+can handle.</li><li>Made the list file button much faster when used with huge lists of
+files.</li><li>Made the file info button display the true color depth of an AVI
+file (8, 16, 24, or 32 instead of always 8 or 24).</li></ul><div class="discussion_heading"><a name='Changes from 1.0c to 1.0b (01-04-2000)' class='nohover'><b>Changes from 1.0c to 1.0b (01-04-2000)</b></a></div>
+<ul><li><p>
+Sped up mono blitting on non-MMX CPUs.</li><li>Fixed a bug in the YUY2 and UYVY 2X stretchers.</li></ul><div class="discussion_heading"><a name='Changes from 1.0a to 1.0b (12-28-1999)' class='nohover'><b>Changes from 1.0a to 1.0b (12-28-1999)</b></a></div>
+<ul><li><p>
+Added 2x height, 2x width, and 2x width and height stretching
+software blitters - up to four times faster than Windows.</li><li>Added scaling compression support for 2x height, 2x width, and 2x
+width and height.</li><li>Fixed the Bink colorspace conversion to match YUV hardware exactly
+(Bink videos should look identical whether displayed with the hardware or
+our optimized software blitters now).  This also had the nice side effect of
+making videos with lots of reddish hues compress better.</li><li>Added much faster blitter support for non-aligned destination memory
+addresses.</li><li>Made the Bink compressor display more information when loading lists
+and runs of files.</li><li>Fixed a bug in the Smacker player for DOS when playing new Smacker
+4.0 files.</li><li>Fixed a bug in the Smacker player for DOS when playing an audio
+track compressed with the Bink audio codec.</li><li>Fixed edge support for mono and 2x blitters.</li><li>Fixed a bug in both the Bink and Smacker compressors, where the
+start sound offset would be wrong if you adjusted the output frame rate.</li><li>Fixed a bug where the Bink player would wait the first frame's time
+before beginning playback.</li><li>Fixed a bug in the Bink player where the final frame wasn't
+displayed long enough.</li></ul><div class="discussion_heading"><a name='Changes from 0.9n to 1.0a (12-01-1999)' class='nohover'><b>Changes from 0.9n to 1.0a (12-01-1999)</b></a></div>
+<ul><li><p>
+Bink compression is now twice as fast! Compress your movies in half
+the time.</li><li>Bink player now shares the CPU much more nicely.</li><li>Added video smoothing and contrast control to the Bink compressor (usually
+  makes a huge difference in video quality).</li><li>Smacker has been upgraded to version 4.0 and has been fully
+integrated.</li><li>New Smacker 4.0 compression - double the quality of your Smacker
+movies!</li><li>Smacker 4.0 now includes optional Bink audio compression.  You can
+now use Bink's perceptually-lossless 8 to 1 audio compressor.</li><li>Smacker 4.0 player now shares the CPU much more nicely.</li><li>Smacker 4.0 player now correctly shows the logo if the movie was
+paused.</li><li>Smacker 4.0 DOS player now uses Miles 6.0 (smaller compiled DOS
+EXEs).</li><li>Smacker 4.0 uses the Bink bandwidth allocation routines to
+intelligently reallocate bandwidth to the frames that need it most.</li><li>Added a SmackGetKeyFrame function to the Smacker 4.0 SDK.</li><li>The analyze window now tags key frames in Bink and Smacker 4 files.</li><li>Added an always-on-top option to both the Bink and Smacker players.</li><li>The Bink compressor can now compress to grayscale-only Bink files.</li><li>Added an option for the Bink compressor to compress the alpha plane of
+  the input file (only Bink SDK users can access the alpha plane currently).</li><li>Made window alignment dependent on pixel size (rather than always 4)
+in Bink.</li><li>Made the compressors, converter, and mixers front-ends more
+consistent.</li><li>Bink video window isn't cleared to black before playback begins.</li><li>Fixed a nasty bug in the masking YUV blitter that would cause some
+unusual frames not to be completely copied (leaving little artifacts behind).</li><li>Fixed a crash when looping short Bink movies.</li><li>Fixed a bug in the Bink converter when converting RAW sound files
+into wave files.</li><li>Fixed a bug in Bink where the first frame would be skipped after a
+go to or a loop around (which also fixed a weird problem when Smacking a Bink
+file).</li></ul><div class="discussion_heading"><a name='Changes from 0.9m to 0.9n (11-02-1999)' class='nohover'><b>Changes from 0.9m to 0.9n (11-02-1999)</b></a></div>
+<ul><li><p>
+Added new YUV to RGB blitters specifically for video memory - up to
+100% faster when converting directly into video memory.</li><li>Fixed a memory leak in BinkClose.</li><li>Fixed a bug when playing multiple files when using the
+fill-screen-to-black option.</li></ul><div class="discussion_heading"><a name='Changes from 0.9k to 0.9m (10-14-1999)' class='nohover'><b>Changes from 0.9k to 0.9m (10-14-1999)</b></a></div>
+<ul><li><p>
+Added a grayscale blitting mode (much faster - useful on slow
+machines).</li><li>Further tweaked the frame skipping logic for slower machines.</li><li>Made the DIBSection blitter chosen before the overlay and off-screen
+surfaces (should be more compatible).</li></ul><div class="discussion_heading"><a name='Changes from 0.9j to 0.9k (10-13-1999)' class='nohover'><b>Changes from 0.9j to 0.9k (10-13-1999)</b></a></div>
+<ul><li><p>
+Made sound synchronization much more accurate after a frame skip or
+a pause - we should recover from frame skips on low end machines much
+cleaner now.</li><li>Fixed a problem with videos stopping with the SDK when using Miles.</li></ul><div class="discussion_heading"><a name='Changes from 0.9i to 0.9j (10-11-1999)' class='nohover'><b>Changes from 0.9i to 0.9j (10-11-1999)</b></a></div>
+<ul><li><p>
+Further optimized the 24-bit and 32-bit non-MMX blitting routines.</li><li>Fixed the background of the Bink Tools dialog boxes under NT.</li><li>Fixed a bug with compiled EXE Bink files not playing under NT.</li></ul><div class="discussion_heading"><a name='Changes from 0.9h to 0.9i (09-09-1999)' class='nohover'><b>Changes from 0.9h to 0.9i (09-09-1999)</b></a></div>
+<ul><li><p>
+Added DIB Section support for non-DirectX blitting.</li><li>Changed DirectDraw off-screen system blitter to check the DirectDraw
+scale flags to see if it supported stretching.</li><li>Added new non-MMX 16-bit, 24-bit, and 32-bit blitters that are all
+much faster on Pentium Pros.</li><li>Added additional optimized data alignment paths in the 16-bit
+non-MMX blitters.</li><li>Fixed a bug in the sound mixer where key frame markers would be
+lost.</li><li>Fixed a bug in the compressor where the hint file frame numbers were
+off by one.</li><li>Added a switch (/C) to hide the Windows mouse cursor inside the Bink
+window.</li></ul><div class="discussion_heading"><a name='Changes from 0.9g to 0.9h (09-02-1999)' class='nohover'><b>Changes from 0.9g to 0.9h (09-02-1999)</b></a></div>
+<ul><li><p>
+Fixed a stupid, but pesky audio mixing bug where the `mix at what
+frame` setting could be ignored.</li><li>Fixed a sporadic crash when compressing file with more than 50000
+frames.</li><li>Fixed a bug where the left edge of the desktop could peek through
+when using the `clear screen to black` setting.</li><li>Fixed a bug in the SDK when BinkCopyToBuffer wouldn't work inside
+when the Bink file was paused.</li></ul><div class="discussion_heading"><a name='Changes from 0.9f to 0.9g (08-05-1999)' class='nohover'><b>Changes from 0.9f to 0.9g (08-05-1999)</b></a></div>
+<ul><li><p>
+Added a new P5-scheduled version of the 24-bit RGB blitter.</li><li>Fixed bug when canceling a Bink compression, but keeping the
+existing frames.</li><li>Fixed a bug when skipping into a Bink file inside a list file.</li></ul><div class="discussion_heading"><a name='Changes from 0.9e to 0.9f (08-03-1999)' class='nohover'><b>Changes from 0.9e to 0.9f (08-03-1999)</b></a></div>
+<ul><li><p>
+Fixed a goofy bug in the Bink player that causes video EXE files not
+to use the embedded options.</li></ul><div class="discussion_heading"><a name='Changes from 0.9d to 0.9e (07-30-1999)' class='nohover'><b>Changes from 0.9d to 0.9e (07-30-1999)</b></a></div>
+<ul><li><p>
+Added Compile to EXE support for both Bink and Smacker files.</li><li>Adjusted the Bink data rate algorithms to minimize periodic data
+spikes and data drop outs.  It's usually worthwhile to recompress your videos.</li><li>Added peak data rate control in the Bink compressor - this allows
+you to keep the peak rates under control when applying bandwidth reallocation.</li><li>You can now highlight and play multiple files at once (both in quick
+mode and advanced).</li><li>Added a View button to the Bink and Smacker mixers.</li><li>The players now also adjust the sound playback rate when playing
+back at a forced frame rate.  This keeps the audio in sync on forced frame rates.</li><li>Added new optimized MMX 24-bit and 32-bit blitters - up to 50%
+faster blitting in these modes.</li><li>Added a periodic reminder to check for a new Bink version.</li></ul><div class="discussion_heading"><a name='Changes from 0.9c to 0.9d (07-12-1999)' class='nohover'><b>Changes from 0.9c to 0.9d (07-12-1999)</b></a></div>
+<ul><li><p>
+Add detection for the AMD Athlon processor (which is pretty awesome,
+by the way).</li><li>Fixed a stupid bug when playing Bink or Smacker files from the
+front-end that had spaces in the filename.</li><li>Fixed a bug when pressing Escape while the video was paused.</li></ul><div class="discussion_heading"><a name='Changes from 0.9b to 0.9c (07-01-1999)' class='nohover'><b>Changes from 0.9b to 0.9c (07-01-1999)</b></a></div>
+<ul><li><p>
+Made the front-end always call the Bink and Smacker players
+directly.</li><li>Fixed the Bink player credits window with playing in 320x200 or
+320x240 mode.</li><li>Fixed a crash in the player when trying to play a non-Smacker file.</li></ul><div class="discussion_heading"><a name='Changes from 0.9a to 0.9b (06-29-1999)' class='nohover'><b>Changes from 0.9a to 0.9b (06-29-1999)</b></a></div>
+<ul><li><p>
+Fixed a DirectDraw related bug where the video frames would never be
+displayed if full screen mode was requested.</li><li>Split out video decompression time and audio decompression time in
+the runtime and summary info.</li></ul><div class="discussion_heading"><a name='Changes from 0.8i to 0.9a (06-25-1999)' class='nohover'><b>Changes from 0.8i to 0.9a (06-25-1999)</b></a></div>
+<ul><li><p>
+Added separate `Advanced play` windows for Bink and Smacker.</li><li>Added a button to check for the latest version of the RAD Video
+Tools.</li><li>Added the Video Analysis window to the Bink Tools.</li><li>Fixed looping so that the movie would remain in sync.</li><li>Added the BinkSetSoundOnOff command to the SDK.</li><li>Added the Smacker Player and Smacker Mixer to the front-end (just
+the compressor to go).</li><li>Wrote and implemented the new Bink help system.</li><li>Much faster (up to twice as fast) 16-bit RGB blitting on MMX
+machines.</li><li>Fixed a bug where the background I/O task would consume too much CPU
+time when the movie was done streaming (or close to done streaming).</li><li>Added the BinkBufferSetDDPrimary function call to the SDK to allow
+BinkBuffers to be used with full-screen DirectDraw applications.</li><li>Fixed an end-of-movie sound glitch when using DirectSound.</li></ul><div class="discussion_heading"><a name='Changes from 0.8h to 0.8i (05-12-1999)' class='nohover'><b>Changes from 0.8h to 0.8i (05-12-1999)</b></a></div>
+<ul><li><p>
+Added the Bink converter which replaces the Graphics and Sound
+Processor in Smacker.</li><li>The Bink converter can now convert video *and* audio at the same
+time - allowing direct conversions from Bink or QuickTime into AVIs.</li><li>Fixed a threading crash if rapidly opening and closing Bink files.</li><li>Fixed the importing of 16-bit BMP files.</li><li>Added importing and exporting of PNG files.</li><li>Fixed monotonous multiple prompting for series of files when
+creating a list when a run of files are selected.</li></ul><div class="discussion_heading"><a name='Changes from 0.8g to 0.8h (04-21-1999)' class='nohover'><b>Changes from 0.8g to 0.8h (04-21-1999)</b></a></div>
+<ul><li><p>
+Added a frame rate adjustment feature.  Unlike the existing frame
+rate changer, this feature will add or remove frames to maintain your
+specified frame rate.  So, if you have a 15 fps animation and you adjust it
+to 30 fps, then every frame will be copied twice.</li><li>Added decoding of Bink audio tracks to the utilities (you can now
+Bink or Smack a Bink file).  This allows you to archive your videos in much,
+much less space than uncompressed AVIs (just use a really high data rate for
+archival purposes, say 2000000).</li></ul><div class="discussion_heading"><a name='Changes from 0.8f to 0.8g (04-16-1999)' class='nohover'><b>Changes from 0.8f to 0.8g (04-16-1999)</b></a></div>
+<ul><li><p>
+Fixed an overwrite bug when compressing small resolution videos.</li></ul><div class="discussion_heading"><a name='Changes from 0.8e to 0.8f (04-12-1999)' class='nohover'><b>Changes from 0.8e to 0.8f (04-12-1999)</b></a></div>
+<ul><li><p>
+Added the Bink SDK manual and cleaned up a few problems in the SDK.</li><li>Fixed a bug when playing under NT close to the max data rate of the
+device.</li></ul><div class="discussion_heading"><a name='Changes from 0.8d to 0.8e (04-02-1999)' class='nohover'><b>Changes from 0.8d to 0.8e (04-02-1999)</b></a></div>
+<ul><li><p>
+Fixed a nasty overflow in the data rate parameters which could cause
+the data rate to grow linearly during a compression.  If the data rate of your movies seems too high, then you probably ran into this bug.</li><li>Smoothed playback somewhat for movies that are playing very close to
+the maximum data rate of the playback device.</li></ul><div class="discussion_heading"><a name='Changes from 0.8c to 0.8d (03-31-1999)' class='nohover'><b>Changes from 0.8c to 0.8d (03-31-1999)</b></a></div>
+<ul><li><p>
+Added much better background IO routines - can approach 100%
+background IO even on Windows 95/98.</li><li>Made audio decompression much faster.</li><li>Added better frame skipping techniques.</li><li>Improved Bink compression speed somewhat.</li><li>Added a new redistributable Bink player (with no RAD credits) for
+licensing.</li></ul><div class="discussion_heading"><a name='Changes from 0.8b to 0.8c (03-24-1999)' class='nohover'><b>Changes from 0.8b to 0.8c (03-24-1999)</b></a></div>
+<ul><li><p>
+Added a list file editor.</li><li>Fixed a bug when Binking a wave file.</li><li>Can detect pretty much any type of CPU now (used the Scitech code).</li></ul><div class="discussion_heading"><a name='Changes from 0.8a to 0.8b (03-23-1999)' class='nohover'><b>Changes from 0.8a to 0.8b (03-23-1999)</b></a></div>
+<ul><li><p>
+Rebuilt the Bink installation program to include the mixer.</li></ul><div class="discussion_heading"><a name='Changes from 0.0 to 0.8a (03-22-1999)' class='nohover'><b>Changes from 0.0 to 0.8a (03-22-1999)</b></a></div>
+<ul><li><p>
+The first version of Bink for general testing is released (Bink
+Release Candidate 1)!</li><li>File format changed from earlier betas, this came with an almost 2x
+quality improvement however - especially on low-bandwidth materials.</li><li>Codec technology is completely finished - tools still need minor
+polishing, including the integration of Smacker.</li><li>This version of Bink requires DirectX to be installed.</li></ul><br>
+<table cellpadding=8 width=100%>
+  <tr align=left valign=bottom>
+    <td>
+      <a href='http://radgametools.com/bnkmain.htm'><img src='product.jpg'></a>
+    </td>
+    <td width=100%>
+      <a href='changelog.html'>Bink 2.7J/1.300J</a>
+      <br>
+      <a href='mailto:bink3@radgametools.com'>E-mail bink3@radgametools.com for technical support.</a>
+      <br>
+      <a href='http://radgametools.com/bnkmain.htm'>Copyright &#169; 1994-2018 by RAD Game Tools, Inc.</a>
+      <br>
+      All Rights Reserved.
+    </td>
+    <td>
+      <a href='radgametools.com'><img src='company.png'></a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
