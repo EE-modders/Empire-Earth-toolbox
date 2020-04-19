@@ -5,7 +5,7 @@ A collection of tools and guides for modding Empire Earth
 - There are some links that are very outdated and do not work anymore - we will try to replace those
 - in the future most of the tools will move into the wiki page
 
-### a list of modding tutorials can be found in the [wiki section of this repo]([Home · EE-modders/Empire-Earth-toolbox Wiki · GitHub](https://github.com/EE-modders/Empire-Earth-toolbox/wiki))
+### a list of modding tutorials can be found in the [wiki section of this repo](https://github.com/EE-modders/Empire-Earth-toolbox/wiki)
 
 ### list of file types in EE + tools for modding
 
