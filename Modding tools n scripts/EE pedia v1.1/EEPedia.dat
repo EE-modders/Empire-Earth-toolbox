@@ -1,0 +1,456 @@
+; Version
+1.1
+
+; Epochs
+; Name | From | To 
+
+Prehistoric         | 500,000 BC | 50,000 BC
+Stone Age           | 50,000 BC  | 5,000 BC
+Copper Age          | 5,000 BC   | 2,000 BC
+Bronze Age          | 2,000 BC   | 0 AD
+Dark Age            | 0 AD       | 900 AD
+Middle Ages         | 900 AD     | 1300 AD
+Renaissance         | 1300 AD    | 1500 AD
+Imperial Age        | 1500 AD    | 1700 AD
+Industrial Age      | 1700 AD    | 1900 AD
+Atomic Age - WWI    | 1900 AD    | 2000 AD
+Atomic Age - WWII   | 1900 AD    | 2000 AD
+Atomic Age - Modern | 1900 AD    | 2000 AD
+Digital Age         | 2000 AD    | 2100 AD
+Nano Age            | 2100 AD    | 2200 AD
+Space               | 2200 AD    |
+
+; Type
+; Unit Type
+
+Civil
+Navy
+Military
+Defense
+Space Defense
+
+; Calamities
+; Name | Power (%) | Effect
+
+Earthquake   |  60% | Damages Buildings, Walls and Towers
+Volcano      |  75% | Creates a volcanic eruptions that shoots out molten rock
+Hurricane    | 100% | Creates a storm over water that devastates ships (player can control storm's movement)
+Plague       | 100% | Infects targets and slowly causes death; Can spread to nearby units
+Malaria      | 100% | Infects units in target area, who lose health; Not fatal
+Fire Storm   |  75% | Burns Buildings and Ships; Can spread to adjacent structures
+Meteor Storm |  75% | Damages space ships
+
+; CyberPowers
+; Name | Cyber Name | Effect
+
+Diffraction Shield | Apollo   | Reduces damage taken by shielded unit
+Repair             | Apollo   | Repairs damaged Cybers
+Ion Pulse          | Apollo   | Increases damage taken by target
+Self-Destruct      | Furies   | Cyber explodes and surrounding units take splash damage
+Time Warp          | Hades    | Causes target unit to disappear and reappear several minutes later
+Teleport           | Hades    | Teleports Hades anywhere on the map, but Hades takes damage
+Nano Virus         | Hades    | Infected Cybers eventually explode; the virus can spread
+Refractive Cloak   | Poseidon | Units surrounding the Poseidon are invisible to enemies except at close range
+Assimilate         | Poseidon | Takes over enemy Cybers
+Resonator          | Tempest  | Causes affected units to take damage proportional to their attack strength
+Anti-Matter Storm  | Tempest  | A violent airborne storm damages nearby aircraft (player can control storm's movement)
+
+; Buildings
+; Type | Name | Starting Epoch | Ending Epoch | Cost | Special
+
+Civil         | Capitol            |  1 | 14 | Citizens    | Produce Citizens & Heros; Morale Bonus; Resource drop-off bonus; Can be upgraded into a Space Capitol with Citizens (in Space Epoch)
+Civil         | Space Capitol      | 15 | 15 | Citizens    | Produce Citizens & Heros; Morale Bonus; Resource drop-off bonus
+Civil         | Farm               |  3 | 15 | Wood        | Citizens can harvest farms for food
+Civil         | Granary            |  3 | 15 | Wood        | Collection point for farm crops
+Civil         | Hospital           |  3 | 15 | Wood, Stone | Heals land units
+Civil         | House              |  1 | 14 | Wood, Stone | Modifies Morale around a Town Center or Capitol (adds 1 per house up to max)
+Civil         | Space House        | 15 | 15 | Wood        | 
+Civil         | Settlement         |  1 | 15 | Wood        | Drop off for resources; Can be upgraded into a Town Center with Citizens
+Civil         | Temple             |  1 | 15 | Wood, Stone | Protection against Calamities
+Civil         | Town Center        |  1 | 15 | Citizens    | Produce Citizens & Heros; Morale Bonus; Resource bonus; Can be upgraded into a Capitol with Citizens
+Civil         | University         |  3 | 15 | Wood, Stone | Protects against conversion
+Navy          | Dock               |  2 | 15 | Wood        | Repairs all nearby ships
+Navy          | Naval Yard         | 10 | 15 | Wood        | Repairs all nearby ships
+Military      | Airport            | 10 | 15 | Wood        | Repairs, refuels & rearms all aircraft
+Military      | Archery Range      |  2 |  6 | Wood        |
+Military      | Barracks           |  1 | 15 | Wood        |
+Military      | Fortress           |  3 | 15 | Wood        | Garrisons land units; Garrisoned units do not count toward population
+Military      | Cyber Factory      | 13 | 15 | Wood        | Makes Combat Cybers
+Military      | Cyber Laboratory   | 13 | 15 | Wood        | Makes Ultra Cybers
+Military      | Siege Workshop     |  4 | 15 | Wood        |
+Military      | Stable             |  3 |  9 | Wood        |
+Military      | Tank Factory       | 10 | 15 | Wood        |
+Defense       | Tower              |  1 |  2 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Copper Age Tower   |  3 |  3 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Bronze Age Tower   |  4 |  5 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Medieval Tower     |  6 |  7 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Imperial Age Tower |  8 |  9 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Concrete Tower     | 10 | 13 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Laser Tower        | 14 | 14 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Wall               |  3 |  3 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Bronze Age Wall    |  4 |  5 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Medieval Wall      |  6 |  7 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Imperial Age Wall  |  8 |  9 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Concrete Wall      | 10 | 13 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Laser Wall         | 14 | 14 | Stone       | Upgrades at Town Center/Capitol
+Defense       | Palisades          |  3 | 15 | Wood        | 
+Defense       | Gate               |  3 | 15 | Nothing     | To build a gate: select a straight wall, click the Gate location, then click on the wall to place the gate
+Defense       | AA Gun Emplacement | 10 | 15 | Gold, Wood  | Non-Mobile Anti-Aircraft Towers
+Space Defense | Space Turret       | 15 | 15 | Iron, Gold  | Build on border between land and space
+Space Defense | Space Wall         | 15 | 15 | Stone       | 
+Space Defense | Space Tower        | 15 | 15 | Stone       |
+Space Defense | Teleporter         | 15 | 15 | Wood, Gold  | Transports a group of units instantly
+Space Defense | Space Dock         | 15 | 15 | Wood        | Produces space ships
+
+; Wonders
+; Name | Power Name | Effect
+
+Tower of Babylon      | Revelation    | Priests convert with an area effect
+Temple of Zeus        | Sanctity      | Players' units self-heal automatically
+Library of Alexandria | Survey        | All enemy buildings are revealed
+Pharos Lighthouse     | Guiding Light | Reveals water areas on map and any units on them
+Coliseum              | Spectacle     | Raises the owner's pop cap and lowers the pop cap of enemy civilizations
+Ishtar Gate           | Safe Guard    | Increases the hit points of the owners wall and towers
+Orbital Space Station | Inspiration   | Increases morale of space-going units
+
+; Units
+; Note: Heros are in the Heros section
+; Also: Anything that is in a Capitol will also be shown in a Town Center
+; Name | Building | Starting Epoch | Ending Epoch | Cost | Attack | Hit Points | Weapon Type or Ship Type or Cyber Type | Population Count | Special 
+
+Citizen                  | Capitol          |  1 | 15 | Food       |    4 |   65 | Varied           | 1 | Construct, repair, gather resources
+Canine Scout             | Capitol          |  1 | 15 | Food       |    0 |   60 | None             | 1 | No attack, good for scouting
+Balloon                  | Capitol          |  9 | 10 | Gold, Wood |    0 |  600 | None             | 1 | Hot Air Balloon upgrades to Observation Balloon; Long Line of Sight
+Spy Satellite            | Capitol          | 13 | 15 | Gold, Iron |    0 | 1000 | None             | 1 | Travels Through Space
+Priest                   | Temple           |  1 | 15 | Food, Gold |    0 |  100 | None             | 1 | Converts enemies
+Prophet                  | Temple           |  1 | 15 | Food, Gold |    0 |  150 | None             | 5 | Casts calamities
+Slinger                  | Archery Range    |  2 |  2 | Gold, Wood |    9 |   70 | Arrow            | 1 |
+Simple Bowman            | Archery Range    |  3 |  4 | Gold, Wood |    9 |   95 | Arrow            | 1 |
+Javelin Thrower          | Archery Range    |  3 |  3 | Gold, Wood |   11 |  130 | Pierce           | 1 |
+Chariot Archer           | Archery Range    |  4 |  5 | Gold, Wood |   17 |  180 | Arrow            | 2 | Good Speed
+Elephant Archer          | Archery Range    |  4 |  4 | Gold, Wood |   25 |  600 | Arrow            | 2 | Slow Speed but many Hit Points
+Composite Bow            | Archery Range    |  5 |  5 | Gold, Wood |   13 |  145 | Arrow            | 1 |
+Pilum                    | Archery Range    |  5 |  5 | Gold, Wood |   13 |  155 | Pierce           | 1 |
+Cross Bow                | Archery Range    |  5 |  5 | Gold, Wood |   40 |  125 | Arrow            | 1 | One shot - one kill vs. infantry (without improved armor)
+Cavalry Archer           | Archery Range    |  6 |  6 | Gold, Wood |   23 |  275 | Arrow            | 2 | Good Speed
+Long Bow                 | Archery Range    |  6 |  6 | Gold, Wood |   17 |  190 | Arrow            | 1 |
+Club Man                 | Barracks         |  1 |  2 | Food, Iron |    8 |  135 | Shock            | 1 |
+Rock Thrower             | Barracks         |  1 |  1 | Food, Gold |    5 |   75 | Shock            | 1 |
+Spear Man                | Barracks         |  2 |  3 | Food, Iron |   15 |   85 | Pierce           | 1 |
+Sampson                  | Barracks         |  2 |  2 | Gold, Wood |   60 |  105 | Siege            | 1 | Anti-Walls/Towers/Buildings
+Mace Man                 | Barracks         |  3 |  3 | Food, Iron |   13 |  150 | Shock            | 1 |
+Short Sword              | Barracks         |  4 |  5 | Food, Iron |   15 |  215 | Shock            | 1 |
+Phalanx                  | Barracks         |  4 |  5 | Food, Iron |   24 |  155 | Pierce           | 1 |
+Barbarian                | Barracks         |  5 |  5 | Food, Iron |   16 |  250 | Shock            | 1 | May walk through forests
+Viking                   | Barracks         |  5 |  5 | Food, Iron |   10 |  160 | Shock            | 1 | Stealthy; Good against ranged units
+Long Sword               | Barracks         |  6 |  6 | Food, Iron |   29 |  400 | Shock            | 1 |
+Pike Man                 | Barracks         |  6 |  7 | Food, Iron |   40 |  240 | Pierce           | 1 |
+Arquebus                 | Barracks         |  7 |  7 | Food, Iron |   44 |  270 | Gun              | 1 |
+Musketeer                | Barracks         |  8 |  8 | Food, Iron |   44 |  325 | Gun              | 1 |
+Halberdier               | Barracks         |  8 |  8 | Food, Iron |   40 |  350 | Pierce           | 1 | Good against all Cavalry
+Sharpshooter             | Barracks         |  8 |  9 | Food, Gold |   50 |  315 | Gun              | 1 | One shot - one kill vs. Infantry (without improved armor)
+Hand Cannoneer           | Barracks         |  8 |  9 | Food, Gold |   65 |  350 | Field            | 1 | Fires over walls; Strong vs. early Tanks; Splash damage
+Medic - Imperial         | Barracks         |  8 |  9 | Food, Gold |    0 |  380 | None             | 1 | Heals units
+Elite Guard              | Barracks         |  8 |  9 | Food, Iron |   35 |  350 | Gun              | 1 | Bonus vs. enemy Infantry
+Grenadier                | Barracks         |  9 |  9 | Food, Iron |   44 |  390 | Gun              | 1 |
+Partisan                 | Barracks         |  9 |  9 | Food, Iron |   20 |  325 | Gun              | 1 | Path through forests; can shoot air units
+Doughboy                 | Barracks         | 10 | 10 | Food, Iron |   44 |  370 | Gun              | 1 |
+Grenade Launcher         | Barracks         | 10 | 10 | Food, Gold |   16 |  525 | Anti-Tank        | 1 | 
+Sniper                   | Barracks         | 10 | 15 | Food, Gold |   60 |  405 | Gun              | 1 | One shot - one kill vs. Infantry (without improved armor)
+Trench Mortar            | Barracks         | 10 | 11 | Food, Gold |   90 |  375 | Field            | 1 | Long range; Splash damage
+Machine Gun              | Barracks         | 10 | 10 | Food, Gold |   16 |  400 | Gun              | 1 | Anti-Infantry
+Medic - Atomic           | Barracks         | 10 | 12 | Food, Gold |    0 |  425 | None             | 1 | Heals units
+Marine                   | Barracks         | 11 | 12 | Food, Iron |   52 |  470 | Gun              | 1 | 
+Bazooka                  | Barracks         | 11 | 15 | Food, Gold |   20 |  625 | Anti-Tank        | 1 |
+Flame Thrower            | Barracks         | 11 | 11 | Food, Gold |   25 |  430 | Siege            | 1 | Good against buildings
+Stinger Soldier          | Barracks         | 12 | 15 | Food, Gold |   55 |  265 | Anti-Air         | 1 |
+Heavy Mortar             | Barracks         | 12 | 15 | Food, Gold |  120 |  425 | Field            | 1 | Long range; Splash damage
+Sentinel                 | Barracks         | 13 | 13 | Food, Iron |   62 |  600 | Laser            | 1 |
+Medic - Digital          | Barracks         | 13 | 15 | Food, Gold |    0 |  500 | None             | 1 | Heals units
+Guardian                 | Barracks         | 14 | 14 | Food, Iron |   74 |  800 | Laser            | 1 |
+Watchman                 | Barracks         | 15 | 15 | Food, Iron |   85 | 1200 | Gun              | 1 |
+Horseman                 | Stable           |  3 |  4 | Food, Gold |   17 |  240 | Shock            | 2 |
+Bronze Cavalry           | Stable           |  4 |  5 | Food, Gold |   23 |  290 | Pierce           | 2 |
+War Elephant             | Stable           |  4 |  4 | Food, Gold |   23 |  600 | Shock            | 2 | Slow speed but many Hit Points; Does trample damage to adjacent units
+Cataphract               | Stable           |  5 |  6 | Food, Gold |   24 |  440 | Shock            | 2 |
+Persian Cavalry          | Stable           |  5 |  5 | Food, Gold |   18 |  225 | Pierce           | 2 |
+Knight                   | Stable           |  6 |  6 | Food, Gold |   38 |  400 | Pierce           | 2 |
+Cuirassier               | Stable           |  7 |  8 | Food, Gold |   40 |  605 | Shock            | 2 |
+Carabineer               | Stable           |  7 |  8 | Food, Gold |   55 |  425 | Gun              | 2 |
+Dragoon                  | Stable           |  9 |  9 | Food, Gold |   65 |  480 | Gun              | 2 |
+Imperial Cuirassier      | Stable           |  9 |  9 | Food, Gold |   60 |  655 | Shock            | 2 |
+Stone Thrower            | Siege Workshop   |  4 |  5 | Gold, Wood |   65 |  180 | Field            | 1 | Good against massed units
+Siege Tower              | Siege Workshop   |  4 |  5 | Gold, Wood |    0 |  675 | None             | 1 | Transport units over walls
+Catapult                 | Siege Workshop   |  4 |  5 | Gold, Wood |   85 |  160 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+Ram                      | Siege Workshop   |  4 |  5 | Gold, Wood |  125 |  275 | Siege            | 1 | Anti-Walls/Towers/Buildings
+Balista                  | Siege Workshop   |  6 |  6 | Gold, Wood |   75 |  200 | Field            | 2 | Good against massed units
+Heavy Siege Tower        | Siege Workshop   |  6 |  6 | Gold, Wood |    0 |  720 | None             | 1 | Transport units over walls
+Trebuchet                | Siege Workshop   |  6 |  6 | Gold, Wood |  150 |  215 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+Heavy Ram                | Siege Workshop   |  6 |  6 | Gold, Wood |  200 |  325 | Siege            | 1 | Anti-Walls/Towers/Buildings
+Culverin Cannon          | Siege Workshop   |  7 |  8 | Iron, Wood |   80 |  215 | Field            | 2 | Anti-Infantry (when massed)
+Basilisk Cannon          | Siege Workshop   |  7 |  8 | Iron, Wood |  145 |  360 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+Bombard                  | Siege Workshop   |  8 |  9 | Iron, Wood |  140 |  175 | Siege            | 2 | Low line-of-sight, but long range; Does splash damage
+Bronze Cannon            | Siege Workshop   |  9 |  9 | Iron, Wood |   90 |  280 | Field            | 2 | Anti-Infantry (when massed)
+Serpentine Cannon        | Siege Workshop   |  9 |  9 | Iron, Wood |  250 |  405 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+57mm AT Gun              | Siege Workshop   | 10 | 11 | Gold, Wood |   35 |  440 | Anti-Tank        | 1 |
+Howitzer Cannon          | Siege Workshop   | 10 | 12 | Iron, Wood |  250 |  500 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+Artillery                | Siege Workshop   | 10 | 12 | Iron, Wood |  175 |  225 | Field            | 2 | Anti-Infantry
+120mm AT Gun             | Siege Workshop   | 12 | 12 | Gold, Wood |   44 |  455 | Anti-Tank        | 1 |
+Thor AT Gun              | Siege Workshop   | 13 | 13 | Gold, Wood |   52 |  550 | Anti-Tank        | 1 |
+Paladin Cannon           | Siege Workshop   | 13 | 15 | Iron, Wood |  425 |  800 | Siege            | 2 | Anti-Walls/Towers/Buildings/Ships
+Colossus Artillery       | Siege Workshop   | 13 | 15 | Iron, Wood |  200 |  300 | Field            | 2 | Anti-Infantry
+Hercules AT Gun          | Siege Workshop   | 14 | 15 | Gold, Wood |   62 |  580 | Anti-Tank        | 1 |
+Fishing Raft             | Dock             |  2 |  3 | Wood       |    0 |  120 | Fishing Boat     | 1 |
+Transport Raft           | Dock             |  2 |  2 | Wood       |    0 |  120 | Transport        | 1 | Transports up to 10 units over water
+War Raft                 | Dock             |  2 |  2 | Iron, Wood |   12 |  220 | Frigate          | 1 |
+Transport - Copper       | Dock             |  3 |  3 | Wood       |    0 |  200 | Transport        | 1 | Transports up to 10 units over water
+Frigate - Copper         | Dock             |  3 |  3 | Iron, Wood |   15 |  240 | Frigate          | 1 |  
+Battleship - Copper      | Dock             |  3 |  3 | Gold, Wood |   62 |  900 | Battleship       | 1 |
+Galley - Copper          | Dock             |  3 |  3 | Iron, Wood |    6 |  260 | Galley           | 1 |
+Fishing Boat - Bronze    | Dock             |  4 |  7 | Wood       |    0 |  280 | Fishing Boat     | 1 |
+Frigate - Bronze         | Dock             |  4 |  4 | Iron, Wood |   18 |  310 | Frigate          | 1 |
+Battleship - Bronze      | Dock             |  4 |  4 | Gold, Wood |   72 | 1180 | Battleship       | 1 |
+Galley - Bronze          | Dock             |  4 |  4 | Iron, Wood |    8 |  335 | Galley           | 1 | 
+Transport - Bronze       | Dock             |  4 |  7 | Wood       |    0 |  360 | Transport        | 1 | Transports up to 12 units over water
+Frigate - Byzantine      | Dock             |  5 |  5 | Iron, Wood |   21 |  400 | Frigate          | 1 |
+Battleship - Byzantine   | Dock             |  5 |  5 | Gold, Wood |   90 | 1560 | Battleship       | 1 |
+Galley - Byzantine       | Dock             |  5 |  5 | Iron, Wood |    9 |  440 | Galley           | 1 |
+Frigate - Middle         | Dock             |  6 |  6 | Iron, Wood |   25 |  540 | Frigate          | 1 |
+Battleship - Middle      | Dock             |  6 |  6 | Gold, Wood |  108 | 2025 | Battleship       | 1 |
+Galley - Middle          | Dock             |  6 |  6 | Iron, Wood |   11 |  575 | Galley           | 1 |
+Frigate - Renaissance    | Dock             |  7 |  7 | Iron, Wood |   33 |  625 | Frigate          | 1 |
+Battleship - Renaissance | Dock             |  7 |  7 | Gold, Wood |  150 | 2450 | Battleship       | 1 |
+Galleon - Renaissance    | Dock             |  7 |  7 | Iron, Wood |   15 |  675 | Galley           | 1 |
+Fishing Boat - Imprerial | Dock             |  8 | 10 | Wood       |    0 |  420 | Fishing Boat     | 1 |
+Transport - Imperial     | Dock             |  8 |  9 | Wood       |    0 |  530 | Transport        | 1 | Transports up to 14 units over water
+Frigate - Imperial       | Dock             |  8 |  8 | Iron, Wood |   38 |  750 | Frigate          | 1 |
+Battleship - Imperial    | Dock             |  8 |  8 | Gold, Wood |  175 | 3060 | Battleship       | 1 |
+Galleon - Imperial       | Dock             |  8 |  8 | Iron, Wood |   18 |  825 | Galley           | 1 |
+Gunboat Cruiser          | Dock             |  8 |  9 | Gold, Wood |   30 | 1400 | Cruiser          | 1 | Can shoot aircraft
+Frigate - Royal          | Dock             |  9 |  9 | Iron, Wood |   51 | 1060 | Frigate          | 1 |
+Battleship - Royal       | Dock             |  9 |  9 | Gold, Wood |  200 | 4525 | Battleship       | 1 |
+Galleon - Royal          | Dock             |  9 | 15 | Iron, Wood |   24 | 1100 | Galley           | 1 |
+Transport - Atomic       | Dock             | 10 | 12 | Wood       |    0 |  750 | Transport        | 1 | Transports up to 14 units over water
+Good Hope                | Dock             | 10 | 10 | Iron, Wood |   55 | 1350 | Frigate          | 1 |
+Dreadnought              | Dock             | 10 | 10 | Gold, Wood |  230 | 5730 | Battleship       | 1 |
+Dardo Cruiser            | Dock             | 10 | 12 | Gold, Wood |   70 | 2300 | Cruiser          | 1 | Anti-Aircraft
+U-Boat                   | Naval Yard       | 10 | 11 | Iron, Wood |  130 | 1000 | Submarine        | 1 |
+Fishing Boat - Trawler   | Dock             | 11 | 12 | Wood       |    0 |  700 | Fishing Boat     | 1 |
+Frigate - Warrington     | Dock             | 11 | 12 | Iron, Wood |   68 | 1600 | Frigate          | 1 |
+Bismark                  | Dock             | 11 | 12 | Gold, Wood |  276 | 6625 | Battleship       | 1 |
+Enterprise Carrier       | Naval Yard       | 11 | 12 | Gold, Wood |    0 | 6000 | Aircraft Carrier | 2 | Builds, refuels, repairs, and launches carrier-based fighters/bombers
+Nautilus                 | Naval Yard       | 12 | 13 | Iron, Wood |  200 | 1350 | Submarine        | 1 |
+Trident                  | Naval Yard       | 12 | 13 | Gold, Iron |  800 |  800 | Submarine        | 1 | Nuclear Powerd Sub - good against all land units and buildings; Low line-of-sight
+Fishing Boat - Digital   | Dock             | 13 | 15 | Wood       |    0 |  900 | Fishing Boat     | 1 |
+Gargantua                | Dock             | 13 | 15 | Wood       |    0 |  920 | Transport        | 1 | Transports up to 14 units over water
+Juggernaut               | Dock             | 13 | 15 | Iron, Wood |  100 | 2100 | Frigate          | 1 |
+Leviathan                | Dock             | 13 | 15 | Gold, Wood |  380 | 8600 | Battleship       | 1 |
+Sagittarian              | Dock             | 13 | 15 | Gold, Wood |  110 | 3800 | Cruiser          | 1 | Anti-Aircraft
+Nexus Carrier            | Naval Yard       | 13 | 15 | Gold, Wood |    0 | 8000 | Aircraft Carrier | 2 | Builds, refuels, repairs, and launches carrier-based fighters/bombers
+Hammerhead               | Naval Yard       | 14 | 15 | Iron, Wood |  250 | 1900 | Submarine        | 1 |
+Triton                   | Naval Yard       | 14 | 15 | Gold, Iron | 1000 | 1000 | Submarine        | 1 | Nuclear Powered Sub - good against all land units and buildings; Low line-of-sight
+A74                      | Tank Factory     | 10 | 10 | Food, Iron |   85 |  405 | Armor Piercing   | 2 | Good against Tanks
+MkV                      | Tank Factory     | 10 | 10 | Food, Iron |   85 |  315 | High Explosive   | 2 | Good against Infantry
+Halftrack                | Tank Factory     | 10 | 12 | Food, Iron |   50 |  450 | Anti-Air         | 1 |
+Panzer                   | Tank Factory     | 11 | 11 | Food, Iron |  100 |  500 | Armor Piercing   | 2 | Good against Tanks
+Sherman                  | Tank Factory     | 11 | 11 | Food, Iron |  100 |  400 | High Explosive   | 2 | Good against Infantry
+Leopard                  | Tank Factory     | 12 | 15 | Food, Iron |  110 |  600 | Armor Piercing   | 2 | Good against Tanks
+M1                       | Tank Factory     | 12 | 12 | Food, Iron |  110 |  450 | High Explosive   | 2 | Good against Infantry
+Gladiator                | Tank Factory     | 13 | 13 | Food, Iron |  110 |  600 | Laser            | 2 |
+Skywatcher               | Tank Factory     | 13 | 15 | Food, Iron |  100 |  575 | Anti-Air         | 1 |
+Centurion                | Tank Factory     | 14 | 15 | Food, Iron |  145 |  750 | Laser            | 2 |
+Anti-Missile Battery     | Tank Factory     | 13 | 13 | Gold, Iron |  100 |  200 | Anti-Air         | 1 | Effective Against Nuclear Missiles
+Fokker DR.1              | Airport          | 10 | 10 | Gold, Iron |   18 |  350 | Fighter/Bomber   | 1 |
+Sopwith                  | Airport          | 10 | 10 | Gold, Iron |   17 |  425 | Fighter          | 1 |
+Gotha                    | Airport          | 10 | 10 | Gold, Iron |  100 |  850 | Bomber           | 1 |
+ME 109                   | Airport          | 11 | 11 | Gold, Iron |   22 |  425 | Fighter/Bomber   | 1 |
+ME 262                   | Airport          | 11 | 11 | Gold, Iron |   26 |  500 | Fighter/Bomber   | 1 |
+Spitfire                 | Airport          | 11 | 11 | Gold, Iron |   23 |  502 | Fighter          | 1 |
+P-51                     | Airport          | 11 | 11 | Gold, Iron |   26 |  550 | Fighter          | 1 |
+HE 111                   | Airport          | 11 | 11 | Gold, Iron |  120 | 1100 | Bomber           | 1 |
+B-17                     | Airport          | 11 | 11 | Gold, Iron |  135 | 1400 | Bomber           | 1 |
+Typhoon                  | Airport          | 11 | 11 | Gold, Iron |   11 |  450 | Fighter/Bomber   | 1 | Anti-Tank
+B-29                     | Airport          | 11 | 11 | Gold, Iron | 2200 |  400 | Atomic Bomber    | 1 |
+Corsair                  | Naval Yard       | 11 | 11 | Gold, Iron |   12 |  496 | Fighter/Bomber   | 1 | Aircraft Carrier-based
+F-117                    | Airport          | 12 | 12 | Gold, Iron |  190 |  625 | Fighter/Bomber   | 1 |
+F-15                     | Airport          | 12 | 12 | Gold, Iron |  236 |  661 | Fighter          | 1 |
+B-2                      | Airport          | 12 | 12 | Gold, Iron |  160 | 1700 | Bomber           | 1 |
+B-52                     | Airport          | 12 | 12 | Gold, Iron | 2800 |  500 | Atomic Bomber    | 1 |
+A-10                     | Airport          | 12 | 15 | Gold, Iron |   14 |  575 | Fighter/Bomber   | 1 | Anti-Tank
+F-14                     | Naval Yard       | 12 | 12 | Gold, Iron |  105 |  610 | Fighter/Bomber   | 1 | Aircraft Carrier-based
+Helicopter Transport     | Airport          | 12 | 12 | Gold, Iron |    0 |  550 | Helicopter       | 1 | Transports up to 5 units
+Helicopter Gunship       | Airport          | 12 | 12 | Gold, Iron |   25 |  450 | Helicopter       | 1 | Anti-Infantry
+Helicopter AT            | Airport          | 12 | 12 | Gold, Iron |   75 |  850 | Helicopter       | 1 | Anti-Tank
+Sea King                 | Airport          | 12 | 13 | Gold, Iron |  400 |  315 | Helicopter       | 1 | Anti-Submarine; Made at a Naval Yard or Airport
+Sea King                 | Naval Yard       | 12 | 13 | Gold, Iron |  400 |  315 | Helicopter       | 1 | Anti-Submarine; Made at a Naval Yard or Airport
+Talon                    | Airport          | 13 | 13 | Gold, Iron |  227 |  740 | Fighter/Bomber   | 1 |
+Jackal                   | Airport          | 13 | 13 | Gold, Iron |  285 |  796 | Fighter          | 1 |
+B-122 Wyvem              | Airport          | 13 | 15 | Gold, Iron |  200 | 2000 | Bomber           | 1 |
+Titan                    | Airport          | 13 | 15 | Gold, Iron | 3300 |  600 | Atomic Bomber    | 1 |
+Avenger                  | Naval Yard       | 13 | 15 | Gold, Iron |  120 |  740 | Fighter/Bomber   | 1 | Aircraft Carrier-based
+Pegasus                  | Airport          | 13 | 15 | Gold, Iron |    0 |  660 | Helicopter       | 1 | Transport; Transports up to 10 units
+Reaper Gunship           | Airport          | 13 | 15 | Gold, Iron |   35 |  600 | Helicopter       | 1 | Anti-Infantry
+Spectra AT               | Airport          | 13 | 15 | Gold, Iron |  100 | 1100 | Helicopter       | 1 | Anti-Tank
+Sea King II              | Airport          | 13 | 15 | Gold, Iron |  475 |  450 | Helicopter       | 1 | Anti-Submarine; Made at a Naval Yard or Airport
+Sea King II              | Naval Yard       | 13 | 15 | Gold, Iron |  475 |  450 | Helicopter       | 1 | Anti-Submarine; Made at a Naval Yard or Airport
+Phoenix                  | Airport          | 14 | 14 | Gold, Iron |  265 |  860 | Fighter/Bomber   | 1 |
+Nebula                   | Airport          | 14 | 15 | Gold, Iron |  338 |  941 | Fighter          | 1 |
+Planetary Fighter        | Airport          | 14 | 15 | Gold, Iron |  230 |  950 | Fighter/Bomber   | 1 | Space
+Ares                     | Cyber Factory    | 13 | 13 | Food, Gold |   65 | 1200 | Combat           | 2 | Flying Cyber; Self Repair
+Pandora                  | Cyber Factory    | 13 | 13 | Food, Gold |   67 |  550 | Combat           | 2 | Anti-Infantry
+Hyperion                 | Cyber Factory    | 13 | 13 | Food, Gold |  105 | 2200 | Combat           | 2 | Walk under water and over cliffs
+Minotaur                 | Cyber Factory    | 13 | 13 | Food, Gold |   72 | 1500 | Combat           | 2 | Anti-Tank
+Apollo                   | Cyber Laboratory | 13 | 15 | Food, Iron |    0 | 2500 | Ultra            | 2 | Flying Cyber; Diffraction Shield; Repair other Cybers; Ion Pulse
+Furies                   | Cyber Laboratory | 13 | 15 | Food, Iron |  150 |  900 | Ultra            | 2 | Self-Destruct
+Tempest                  | Cyber Laboratory | 13 | 13 | Food, Iron |  115 |  800 | Ultra            | 2 | Anti-Matter Storm (Anti-Air); Resonator (Anti-Land)
+Ares II                  | Cyber Factory    | 14 | 15 | Food, Gold |   75 | 1500 | Combat           | 2 | Flying Cyber; Self Repair
+Pandora II               | Cyber Factory    | 14 | 15 | Food, Gold |   80 |  660 | Combat           | 2 | Anti-Infantry
+Hyperion II              | Cyber Factory    | 14 | 15 | Food, Gold |  130 | 2500 | Combat           | 2 | Walk under water and over cliffs
+Minotaur II              | Cyber Factory    | 14 | 15 | Food, Gold |   82 | 1800 | Combat           | 2 | Anti-Tank
+Zeus                     | Cyber Factory    | 14 | 15 | Food, Gold |  350 | 2300 | Combat           | 2 | Anti-Cyber
+Hades                    | Cyber Laboratory | 14 | 15 | Food, Iron |    0 | 1700 | Ultra            | 2 | Teleport; Time Warp; Nano Virus
+Poseidon                 | Cyber Laboratory | 14 | 15 | Food, Iron |    0 | 3000 | Ultra            | 2 | Walk under water; Refractive Cloak; Assimilate other Cybers
+Space Carrier            | Space Dock       | 15 | 15 | Gold, Iron |    0 | 8000 | Space            | 1 | Can Launch Fighters
+Space Fighter            | Space Dock       | 15 | 15 | Gold, Iron |  175 | 1400 | Fighter/Bomber   | 1 | Space; Most effective against battleships
+Space Capitol Ship       | Space Dock       | 15 | 15 | Gold, Iron |  200 | 8000 | Space            | 1 | Effective against corvettes, transports and carriers
+Space Corvette           | Space Dock       | 15 | 15 | Gold, Iron |  150 | 2500 | Space            | 1 | Most effective against fighters
+Space Transport          | Space Dock       | 15 | 15 | Gold, Iron |    0 | 1800 | Space            | 1 |
+
+; Heroes
+; Name | Building | Starting Epoch | Ending Epoch | Cost | Attack | Hit Points | Weapon Type or Ship Type or Cyber Type | Population Count | Special  
+
+Sargon of Akkad        | Capitol |  3 |  3 | Food, Gold |  12 |  900 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Gilgamesh              | Capitol |  3 |  3 | Food, Iron |  41 | 1275 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+Alexander the Great    | Capitol |  4 |  4 | Food, Gold |  14 | 1235 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Hannibal               | Capitol |  4 |  4 | Food, Iron |  46 | 1800 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+Charlemagne            | Capitol |  5 |  5 | Food, Gold |  16 | 1575 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Julius Caesar          | Capitol |  5 |  5 | Food, Iron |  52 | 2250 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+William the Conqueror  | Capitol |  6 |  6 | Food, Gold |  19 | 1950 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Richard the Lionheart  | Capitol |  6 |  6 | Food, Iron |  60 | 2775 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+Isabella               | Capitol |  7 |  7 | Food, Gold |  22 | 2300 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Henry V                | Capitol |  7 |  7 | Food, Iron |  90 | 3270 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+Elizabeth I            | Capitol |  8 |  8 | Food, Gold |  25 | 2610 | Shock | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Oliver Cromwell        | Capitol |  8 |  8 | Food, Iron | 110 | 3750 | Shock | 1 | Warrior - Strong fighter; Provides morale to troops
+Otto von Bismarck      | Capitol |  9 |  9 | Food, Gold |  33 | 3000 | Gun   | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Napoleon               | Capitol |  9 |  9 | Food, Iron | 140 | 4245 | Gun   | 1 | Warrior - Strong fighter; Provides morale to troops
+Givan DeVarran         | Capitol | 10 | 10 | Food, Gold |  43 | 3330 | Gun   | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Manfred von Richthofen | Capitol | 10 | 10 | Food, Iron | 150 | 4740 | Gun   | 1 | Warrior - Strong fighter; Provides morale to troops
+Erwin Rommel           | Capitol | 11 | 11 | Food, Gold |  55 | 3650 | Gun   | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Travis Shackelford     | Capitol | 11 | 11 | Food, Iron | 160 | 5235 | Gun   | 1 | Warrior - Strong fighter; Provides morale to troops
+RW Bresden             | Capitol | 12 | 12 | Food, Gold |  60 | 4000 | Gun   | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Dennis St. Albans      | Capitol | 12 | 12 | Food, Iron | 180 | 5730 | Gun   | 1 | Warrior - Strong fighter; Provides morale to troops
+Dr. Alexi Septimus     | Capitol | 13 | 13 | Food, Gold |  70 | 4725 | Laser | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Molotov                | Capitol | 13 | 13 | Food, Iron | 230 | 5600 | Laser | 1 | Warrior - Strong fighter; Provides morale to troops
+Molly Ryan             | Capitol | 14 | 14 | Food, Gold |  85 | 5000 | Laser | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Cyborg Molotov         | Capitol | 14 | 14 | Food, Iron | 360 | 6075 | Laser | 1 | Warrior - Strong fighter; Provides morale to troops
+Khan Sun Do            | Capitol | 15 | 15 | Food, Gold |  85 | 6000 | Laser | 1 | Strategist - Restores health to troops; Battle Cry demoralizes enemies
+Hu Kwan Do             | Capitol | 15 | 15 | Food, Iron | 360 | 8100 | Laser | 1 | Warrior - Strong fighter; Provides morale to troops
+
+; Technologies
+; Name | Building | Epoch | Effect
+
+Mysticism                 | Temple     |  1 | +60% Prophet Hit Points
+Sandals                   | Temple     |  1 | +1 Prophet Speed
+Shamanism                 | Temple     |  2 | +1 Prophet Range
+Ancestor Worship          | Temple     |  2 | +1 Temple Range
+Ceremonial Burial         | Temple     |  2 | +100% Priest Hit Points
+Hafted Tools              | Capitol    |  2 | +15% Stone Gathering
+Irrigation                | Granary    |  3 | +15% Farming
+Herbal Medicines          | Hospital   |  3 | +70% Citizen/Dog Hit Points; +3 Citizen Attack
+Oil Lamp                  | University |  3 | +1 Building Line-Of-Sight
+Mythology                 | Temple     |  3 | +1 Priest Speed
+Polytheism                | Temple     |  3 | +1 Priest Range
+Fine-Edged Tools          | Capitol    |  3 | +15% Hunting/Foraging
+Hand Axe                  | Capitol    |  3 | +15% Wood Gathering
+Copper Age Towers         | Capitol    |  3 | Upgrade
+Hippocratic Oath          | Hospital   |  4 | +Hospital Rate and Range
+Pulley                    | University |  4 | +50% Building Hit Points
+Philosophy                | University |  4 | +1 University Range
+Oracle                    | Temple     |  4 | +1 Prophet Speed
+Monotheism                | Temple     |  4 | +1 Temple Range
+Metal Casting             | Capitol    |  4 | +15% Gold Gathering
+Hardened Chisel           | Capitol    |  4 | +15% Iron Gathering
+Bronze Age Walls/Towers   | Capitol    |  4 | Upgrade 
+Comparitive Anatomy       | Hospital   |  5 | +42% Citizen/Dog Hit Points; +2 Citizen Attack
+Pharmacy                  | Hospital   |  5 | +1 Citizen Speed
+Sanitation                | Hospital   |  5 | +5 Population Cap
+Commerical Law            | University |  5 | -50% Tribute Cost
+Cofferdam                 | University |  5 | +100% Dock Repair Rate
+Sainthood                 | Temple     |  5 | +1 Prophet Range
+Prophecy                  | Temple     |  5 | +40% Prophet Hit Points
+Excommunication           | Temple     |  5 | +1 Priest Range
+Falconry                  | Capitol    |  5 | +15% Hunting/Foraging
+Iron Saw                  | Capitol    |  5 | +15% Wood Gathering
+Wheeled Plow              | Granary    |  6 | +15% Farming
+Bulls-Eye Lantern         | University |  6 | +1 Building Line-Of-Sight
+Law School                | University |  6 | +1 University Range
+Crusades                  | Temple     |  6 | +1 Temple Range
+Indulgences               | Temple     |  6 | +1 Priest Speed
+Inquisition               | Temple     |  6 | +50% Priest Hit Points
+Amalgamation              | Capitol    |  6 | +15% Gold Gathering
+Shaft Mining              | Capitol    |  6 | +15% Iron Gathering
+Medieval Walls/Towers     | Capitol    |  6 | Upgrade
+Human Anatomy             | Hospital   |  7 | +30% Citizen/Dog Hit Points; +2 Citizen Attack
+Quarantine                | Hospital   |  7 | +Hospital Rate and Range
+Tarot                     | Temple     |  7 | +1 Prophet Speed
+Astrology                 | Temple     |  7 | +1 Prophet Range
+Printing Press            | Temple     |  7 | Priests Can Convert Priests
+Windlass                  | Capitol    |  7 | +15% Stone Gathering
+Orthopedics               | Hospital   |  8 | +1 Citizen Speed
+Chemical Drugs            | Hospital   |  8 | +5 Population Cap
+Strengthened Concrete     | University |  8 | +33% Building Hit Points
+Scientific Method         | University |  8 | +1 University Range
+Dry Dock                  | University |  8 | +150% Dock Repair Rate
+Occultism                 | Temple     |  8 | +25% Prophet Hit Points
+Reformation               | Temple     |  8 | +1 Priest Range
+Missionaries              | Temple     |  8 | Priests Can Convert Buildings
+Land Conservation         | Capitol    |  8 | +15% Hunting/Foraging
+Forestry                  | Capitol    |  8 | +15% Wood Gathering
+Imperial Age Walls/Towers | Capitol    |  8 | Upgrade
+Enclosure                 | Granary    |  9 | +15% Farming
+Pasterization             | Hospital   |  9 | +20% Citizen/Dog Hit Points; +3 Citizen Attack
+Anesthesia                | Hospital   |  9 | +Hospital Rate and Range
+Gas Lamp                  | University |  9 | +1 Building Line-Of-Sight
+Sunday School             | Temple     |  9 | +1 Temple Range
+Religious Tolerance       | Temple     |  9 | +25% Priest Hit Points
+Steam Engine              | Capitol    |  9 | +15% Gold Gathering
+Mining Explosives         | Capitol    |  9 | +15% Iron Gathering
+Vitamins                  | Hospital   | 10 | +1 Citizen Speed
+Civil Liberties           | University | 10 | +1 University Range
+Radio Services            | Temple     | 10 | +1 Priest Speed
+Hammer Drilling Rigs      | Capitol    | 10 | +15% Stone Gathering
+Concrete Walls/Towers     | Capitol    | 10 | Upgrade
+DNA Research              | Hospital   | 11 | +30% Citizen/Dog Hit Points; +3 Citizen Attack
+Vaccinations              | Hospital   | 11 | +5 Population Cap
+Scuba Repairs             | University | 11 | +80% Dock/Naval Yard Repair Rate
+Televangelism             | Temple     | 11 | +1 Priest Range
+Environmental Law         | Capitol    | 11 | +15% Hunting/Foraging
+Mechanized Logging        | Capitol    | 11 | +15% Wood Gathering
+Pesticides                | Granary    | 12 | +15% Farming
+MRI                       | Hospital   | 12 | +Hospital Rate and Range
+Building Codes            | University | 12 | +25% Building Hit Points
+Religious Resurgence      | Temple     | 12 | +20% Priest Hit Points
+Hydraulic Mining          | Capitol    | 12 | +15% Gold Gathering
+Basic Oxygen Furnace      | Capitol    | 12 | +15% Iron Gathering
+Genetic Engineering       | Hospital   | 13 | +20% Citizen/Dog Hit Points; +3 Citizen Attack
+Digital Library           | University | 13 | +1 University Range
+Virtual Services          | Temple     | 13 | +1 Priest Speed
+Self-Sufficiency          | Capitol    | 13 | +15% Hunting/Foraging
+Laser Walls/Towers        | Capitol    | 13 | Upgrade
+Hydroponics               | Granary    | 14 | +15% Farming
+Cybernetics               | Hospital   | 14 | +1 Citizen Speed
+Anti-Aging Pill           | Hospital   | 14 | +5 Population Cap
+Mind Control              | Temple     | 14 | +20% Priest Recharge Rate
+Atom Manipulation         | Capitol    | 14 | +15% Gold Gathering
+Core Mining               | Capitol    | 14 | +15% Iron Gathering
+Robotic Farm              | Granary    | 15 | Farms Require No Citizens
+Damage Control            | Hospital   | 15 | Space Units Heal Selves
+Zero G Engineers          | University | 15 | +15% Space Dock Repair Rate
+Faith Healing             | Temple     | 15 | Increases Priest Hit Points
+Quantam Theology          | Temple     | 15 | Increases Prophet Recharge Rate
+Space/Wall Towers         | Capitol    | 15 | Upgrade
+
+
+
+
+

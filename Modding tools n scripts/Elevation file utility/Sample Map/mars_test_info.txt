@@ -1,0 +1,5 @@
+center latitude  = 7
+center longitude = 43
+rotation         = 0
+water percentage = 50
+mintopo = -2290 m	maxtopo = 1137 m	delta = 3427 m
